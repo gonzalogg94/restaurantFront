@@ -49,8 +49,8 @@ const Inicio = () => {
         <p>Un lugar donde encontras la mejor comida tradicional argentina </p>
       </article>
       {/* card */}
-      <article class=" row  container-fluid">
-        <aside class="card card--1 mx-2 w-25 col-sm-6 col-md-6 col-lg-3">
+      <article class=" row  container-fluid justify-content-center">
+        <aside class="card card--1 m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__info-hover">
             <div class="card__clock-info"></div>
           </div>
@@ -68,40 +68,45 @@ const Inicio = () => {
             </h3>
           </div>
         </aside>
-        <aside class="card card--2  mx-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        <aside class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__img"></div>
           <a href="#" class="card_link">
             <div class="card__img--hover"></div>
           </a>
           <div class="card__info">
-            <span class="card__category"> Travel</span>
-            <h3 class="card__title">Discover the sea</h3>
+            <span class="card__category">Parilla</span>
+            <h3 class="card__title">Los mejores cortes de carne</h3>
           </div>
         </aside>
-        <aside class="card card--3  mx-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        <aside class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__img"></div>
           <a href="#" class="card_link">
             <div class="card__img--hover"></div>
           </a>
           <div class="card__info">
-            <span class="card__category"> Travel</span>
-            <h3 class="card__title">Discover the sea</h3>
+            <span class="card__category">Vinos</span>
+            <h3 class="card__title">
+              Las mejores elecciones estan en nuestra vinoteca
+            </h3>
           </div>
         </aside>
-        <aside class="card card--2  mx-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        <aside class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__img"></div>
           <a href="#" class="card_link">
             <div class="card__img--hover"></div>
           </a>
           <div class="card__info">
-            <span class="card__category"> Travel</span>
-            <h3 class="card__title">Discover the sea</h3>
+            <span class="card__category">Postres</span>
+            <h3 class="card__title">Postres artesanales</h3>
           </div>
         </aside>
       </article>
       {/* card */}
-      <article className="text-white container mt-4">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui fugiat adipisci voluptatibus, reiciendis corporis ad excepturi quo officiis eos doloribus blanditiis odit repellat minus. Quis, ullam? Delectus laboriosam blanditiis obcaecati quas amet. Officia minus aperiam ipsam officiis reiciendis maxime, eaque ullam dicta, voluptas incidunt voluptatum beatae fugiat blanditiis quidem unde aspernatur, dolore perspiciatis maiores consequuntur fuga dolores? Neque consequatur expedita perspiciatis, sit molestiae nisi aperiam esse dolor harum inventore cupiditate rem vero fugiat, modi quo soluta eligendi recusandae aliquam quas veniam eum. Quis, nobis! Voluptatum, vel quis delectus, autem atque est enim qui aspernatur quam voluptas eum. Inventore, veniam fugiat!</p>
+      <hr className="container text-white" />
+      <article className="text-white container py-4">
+        <p>
+        Tafi de Mistol se encuentra un espacio dedicado a la cocina Argentina, su nombre es cultural . Es ideal para los amantes de la elegancia y el confort, además la dulce vibración que emite el piano todas las noches, termina de complementar el encanto del lugar acompañado por sus platos fuertes.No podía faltar una amplia lista de vinos y licores, que junto a la decoración y ambiente del lugar, logran ser un lugar estratégico para cerrar negocios o disfrutar de una velada romántica.
+        </p>
       </article>
     </section>
   );

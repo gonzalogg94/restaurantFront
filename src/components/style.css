@@ -10,12 +10,6 @@
   background-color:#2C503B;
 }
 
-/* forma redonda para imagenes */
-.imgRedonda {
-  width: 200px;
-  height: 200px;
-  border-radius: 150px;
-}
 /* clase para dar tamaño al banner principal de pa pagina */
 .bannerPagina {
   height: 500px;
@@ -30,7 +24,10 @@
     background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 }
 .card--3 .card__img, .card--3 .card__img--hover {
-    background-image: url('https://elcomercio.pe/resizer/ZnhS1ZHzq1FULMm59gQfVMqmW_g=/1200x900/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/JWRIZ5FBRJHVBFHCO35Q7Y5C4E.jpg');
+    background-image: url('https://i.blogs.es/576a60/istock-837387558/840_560.jpg');
+}
+.card--4 .card__img, .card--4 .card__img--hover {
+    background-image: url('https://cdn7.kiwilimon.com/recetaimagen/25955/38379.jpg');
 }
 
 .card__time {
@@ -138,6 +135,9 @@ border-bottom-right-radius: 12px;
     opacity: 1;
 }
 /* card */
+
+
+
 
 /* media queries */
 @media all and (max-width: 767px) {
