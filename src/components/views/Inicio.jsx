@@ -22,7 +22,10 @@ const Inicio = () => {
           />
 
           <Carousel.Caption>
-            <h3>Nuestra comida es poner nuestra personalidad en lo que hacemos y ese sentimiento nos convierte en algo distinto</h3>
+            <h3>
+              Nuestra comida es poner nuestra personalidad en lo que hacemos y
+              ese sentimiento nos convierte en algo distinto
+            </h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -33,7 +36,10 @@ const Inicio = () => {
           />
 
           <Carousel.Caption>
-            <h3>Porque amamos la vida y nustras tradiciones le ponemos pasion en la cocina</h3>
+            <h3>
+              Porque amamos la vida y nustras tradiciones le ponemos pasion en
+              la cocina
+            </h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -41,6 +47,66 @@ const Inicio = () => {
         <h2 className="text-white">Tafi De Mistol</h2>
         <hr className="container" />
         <p>Un lugar donde encontras la mejor comida tradicional argentina </p>
+      </article>
+      {/* card */}
+      <article class=" row  container-fluid justify-content-center">
+        <aside class="card card--1 m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+          <div class="card__info-hover">
+            <div class="card__clock-info"></div>
+          </div>
+          <div class="card__img"></div>
+          <a
+            href="https://media.ambito.com/p/eeeb0aa8490c86a5ed10e052acb243d0/adjuntos/239/imagenes/039/444/0039444907/pastasjpg.jpg"
+            class="card_link"
+          >
+            <div class="card__img--hover"></div>
+          </a>
+          <div class="card__info">
+            <span class="card__category">Pastas</span>
+            <h3 class="card__title">
+              Pastas caseras con la especialidad de la casa
+            </h3>
+          </div>
+        </aside>
+        <aside class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+          <div class="card__img"></div>
+          <a href="#" class="card_link">
+            <div class="card__img--hover"></div>
+          </a>
+          <div class="card__info">
+            <span class="card__category">Parilla</span>
+            <h3 class="card__title">Los mejores cortes de carne</h3>
+          </div>
+        </aside>
+        <aside class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+          <div class="card__img"></div>
+          <a href="#" class="card_link">
+            <div class="card__img--hover"></div>
+          </a>
+          <div class="card__info">
+            <span class="card__category">Vinos</span>
+            <h3 class="card__title">
+              Las mejores elecciones estan en nuestra vinoteca
+            </h3>
+          </div>
+        </aside>
+        <aside class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+          <div class="card__img"></div>
+          <a href="#" class="card_link">
+            <div class="card__img--hover"></div>
+          </a>
+          <div class="card__info">
+            <span class="card__category">Postres</span>
+            <h3 class="card__title">Postres artesanales</h3>
+          </div>
+        </aside>
+      </article>
+      {/* card */}
+      <hr className="container text-white" />
+      <article className="text-white container py-4">
+        <p>
+        Tafi de Mistol se encuentra un espacio dedicado a la cocina Argentina, su nombre es cultural . Es ideal para los amantes de la elegancia y el confort, además la dulce vibración que emite el piano todas las noches, termina de complementar el encanto del lugar acompañado por sus platos fuertes.No podía faltar una amplia lista de vinos y licores, que junto a la decoración y ambiente del lugar, logran ser un lugar estratégico para cerrar negocios o disfrutar de una velada romántica.
+        </p>
       </article>
     </section>
   );
