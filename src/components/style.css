@@ -1,5 +1,31 @@
+/* fuente */
+.fuente {
+  font-family: "Black Han Sans", sans-serif;
+  font-family: "Orbitron", sans-serif;
+  font-family: "Source Serif Pro", serif;
+}
 
 /* Color de fondo negro */
-.colorFondo{
-    background-color: black;
+.colorFondo {
+  background-color:#2C503B;
+}
+
+/* forma redonda para imagenes */
+.imgRedonda {
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+}
+/* clase para dar tamaño al banner principal de pa pagina */
+.bannerPagina {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* media queries */
+@media all and (max-width: 767px) {
+  .bannerPagina {
+    height: 250px;
+    object-fit: cover;
+  }
 }
