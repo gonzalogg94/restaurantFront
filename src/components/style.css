@@ -15,7 +15,7 @@
   height: 500px;
   object-fit: cover;
 }
-/* card */
+/* card de inicio */
 .card--1 .card__img, .card--1 .card__img--hover {
     background-image: url('https://media.ambito.com/p/eeeb0aa8490c86a5ed10e052acb243d0/adjuntos/239/imagenes/039/444/0039444907/pastasjpg.jpg');
 }
