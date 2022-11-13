@@ -115,17 +115,20 @@ const Inicio = () => {
       <hr className="container text-white" />
       <article className="text-white container py-4 text-center">
         <h2>Lo mejor de la comida argentina lo encontras en Tafi de Mistol</h2>
+      <article className="row pt-4 justify-content-center">
+        <div className="col-4 text-center text-white">
+        <i className="bi bi-credit-card-2-back fs-1"></i>
+        <h3>Recibimos todas las tarjetas</h3>
+        </div>
+        <div className="col-4 text-center text-white fs-1">
+        <i className="bi bi-telephone-inbound"></i>
+        <h3>Realizar reserva previa</h3>
+        </div>
+        <div className="col-4 text-center text-white">
+        <i className="bi bi-pencil-square text-white fs-1"></i>
+        <h3>Realiza tu pedido desde nuestra web</h3>
+        </div>
       </article>
-      <article className="row pt-2 justify-content-center">
-        <div className="col-4 text-center">
-        <i className="bi bi-credit-card-2-back text-white fs-1"></i>
-        </div>
-        <div className="col-4 text-center">
-        <i className="bi bi-credit-card-2-back text-white fs-1"></i>
-        </div>
-        <div className="col-4 text-center">
-        <i className="bi bi-credit-card-2-back text-white fs-1"></i>
-        </div>
       </article>
     </section>
   );
