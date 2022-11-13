@@ -43,10 +43,20 @@ const Inicio = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      <article className="text-center text-white py-5">
+      <article className="text-center text-white py-5 container">
         <h2 className="text-white">Tafi De Mistol</h2>
         <hr className="container" />
-        <p>Un lugar donde encontras la mejor comida tradicional argentina </p>
+        <p>
+          {" "}
+          Tafi de Mistol se encuentra un espacio dedicado a la cocina Argentina,
+          su nombre es cultural . Es ideal para los amantes de la elegancia y el
+          confort, además la dulce vibración que emite el piano todas las
+          noches, termina de complementar el encanto del lugar acompañado por
+          sus platos fuertes.No podía faltar una amplia lista de vinos y
+          licores, que junto a la decoración y ambiente del lugar, logran ser un
+          lugar estratégico para cerrar negocios o disfrutar de una velada
+          romántica.
+        </p>
       </article>
       {/* card */}
       <article class=" row  container-fluid justify-content-center">
@@ -103,10 +113,22 @@ const Inicio = () => {
       </article>
       {/* card */}
       <hr className="container text-white" />
-      <article className="text-white container py-4">
-        <p>
-        Tafi de Mistol se encuentra un espacio dedicado a la cocina Argentina, su nombre es cultural . Es ideal para los amantes de la elegancia y el confort, además la dulce vibración que emite el piano todas las noches, termina de complementar el encanto del lugar acompañado por sus platos fuertes.No podía faltar una amplia lista de vinos y licores, que junto a la decoración y ambiente del lugar, logran ser un lugar estratégico para cerrar negocios o disfrutar de una velada romántica.
-        </p>
+      <article className="text-white container py-4 text-center">
+        <h2>Lo mejor de la comida argentina lo encontras en Tafi de Mistol</h2>
+      <article className="row pt-4 justify-content-center">
+        <div className="col-4 text-center text-white">
+        <i className="bi bi-credit-card-2-back fs-1"></i>
+        <h3>Recibimos todas las tarjetas</h3>
+        </div>
+        <div className="col-4 text-center text-white fs-1">
+        <i className="bi bi-telephone-inbound"></i>
+        <h3>Realizar reserva previa</h3>
+        </div>
+        <div className="col-4 text-center text-white">
+        <i className="bi bi-pencil-square text-white fs-1"></i>
+        <h3>Realiza tu pedido desde nuestra web</h3>
+        </div>
+      </article>
       </article>
     </section>
   );
