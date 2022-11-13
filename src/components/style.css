@@ -138,6 +138,10 @@ border-bottom-right-radius: 12px;
 
 
 
+/* Background Navbar Transparente*/
+.bgTransparente{
+  background-color: #2C503B;
+}
 
 /* media queries */
 @media all and (max-width: 767px) {
