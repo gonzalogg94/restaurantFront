@@ -67,7 +67,7 @@ const Inicio = () => {
           </div>
           <div class="card__img"></div>
           <a
-            href="https://media.ambito.com/p/eeeb0aa8490c86a5ed10e052acb243d0/adjuntos/239/imagenes/039/444/0039444907/pastasjpg.jpg"
+            href="#"
             class="card_link"
           >
             <div class="card__img--hover"></div>
