@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/style.css";
 import "bootstrap-icons/font/bootstrap-icons.css"
 import AdministradorProductos from './components/views/AdministradorProductos';
+import CrearProducto from './components/views/productos/CrearProducto';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
  <Route exact path='/' element={<Inicio></Inicio>}></Route>
  <Route exact path='/nosotros' element={<Nosotros></Nosotros>} />
  <Route exact path='/administrador' element={<AdministradorProductos/>} />
+ <Route exact path='/administrador/crearProd' element={<CrearProducto/>} />
  </Routes>
  </BrowserRouter>
   );
