@@ -1,0 +1,250 @@
+/* fuente */
+.fuente {
+  font-family: "Black Han Sans", sans-serif;
+  font-family: "Orbitron", sans-serif;
+  font-family: "Source Serif Pro", serif;
+}
+
+/* Color de fondo negro */
+.colorFondo {
+  background-color:#2C503B;
+  min-height: 100vh;
+}
+
+/* clase para dar tamaño al banner principal de pa pagina */
+.bannerPagina {
+  height: 500px;
+  object-fit: cover;
+}
+/* card de inicio */
+.card--1 .card__img, .card--1 .card__img--hover {
+    background-image: url('https://media.ambito.com/p/eeeb0aa8490c86a5ed10e052acb243d0/adjuntos/239/imagenes/039/444/0039444907/pastasjpg.jpg');
+}
+
+.card--2 .card__img, .card--2 .card__img--hover {
+    background-image: url('https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/08/09173312/asado.jpg');
+}
+.card--3 .card__img, .card--3 .card__img--hover {
+    background-image: url('https://i.blogs.es/576a60/istock-837387558/840_560.jpg');
+}
+.card--4 .card__img, .card--4 .card__img--hover {
+    background-image: url('https://cdn7.kiwilimon.com/recetaimagen/25955/38379.jpg');
+}
+
+.card__time {
+    font-size: 12px;
+    color: #AD7D52;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.card__clock-info {
+    float: right;
+}
+
+.card__img {
+  visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+  
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  position: absolute;
+    height: 235px;
+  border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+top: 0;
+  
+}
+.card {
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    transform: scale(1.10, 1.10);
+}
+
+.card__info {
+z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+border-bottom-right-radius: 12px;
+   padding: 16px 24px 24px 24px;
+}
+
+.card__category {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  color: #868686;
+}
+
+.card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: #AD7D52;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+   
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+/* card */
+
+/* menu barra lateral */
+.fondoLateral {
+  background-color: #a1f1bf;
+}
+.bgTextoCarousel {
+  text-align: center;
+  background: #51ba49;
+  border-radius: 5px;
+}
+
+.bannerPagina {
+  height: 500px;
+  object-fit: cover;
+}
+li {
+  list-style: none;
+}
+
+.listSidebar {
+  background-color: transparent;
+  border: none;
+  list-style: none;
+}
+.sidebar ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.sidebar li {
+  float: none;
+  width: 90%;
+  padding: 4px;
+}
+.sidebar li a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-left: 5px solid;
+  position: relative;
+  z-index: 2;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: rgb(3, 0, 0);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 10px;
+}
+.sidebar li a:hover {
+  border-bottom: 0px;
+  color: rgb (15, 24, 26);
+}
+.sidebar li:first-child a {
+  border-left: 10px solid #51ba49;
+}
+.sidebar li:nth-child(2) a {
+  border-left: 10px solid #51ba49;
+}
+.sidebar li:nth-child(3) a {
+  border-left: 10px solid #51ba49;
+}
+.sidebar li:last-child a {
+  border-left: 10px solid #51ba49;
+}
+.sidebar li a:after {
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0px;
+  position: absolute;
+  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  z-index: -1;
+}
+.sidebar li a:hover:after {
+  width: 100%;
+  border-end-end-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.sidebar li:first-child a:after {
+  background: #51ba49;
+}
+.sidebar li:nth-child(2) a:after {
+  background: #51ba49;
+}
+.sidebar li:nth-child(3) a:after {
+  background: #51ba49;
+}
+.sidebar li:last-child a:after {
+  background: #51ba49;
+}
+.botonSmall {
+  display: none;
+}
+.colorBGHeaderFooter {
+  background-color: #51ba49;
+}
+
+.tamañoLogoSM {
+  box-sizing: border-box;
+}
+/* menu barra lateral */
+
+
+/* media queries */
+@media all and (max-width: 767px) {
+  .bannerPagina {
+    height: 250px;
+    object-fit: cover;
+  }
+}
