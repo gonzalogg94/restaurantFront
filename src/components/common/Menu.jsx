@@ -7,12 +7,12 @@ const Menu = () => {
   return (
     <Navbar className="bgTransparente" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand md={4} className="text-center" as={Link} to="/">
-          <img src={logo} alt="Logo" className="w-50" />
+        <Navbar.Brand  className="text-center" as={Link} to="/">
+          <img src={logo} alt="Logo" className="w-auto" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav md={8} className="me-auto">
+        <Navbar.Collapse >
+          <Nav className="me-auto text-center">
             <NavLink end className="nav-item nav-link" to="/">
               Inicio
             </NavLink>

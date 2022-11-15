@@ -143,6 +143,11 @@ border-bottom-right-radius: 12px;
   background-color: #2C503B;
 }
 
+/*Footer*/
+.stylesFooter{
+  background-color: #2C503B;
+}
+
 /* media queries */
 @media all and (max-width: 767px) {
   .bannerPagina {
