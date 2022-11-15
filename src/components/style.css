@@ -8,6 +8,7 @@
 /* Color de fondo negro */
 .colorFondo {
   background-color:#2C503B;
+  min-height: 100vh;
 }
 
 /* clase para dar tamaño al banner principal de pa pagina */
