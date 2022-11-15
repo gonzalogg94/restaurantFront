@@ -1,6 +1,6 @@
 import React from 'react';
 
-const itemProducto = () => {
+const ItemProducto = () => {
     return (
         <tr>
         <td>1</td>
@@ -14,4 +14,4 @@ const itemProducto = () => {
     );
 };
 
-export default itemProducto;
+export default ItemProducto;
