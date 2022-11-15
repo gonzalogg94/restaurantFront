@@ -9,7 +9,7 @@ const AdministradorProductos = () => {
     <section className="colorFondo fuente">
       <Container>
         <div>
-          <h2 className="display-3 text-center my-2 text-light">
+          <h2 className="display-3 text-center by-5 text-light">
             Administrador de Productos
           </h2>
           <hr />
