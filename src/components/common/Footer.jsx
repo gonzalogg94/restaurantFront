@@ -8,7 +8,7 @@ const Footer = () => {
     <section className="stylesFooter">
       <Container className="py-4">
         <Row className="justify-content-between">
-          <Col md={3} className="text-center">
+          <Col md={3} className="text-center mt-4" >
             {" "}
             <img src={logo} alt="Logo" className="w-50" />
           </Col>
