@@ -1,0 +1,23 @@
+{
+    "productos":[{
+        "nombreProducto":"asado",
+        " estado":"x",
+        " precio":900,
+        "detalle":"carne a la parrilla",
+        " categoria":"parrillada",
+        " imagen":"url valida",
+        "id":1
+
+    },
+    {
+        "nombreProducto":"fideo al pesto",
+        " estado":"x",
+        " precio":700,
+        "detalle":"pasta con perejil",
+        " categoria":"pastas",
+        " imagen":"url valida",
+        "id":2
+
+    }
+]
+}
