@@ -1,4 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
+import { Container } from "react-bootstrap";
 
 const Inicio = () => {
   return (
@@ -66,7 +67,7 @@ const Inicio = () => {
           </div>
           <div class="card__img"></div>
           <a
-            href="https://media.ambito.com/p/eeeb0aa8490c86a5ed10e052acb243d0/adjuntos/239/imagenes/039/444/0039444907/pastasjpg.jpg"
+            href="#"
             class="card_link"
           >
             <div class="card__img--hover"></div>
@@ -112,24 +113,28 @@ const Inicio = () => {
         </aside>
       </article>
       {/* card */}
-      <hr className="container text-white" />
-      <article className="text-white container py-4 text-center">
-        <h2>Lo mejor de la comida argentina lo encontras en Tafi de Mistol</h2>
-      <article className="row pt-4 justify-content-center">
-        <div className="col-4 text-center text-white">
-        <i className="bi bi-credit-card-2-back fs-1"></i>
-        <h3>Recibimos todas las tarjetas</h3>
-        </div>
-        <div className="col-4 text-center text-white fs-1">
-        <i className="bi bi-telephone-inbound"></i>
-        <h3>Realizar reserva previa</h3>
-        </div>
-        <div className="col-4 text-center text-white">
-        <i className="bi bi-pencil-square text-white fs-1"></i>
-        <h3>Realiza tu pedido desde nuestra web</h3>
-        </div>
-      </article>
-      </article>
+      <Container>
+        <hr className="text-white" />
+        <article className="text-white container py-4 text-center">
+          <h2>
+            Lo mejor de la comida argentina lo encontras en Tafi de Mistol
+          </h2>
+          <article className="row pt-4 justify-content-center">
+            <div className="col-4 text-center text-white">
+              <i className="bi bi-credit-card-2-back fs-1"></i>
+              <h3>Recibimos todas las tarjetas</h3>
+            </div>
+            <div className="col-4 text-center text-white fs-1">
+              <i className="bi bi-telephone-inbound"></i>
+              <h3>Realizar reserva previa</h3>
+            </div>
+            <div className="col-4 text-center text-white">
+              <i className="bi bi-pencil-square text-white fs-1"></i>
+              <h3>Realiza tu pedido desde nuestra web</h3>
+            </div>
+          </article>
+        </article>
+      </Container>
     </section>
   );
 };
