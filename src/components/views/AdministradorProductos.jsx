@@ -22,12 +22,13 @@ const AdministradorProductos = () => {
               <thead>
                 <tr>
                   <th>Codigo</th>
-                  <th> nombreProducto</th>
-                  <th> estado</th>
-                  <th> precio</th>
-                  <th> detalle</th>
-                  <th> categoria</th>
-                  <th> imagen</th>
+                  <th> NombreProducto</th>
+                  <th> Estado</th>
+                  <th> Precio</th>
+                  <th> Detalle</th>
+                  <th> Categoria</th>
+                  <th> Imagen</th>
+                  <th> Administrar</th>
                 </tr>
               </thead>
               <tbody>
