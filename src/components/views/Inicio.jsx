@@ -67,7 +67,8 @@ const Inicio = () => {
           </div>
           <div class="card__img"></div>
           <a
-            href="#"
+            href="/"
+
             class="card_link"
           >
             <div class="card__img--hover"></div>
@@ -81,7 +82,7 @@ const Inicio = () => {
         </aside>
         <aside class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__img"></div>
-          <a href="#" class="card_link">
+          <a href="/" class="card_link">
             <div class="card__img--hover"></div>
           </a>
           <div class="card__info">
@@ -91,7 +92,7 @@ const Inicio = () => {
         </aside>
         <aside class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__img"></div>
-          <a href="#" class="card_link">
+          <a href="/" class="card_link">
             <div class="card__img--hover"></div>
           </a>
           <div class="card__info">
@@ -103,7 +104,7 @@ const Inicio = () => {
         </aside>
         <aside class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__img"></div>
-          <a href="#" class="card_link">
+          <a href="/" class="card_link">
             <div class="card__img--hover"></div>
           </a>
           <div class="card__info">
