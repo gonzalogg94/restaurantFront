@@ -141,6 +141,8 @@ border-bottom-right-radius: 12px;
 /* Background Navbar Transparente*/
 .bgTransparente{
   background-color: #2C503B;
+  padding: 0px;
+  margin: 0px;
 }
 
 /*Footer*/
@@ -154,4 +156,9 @@ border-bottom-right-radius: 12px;
     height: 250px;
     object-fit: cover;
   }
+
+  .navbar{
+
+  }
 }
+
