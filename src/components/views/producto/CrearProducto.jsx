@@ -3,7 +3,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
 import { crearProductoApi } from "../../helpers/queries";
-
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 const CrearProducto = () => {
   const {
     register,
@@ -14,7 +15,13 @@ const CrearProducto = () => {
   const onSubmit = (datos) => {
     console.log(datos);
     console.log("desde el evento onsubmit");
-    crearProductoApi(datos).then((respuesta)=>{})
+    crearProductoApi(datos).then((respuesta)=>{
+      if(respuesta.status===201){
+        Swal.fire("Producto Creado","Creado Con Exito","success");
+      }else{
+        Swal.fire("Error","No se pudo Crear ","error");
+      }
+    })
   };
 
   return (

@@ -26,6 +26,15 @@
       "categoria": "asado",
       "imagen": "https://react-bootstrap.github.io/components/buttons/",
       "id": 3
+    },
+    {
+      "nombreProducto": "pasta casera",
+      "estado": "sin stock",
+      "precio": "456",
+      "detalle": "pasta de la casa casera",
+      "categoria": "pasta",
+      "imagen": "https://mail.google.com/mail/u/0/#inbox",
+      "id": 4
     }
   ]
 }
