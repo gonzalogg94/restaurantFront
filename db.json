@@ -1,0 +1,17 @@
+{
+    "usuarios":[
+        {
+            "nombreUsuario":"Enzo",
+            "email":"enzo@gmail.com",
+            "contrasena":"123456789",
+            "id":1
+        },
+        {
+            "nombreUsuario":"Alejandro",
+            "email":"alejandro@gmail.com",
+            "contrasena":"123456789",
+            "id":1
+        }
+    ]
+
+}

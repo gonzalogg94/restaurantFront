@@ -9,6 +9,7 @@ import AdministradorProductos from './components/views/AdministradorProductos';
 import CrearProducto from './components/views/producto/CrearProducto';
 import EditarProducto from './components/views/producto/EditarProducto';
 import Registro from './components/views/Registro';
+import AdminUsuarios from './components/views/AdminUsuarios';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
  <Route exact path='/administrador' element={<AdministradorProductos/>} />
  <Route exact path='/administrador/crearProd' element={<CrearProducto/>} />
  <Route exact path='/administrador/editarProd' element={<EditarProducto/>} />
- <Route exact path='/registro' element={<Registro/>} />
+ <Route exact path='/registro/id' element={<Registro/>} />
+ <Route exact path='/adminUsuarios' element={<AdminUsuarios/>} />
  </Routes>
  </BrowserRouter>
   );
