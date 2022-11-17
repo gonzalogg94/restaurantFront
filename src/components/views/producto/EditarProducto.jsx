@@ -2,16 +2,52 @@ import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { editarProductoApi, obtenerProductoApi } from "../../helpers/queries";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const EditarProducto = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    setValue
   } = useForm();
-  const onSubmit = ()=>{}
-
   
+  const {id}= useParams();
+  console.log(id);
+ 
+  const navegar = useNavigate();
+  useEffect(() => {
+ obtenerProductoApi(id).then((respuesta)=>{
+  
+  setValue("nombreProducto", respuesta.dato.nombreProducto)
+  setValue("estado", respuesta.dato.estado)
+  setValue("precio", respuesta.dato.precio)
+  setValue("detalle", respuesta.dato.detalle)
+  setValue("categoria", respuesta.dato.categoria)
+  setValue("imagen", respuesta.dato.imagen)
+  console.log(respuesta);
+  
+ })
+ }, [])
+ 
+  
+  const onSubmit = (producto)=>{
+    editarProductoApi(id, producto).then((respuesta)=>{
+      if(respuesta.status === 200){
+        Swal.fire("Producto Actualizado","Actualizacion Correcta", "success")
+        navegar('/administrador');
+      }else{
+        Swal.fire("Error inesperado","Intente Nuevamente","error")
+      }
+    })
+    console.log(producto);
+  };
+
+
     return (
       <section className="colorFondo fuente text-light">
       <Container>

@@ -10,10 +10,10 @@
       "id": 3
     },
     {
-      "nombreProducto": "pasta casera",
-      "estado": "sin stock",
-      "precio": "456",
-      "detalle": "pasta de la casa casera",
+      "nombreProducto": "pasta casera modificada x cara",
+      "estado": "En stock porque nadie compra",
+      "precio": "1580",
+      "detalle": "pasta de los chinos que se hace con perros",
       "categoria": "pasta",
       "imagen": "https://mail.google.com/mail/u/0/#inbox",
       "id": 4

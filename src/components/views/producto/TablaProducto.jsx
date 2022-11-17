@@ -42,7 +42,7 @@ borrarProductoApi(props.producto.id).then((respuesta)=>{
       <td>{props.producto.imagen}</td>
       <td>
       <Button variant="none" onClick={borrarProducto} >  <i  className="bi bi-file-earmark-x-fill text-danger iconAdmin"></i></Button>
-      <Link className="btn" to={"/administrador/editarProd/:"+ props.producto.id}>  <i className="bi bi-file-earmark-diff-fill text-warning  iconAdmin"></i></Link>
+      <Link className="btn" to={"/administrador/editarProd/"+ props.producto.id}>  <i className="bi bi-file-earmark-diff-fill text-warning  iconAdmin"></i></Link>
           
         
          
