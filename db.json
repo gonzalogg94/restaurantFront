@@ -35,6 +35,15 @@
       "categoria": "pasta",
       "imagen": "https://mail.google.com/mail/u/0/#inbox",
       "id": 4
+    },
+    {
+      "nombreProducto": "vino tinto",
+      "estado": "en sotck",
+      "precio": "25",
+      "detalle": "vino claiente",
+      "categoria": "bebida",
+      "imagen": "https://ar.pinterest.com/pin/296182113005005181/?nic_v3=1a1dUDSqB",
+      "id": 5
     }
   ]
 }

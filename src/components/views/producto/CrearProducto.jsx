@@ -18,11 +18,13 @@ const CrearProducto = () => {
     crearProductoApi(datos).then((respuesta)=>{
       if(respuesta.status===201){
         Swal.fire("Producto Creado","Creado Con Exito","success");
+        navegacion("/administrador");
       }else{
         Swal.fire("Error","No se pudo Crear ","error");
       }
     })
   };
+  const navegacion= useNavigate();
 
   return (
     <section className="colorFondo fuente text-light">
