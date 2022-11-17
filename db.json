@@ -1,23 +1,31 @@
 {
-    "productos":[{
-        "nombreProducto":"asado",
-        "estado":"disponible",
-        "precio":900,
-        "detalle":"carne a la parrilla",
-        "categoria":"parrillada",
-        "imagen":"url valida",
-        "id":1
-
+  "productos": [
+    {
+      "nombreProducto": "asado",
+      "estado": "disponible",
+      "precio": 900,
+      "detalle": "carne a la parrilla",
+      "categoria": "parrillada",
+      "imagen": "url valida",
+      "id": 1
     },
     {
-        "nombreProducto":"fideo al pesto",
-        "estado":"sin stock",
-        "precio":700,
-        "detalle":"pasta con perejil",
-        "categoria":"pastas",
-        "imagen":"url valida",
-        "id":2
-
+      "nombreProducto": "fideo al pesto",
+      "estado": "sin stock",
+      "precio": 700,
+      "detalle": "pasta con perejil",
+      "categoria": "pastas",
+      "imagen": "url valida",
+      "id": 2
+    },
+    {
+      "nombreProducto": "asado 2",
+      "estado": "en stock",
+      "precio": "18",
+      "detalle": "dghgsfdghd",
+      "categoria": "asado",
+      "imagen": "https://react-bootstrap.github.io/components/buttons/",
+      "id": 3
     }
-]
+  ]
 }

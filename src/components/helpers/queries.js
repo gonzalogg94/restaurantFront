@@ -9,3 +9,19 @@ export const consultarApi = async () => {
     console.log(error);
   }
 };
+
+export const crearProductoApi =async (producto) => {
+  try {
+    const respuesta = await fetch(url,{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(producto)
+    });
+    
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};

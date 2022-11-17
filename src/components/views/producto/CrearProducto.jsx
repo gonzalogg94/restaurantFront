@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
+import { crearProductoApi } from "../../helpers/queries";
 
 const CrearProducto = () => {
   const {
@@ -13,6 +14,7 @@ const CrearProducto = () => {
   const onSubmit = (datos) => {
     console.log(datos);
     console.log("desde el evento onsubmit");
+    crearProductoApi(datos).then((respuesta)=>{})
   };
 
   return (
