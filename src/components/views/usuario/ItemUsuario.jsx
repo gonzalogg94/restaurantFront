@@ -11,9 +11,6 @@ const ItemUsuario = ( {usuario, setUsuarios} ) => {
         <Button className="m-1" variant="danger">
           Borrar
         </Button>
-        <Button className="m-1" variant="warning">
-          Editar
-        </Button>
         </td>
       </tr>
     );
