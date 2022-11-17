@@ -1,10 +1,16 @@
-import React from "react";
+
+import Badge from 'react-bootstrap/Badge';
+import { Link } from 'react-router-dom';
 
 
 const ListaProductos = () => {
   return (
     <section className="fuente colorFondo">
-      
+      <div className='posicionBadge position-fixed'>
+        <Link>
+      <Badge className='fs-5 m-5'  bg="secondary"><i className="bi bi-cart-check-fill"> 10</i></Badge> 
+        </Link>
+      </div>
         <article className="row">
         <aside class="col-lg-2 col-md-2 fondoLateral esconder">
           <div class="sidebar d-none d-md-grid col-md-2 col-lg-2 text-light">

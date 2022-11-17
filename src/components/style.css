@@ -239,7 +239,11 @@ li {
   box-sizing: border-box;
 }
 /* menu barra lateral */
-
+/* carrito */
+.posicionBadge {
+  z-index: 5;
+}
+/* carrito */
 
 /* media queries */
 @media all and (max-width: 767px) {
@@ -247,4 +251,8 @@ li {
     height: 250px;
     object-fit: cover;
   }
+}
+
+.iconAdmin{
+  font-size: 2rem;
 }
