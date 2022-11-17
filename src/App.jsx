@@ -21,7 +21,7 @@ function App() {
  <Route exact path='/menu' element={<ListaProductos></ListaProductos>} />
  <Route exact path='/administrador' element={<AdministradorProductos/>} />
  <Route exact path='/administrador/crearProd' element={<CrearProducto/>} />
- <Route exact path='/administrador/editarProd' element={<EditarProducto/>} />
+ <Route exact path='/administrador/editarProd/:id' element={<EditarProducto/>} />
  </Routes>
  <Footer></Footer>
  </BrowserRouter>

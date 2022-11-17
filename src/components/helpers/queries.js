@@ -37,3 +37,34 @@ export const borrarProductoApi = async (id) => {
     console.log(error);
   }
 };
+
+export const obtenerProductoApi = async (id) => {
+  try {
+    const respuesta = await fetch(`${url}/${id}`);
+    const productoBuscado ={
+      dato:await respuesta.json(),
+      status: respuesta.status
+  
+    } 
+    return productoBuscado;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editarProductoApi = async (id, datosActualizados) => {
+  try {
+    const respuesta = await fetch(`${url}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datosActualizados)
+    });
+
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  
+  }
+};
