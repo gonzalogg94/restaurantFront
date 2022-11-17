@@ -8,10 +8,13 @@ import ListaProductos from './components/views/ListaProductos';
 import AdministradorProductos from './components/views/AdministradorProductos';
 import CrearProducto from './components/views/producto/CrearProducto';
 import EditarProducto from './components/views/producto/EditarProducto';
+import Footer from './components/common/Footer';
+import Menu from './components/common/Menu';
 
 function App() {
   return (
  <BrowserRouter>
+ <Menu></Menu>
  <Routes>
  <Route exact path='/' element={<Inicio></Inicio>}></Route>
  <Route exact path='/nosotros' element={<Nosotros></Nosotros>} />
@@ -20,6 +23,7 @@ function App() {
  <Route exact path='/administrador/crearProd' element={<CrearProducto/>} />
  <Route exact path='/administrador/editarProd' element={<EditarProducto/>} />
  </Routes>
+ <Footer></Footer>
  </BrowserRouter>
   );
 }
