@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
 import TablaProducto from "./producto/TablaProducto";
 import { useEffect, useState } from "react";
 import { consultarApi } from "../helpers/queries";
+import { Link } from "react-router-dom";
 
 const AdministradorProductos = () => {
   const [productos, setProductos] = useState([]);
@@ -26,7 +26,7 @@ const AdministradorProductos = () => {
         <div className="table-responsive">
           <div className="d-flex justify-content-around  my-3 text-light">
             <h3>Listado de Productos</h3>
-            <Button variant="outline-info">Agregar</Button>
+            <Link className="btn btn-outline-info" to='/administrador/crearProd'>Agregar</Link>
           </div>
           <Table striped bordered hover variant="dark">
             <thead>
@@ -42,8 +42,9 @@ const AdministradorProductos = () => {
               </tr>
             </thead>
             <tbody>
-                {productos.map((producto)=><TablaProducto key={producto.id} producto={producto}/>)}
-              
+              {productos.map((producto) => (
+                <TablaProducto key={producto.id} producto={producto} />
+              ))}
             </tbody>
           </Table>
         </div>
