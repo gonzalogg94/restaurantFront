@@ -67,8 +67,8 @@ const Registro = () => {
                     message: "Debe ingresar como mínimo 2 caracteres",
                   },
                   maxLength: {
-                    value: 50,
-                    message: "Existe un máximo 50 caracteres",
+                    value: 20,
+                    message: "Existe un máximo 20 caracteres",
                   },
                 })}
               />
@@ -89,8 +89,8 @@ const Registro = () => {
                     message: "Debe ingresar como mínimo 2 caracteres",
                   },
                   maxLength: {
-                    value: 50,
-                    message: "Existe un máximo 50 caracteres",
+                    value: 20,
+                    message: "Existe un máximo 20 caracteres",
                   },
                 })}
               />

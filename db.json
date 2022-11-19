@@ -2,42 +2,6 @@
   "usuarios": [
     {
       "nombreUsuario": "Enzo",
-      "email": "enzo@gmail.com",
-      "contrasena": "123456789",
-      "id": 1
-    },
-    {
-      "nombreUsuario": "Alejandro",
-      "email": "alejandro@gmail.com",
-      "contrasena": "123456789",
-      "id": 2
-    },
-    {
-      "nombreUsuario": "Romina",
-      "email": "romina@gmail.com",
-      "contrasena": "123456789",
-      "id": 3
-    },
-    {
-      "nombreUsuario": "Dario",
-      "email": "dgallardo@gmail.com",
-      "contrasena": "Dgallardo1234",
-      "id": 5
-    },
-    {
-      "nombreUsuario": "Jorge",
-      "email": "jfenino@gmail.com",
-      "contrasena": "Jfenino12345",
-      "id": 6
-    },
-    {
-      "nombreUsuario": "Clara",
-      "email": "cdecima@gmail.com",
-      "contrasena": "123qweFGt",
-      "id": 7
-    },
-    {
-      "nombreUsuario": "Enzo",
       "apellido": "Heredia",
       "email": "enzo@gmail.com",
       "contrasena": "123456789",
@@ -56,6 +20,20 @@
       "email": "leandrito@gmail.com",
       "contrasena": "Leandrio1234",
       "id": 10
+    },
+    {
+      "nombreUsuario": "Kike",
+      "apellido": "Heredia",
+      "email": "kiketuch@gmail.com",
+      "contrasena": "1234Aidjfk",
+      "id": 11
+    },
+    {
+      "nombreUsuario": "Enzo Alejandro",
+      "apellido": "Heredia",
+      "email": "eaheredia292@gmail.com",
+      "contrasena": "Enzo1235",
+      "id": 12
     }
   ]
 }

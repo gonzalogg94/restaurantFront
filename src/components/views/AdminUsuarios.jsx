@@ -34,12 +34,12 @@ const AdminUsuarios = () => {
             <Table striped bordered hover variant="dark">
               <thead>
                 <tr>
-                  <th>id</th>
-                  <th> nombreUsuario</th>
-                  <th> apellido</th>
-                  <th> e-mail</th>
-                  <th> contraseña</th>
-                  <th> opciones</th>
+                  <th>Id</th>
+                  <th> Nombre de Usuario</th>
+                  <th> Apellido</th>
+                  <th> E-mail</th>
+                  <th> Contraseña</th>
+                  <th> Opciones</th>
                 </tr>
               </thead>
               <tbody>
