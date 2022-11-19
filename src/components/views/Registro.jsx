@@ -16,6 +16,7 @@ const Registro = () => {
   } = useForm({
     defaultValues: {
       nombreUsuario: "",
+      apellido:"",
       email: "",
       contrasena: "",
     },
@@ -58,7 +59,7 @@ const Registro = () => {
               <Form.Label>Nombre de Usuario</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Nombre y Apellido"
+                placeholder="Nombre"
                 {...register("nombreUsuario", {
                   required: "Este dato es obligatorio",
                   minLength: {
@@ -73,6 +74,28 @@ const Registro = () => {
               />
               <Form.Text className="text-warning">
                 {errors.nombreUsuario?.message}
+              </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formNombreUsuario">
+              <Form.Label>Apellido</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Apellido"
+                {...register("apellido", {
+                  required: "Este dato es obligatorio",
+                  minLength: {
+                    value: 2,
+                    message: "Debe ingresar como mínimo 2 caracteres",
+                  },
+                  maxLength: {
+                    value: 50,
+                    message: "Existe un máximo 50 caracteres",
+                  },
+                })}
+              />
+              <Form.Text className="text-warning">
+                {errors.apellido?.message}
               </Form.Text>
             </Form.Group>
 
