@@ -35,6 +35,27 @@
       "email": "cdecima@gmail.com",
       "contrasena": "123qweFGt",
       "id": 7
+    },
+    {
+      "nombreUsuario": "Enzo",
+      "apellido": "Heredia",
+      "email": "enzo@gmail.com",
+      "contrasena": "123456789",
+      "id": 8
+    },
+    {
+      "nombreUsuario": "Santiago",
+      "email": "santi@gmail.com",
+      "contrasena": "Santi1234gfdg",
+      "apellido": "Gonzalez",
+      "id": 9
+    },
+    {
+      "nombreUsuario": "Leandro",
+      "apellido": "Gonzalez",
+      "email": "leandrito@gmail.com",
+      "contrasena": "Leandrio1234",
+      "id": 10
     }
   ]
 }

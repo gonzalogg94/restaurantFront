@@ -5,6 +5,7 @@ const ItemUsuario = ( {usuario, setUsuarios} ) => {
         <tr>
         <td>{usuario.id}</td>
         <td>{usuario.nombreUsuario}</td>
+        <td>{usuario.apellido}</td>
         <td>{usuario.email}</td>
         <td>{usuario.contrasena}</td>
         <td>
