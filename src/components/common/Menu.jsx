@@ -29,6 +29,9 @@ const Menu = () => {
               <NavLink end className="nav-item nav-link" to="/administrador">
                 Administrar
               </NavLink>
+              <NavLink end className="nav-item nav-link" to="/administrador">
+                Usuarios
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
