@@ -1,13 +1,6 @@
 {
   "usuarios": [
     {
-      "nombreUsuario": "Enzo",
-      "apellido": "Heredia",
-      "email": "enzo@gmail.com",
-      "contrasena": "123456789",
-      "id": 8
-    },
-    {
       "nombreUsuario": "Santiago",
       "email": "santi@gmail.com",
       "contrasena": "Santi1234gfdg",
@@ -34,6 +27,13 @@
       "email": "eaheredia292@gmail.com",
       "contrasena": "Enzo1235",
       "id": 12
+    },
+    {
+      "nombreUsuario": "Clara",
+      "apellido": "Decima",
+      "email": "dClara@gmail.com",
+      "contrasena": "Clara1234",
+      "id": 13
     }
   ]
 }
