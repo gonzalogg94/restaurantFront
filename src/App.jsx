@@ -10,6 +10,7 @@ import CrearProducto from './components/views/producto/CrearProducto';
 import EditarProducto from './components/views/producto/EditarProducto';
 import Footer from './components/common/Footer';
 import Menu from './components/common/Menu';
+import DetalleProducto from './components/views/DetalleProducto';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
  <Route exact path='/administrador' element={<AdministradorProductos/>} />
  <Route exact path='/administrador/crearProd' element={<CrearProducto/>} />
  <Route exact path='/administrador/editarProd/:id' element={<EditarProducto/>} />
+ <Route exact path='/detalles/producto/id' element={<DetalleProducto></DetalleProducto>} />
  </Routes>
  <Footer></Footer>
  </BrowserRouter>
