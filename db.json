@@ -35,6 +35,18 @@
       "email": "cdecima@gmail.com",
       "contrasena": "123qweFGt",
       "id": 7
+    },
+    {
+      "nombreUsuario": "Hugo",
+      "email": "hugo@gmail.com",
+      "contrasena": "assa54548A",
+      "id": 8
+    },
+    {
+      "nombreUsuario": "Kike",
+      "email": "kiketuch@gmail.com",
+      "contrasena": "Kiketuch440",
+      "id": 9
     }
   ]
 }
