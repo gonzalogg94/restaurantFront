@@ -21,7 +21,6 @@ const ItemUsuario = ( {usuario, setUsuarios} ) => {
                 borrarUserAPI(usuario.id).then((respuesta)=>{
                     if(respuesta.status === 200){
                         consultarUsersAPI().then((respuesta)=>{
-                            console.log(respuesta)
                             setUsuarios(respuesta)
                         })
                         Swal.fire(
