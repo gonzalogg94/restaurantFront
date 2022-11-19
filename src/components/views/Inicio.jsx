@@ -1,5 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Inicio = () => {
   return (
@@ -61,7 +62,8 @@ const Inicio = () => {
       </article>
       {/* card */}
       <article class=" row  container-fluid justify-content-center">
-        <aside class="card card--1 m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        <Link class="card card--1 m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        <aside>
           <div class="card__info-hover">
             <div class="card__clock-info"></div>
           </div>
@@ -79,7 +81,9 @@ const Inicio = () => {
             </h3>
           </div>
         </aside>
-        <aside class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        </Link>
+        <Link class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3 d">
+        <aside>
           <div class="card__img"></div>
           <a href="#" class="card_link">
             <div class="card__img--hover"></div>
@@ -89,7 +93,9 @@ const Inicio = () => {
             <h3 class="card__title">Los mejores cortes de carne</h3>
           </div>
         </aside>
-        <aside class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        </Link>
+        <Link class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        <aside >
           <div class="card__img"></div>
           <a href="#" class="card_link">
             <div class="card__img--hover"></div>
@@ -101,7 +107,9 @@ const Inicio = () => {
             </h3>
           </div>
         </aside>
-        <aside class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        </Link>
+        <Link class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
+        <aside >
           <div class="card__img"></div>
           <a href="#" class="card_link">
             <div class="card__img--hover"></div>
@@ -111,6 +119,7 @@ const Inicio = () => {
             <h3 class="card__title">Postres artesanales</h3>
           </div>
         </aside>
+        </Link>
       </article>
       {/* card */}
       <Container>
