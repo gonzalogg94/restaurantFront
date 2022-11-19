@@ -29,7 +29,7 @@ const Menu = () => {
               <NavLink end className="nav-item nav-link" to="/administrador">
                 Administrar
               </NavLink>
-              <NavLink end className="nav-item nav-link" to="/administrador">
+              <NavLink end className="nav-item nav-link" to="/adminUsuarios">
                 Usuarios
               </NavLink>
             </Nav>

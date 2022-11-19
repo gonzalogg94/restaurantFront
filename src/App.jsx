@@ -11,6 +11,8 @@ import EditarProducto from './components/views/producto/EditarProducto';
 import Footer from './components/common/Footer';
 import Menu from './components/common/Menu';
 import DetalleProducto from './components/views/DetalleProducto';
+import Registro from './components/views/Registro';
+import AdminUsuarios from './components/views/AdminUsuarios';
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
  <Route exact path='/administrador/crearProd' element={<CrearProducto/>} />
  <Route exact path='/administrador/editarProd/:id' element={<EditarProducto/>} />
  <Route exact path='/detalles/producto/id' element={<DetalleProducto></DetalleProducto>} />
+ <Route exact path='/administrador/editarProd' element={<EditarProducto/>} />
+ <Route exact path='/registro' element={<Registro/>} />
+ <Route exact path='/adminUsuarios' element={<AdminUsuarios/>} />
  </Routes>
  <Footer></Footer>
  </BrowserRouter>
