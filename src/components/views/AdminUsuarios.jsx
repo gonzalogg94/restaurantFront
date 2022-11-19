@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
 import { consultarUsersAPI } from "../helpers/queries";
 import ItemUsuario from "./usuario/ItemUsuario";
+import { Link } from "react-router-dom";
 
 const AdminUsuarios = () => {
     
@@ -29,7 +29,7 @@ const AdminUsuarios = () => {
           <div className="table-responsive">
             <div className="d-flex justify-content-around  my-3 text-light">
               <h3>Listado de Usuarios</h3>
-              <Button variant="outline-info">Agregar</Button>
+              <Link className="btn btn-success" variant="outline-info" to="/registro">Agregar</Link>
             </div>
             <Table striped bordered hover variant="dark">
               <thead>

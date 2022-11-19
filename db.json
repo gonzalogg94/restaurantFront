@@ -10,7 +10,13 @@
             "nombreUsuario":"Alejandro",
             "email":"alejandro@gmail.com",
             "contrasena":"123456789",
-            "id":1
+            "id":2
+        },
+        {
+            "nombreUsuario":"Romina",
+            "email":"romina@gmail.com",
+            "contrasena":"123456789",
+            "id":3
         }
     ]
 
