@@ -1,23 +1,46 @@
 {
-    "usuarios":[
-        {
-            "nombreUsuario":"Enzo",
-            "email":"enzo@gmail.com",
-            "contrasena":"123456789",
-            "id":1
-        },
-        {
-            "nombreUsuario":"Alejandro",
-            "email":"alejandro@gmail.com",
-            "contrasena":"123456789",
-            "id":2
-        },
-        {
-            "nombreUsuario":"Romina",
-            "email":"romina@gmail.com",
-            "contrasena":"123456789",
-            "id":3
-        }
-    ]
-
+  "usuarios": [
+    {
+      "nombreUsuario": "Enzo",
+      "email": "enzo@gmail.com",
+      "contrasena": "123456789",
+      "id": 1
+    },
+    {
+      "nombreUsuario": "Alejandro",
+      "email": "alejandro@gmail.com",
+      "contrasena": "123456789",
+      "id": 2
+    },
+    {
+      "nombreUsuario": "Romina",
+      "email": "romina@gmail.com",
+      "contrasena": "123456789",
+      "id": 3
+    },
+    {
+      "email": "hugo@gmail.com",
+      "nombreUsuario": "Hugo",
+      "contrasena": "123456789aQ",
+      "id": 4
+    },
+    {
+      "nombreUsuario": "Dario",
+      "email": "dgallardo@gmail.com",
+      "contrasena": "Dgallardo1234",
+      "id": 5
+    },
+    {
+      "nombreUsuario": "Jorge",
+      "email": "jfenino@gmail.com",
+      "contrasena": "Jfenino12345",
+      "id": 6
+    },
+    {
+      "nombreUsuario": "Clara",
+      "email": "cdecima@gmail.com",
+      "contrasena": "123qweFGt",
+      "id": 7
+    }
+  ]
 }

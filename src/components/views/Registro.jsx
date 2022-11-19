@@ -2,21 +2,46 @@ import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
+import { crearUserAPI } from "../helpers/queries";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Registro = () => {
+    
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     defaultValues: {
-      usuario: "",
+      nombreUsuario: "",
       email: "",
       contrasena: "",
     },
   });
+
+  const navegacion = useNavigate()
+
   const onSubmit = (datos) => {
+    //datos validados
     console.log(datos);
+    crearUserAPI(datos).then((respuesta) => {
+      if (respuesta.status === 201) {
+        //se crea el producto
+        Swal.fire(
+          "Producto creado",
+          "El producto fue creado correctamente",
+          "success"
+        );
+        reset();
+        //redireccionamiento
+        navegacion('/menu');
+      } else {
+        //mostrar mensaje de error al usuario
+        Swal.fire("Ocurrio un error", "Vuelva a intentarlo más tarde", "error");
+      }
+    });
     console.log("desde nuestra funcion submit");
   };
 
@@ -34,7 +59,7 @@ const Registro = () => {
               <Form.Control
                 type="text"
                 placeholder="Nombre y Apellido"
-                {...register("usuario", {
+                {...register("nombreUsuario", {
                   required: "Este dato es obligatorio",
                   minLength: {
                     value: 2,
@@ -47,7 +72,7 @@ const Registro = () => {
                 })}
               />
               <Form.Text className="text-warning">
-                {errors.usuario?.message}
+                {errors.nombreUsuario?.message}
               </Form.Text>
             </Form.Group>
 
@@ -56,9 +81,6 @@ const Registro = () => {
               <Form.Control
                 type="email"
                 placeholder="nombre@ejemplo.com"
-                // required
-                // minLength={10}
-                // maxLength={100}
                 {...register("email", {
                   required: "Este dato es obligatorio",
                   minLength: {
@@ -82,10 +104,7 @@ const Registro = () => {
               <Form.Control
                 type="password"
                 placeholder="Password"
-                // required
-                // min={8}
-                // max={30}
-                {...register("pass", {
+                {...register("contrasena", {
                   required: "Este valor es obligatorio",
                   minLength: {
                     value: 8,
@@ -103,7 +122,7 @@ const Registro = () => {
                 })}
               />
               <Form.Text className="text-warning">
-                {errors.pass?.message}
+                {errors.contrasena?.message}
               </Form.Text>
             </Form.Group>
 
