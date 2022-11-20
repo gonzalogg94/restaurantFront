@@ -13,8 +13,14 @@ import Menu from './components/common/Menu';
 import DetalleProducto from './components/views/DetalleProducto';
 import Registro from './components/views/Registro';
 import AdminUsuarios from './components/views/AdminUsuarios';
+import Login from './components/views/Login';
+import { useState } from 'react';
 
 function App() {
+  const usuario = JSON.parse(localStorage.getItem("tokenUsuario")) || [];
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
+
+
   return (
  <BrowserRouter>
  <Menu></Menu>
@@ -29,6 +35,7 @@ function App() {
  <Route exact path='/administrador/editarProd' element={<EditarProducto/>} />
  <Route exact path='/registro' element={<Registro/>} />
  <Route exact path='/adminUsuarios' element={<AdminUsuarios/>} />
+ <Route exact path='/login' element={<Login setUsuarioLogueado={setUsuarioLogueado}/>} />
  </Routes>
  <Footer></Footer>
  </BrowserRouter>

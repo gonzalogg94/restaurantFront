@@ -254,6 +254,12 @@ li {
 /*Footer*/
 .stylesFooter{
   background-color: #2C503B;
+  min-height: 100uh;
+  display: flex;
+  flex-direction: column;
+}
+.mainSection{
+  flex-grow: 1;
 }
 
 /* media queries */
