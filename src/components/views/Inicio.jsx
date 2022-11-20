@@ -68,9 +68,9 @@ const Inicio = () => {
               <div class="card__clock-info"></div>
             </div>
             <div class="card__img"></div>
-            <a href="#" class="card_link">
+            <Link href="#" class="card_link">
               <div class="card__img--hover"></div>
-            </a>
+            </Link>
             <div class="card__info">
               <span class="card__category">Pastas</span>
               <h3 class="card__title">
@@ -82,9 +82,9 @@ const Inicio = () => {
         <Link class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3  text-decoration-none text-black " to={'/menu'}>
           <aside>
             <div class="card__img"></div>
-            <a href="#" class="card_link">
+            <Link href="#" class="card_link">
               <div class="card__img--hover"></div>
-            </a>
+            </Link>
             <div class="card__info">
               <span class="card__category">Parilla</span>
               <h3 class="card__title">Los mejores cortes de carne</h3>
@@ -94,9 +94,9 @@ const Inicio = () => {
         <Link class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black" to={'/menu'}>
           <aside>
             <div class="card__img"></div>
-            <a href="#" class="card_link">
+            <Link href="#" class="card_link">
               <div class="card__img--hover"></div>
-            </a>
+            </Link>
             <div class="card__info">
               <span class="card__category">Vinos</span>
               <h3 class="card__title">
@@ -108,9 +108,9 @@ const Inicio = () => {
         <Link class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black " to={'/menu'}>
           <aside>
             <div class="card__img"></div>
-            <a href="#" class="card_link">
+            <Link href="#" class="card_link">
               <div class="card__img--hover"></div>
-            </a>
+            </Link>
             <div class="card__info">
               <span class="card__category">Postres</span>
               <h3 class="card__title">Postres artesanales</h3>
