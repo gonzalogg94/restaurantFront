@@ -35,6 +35,15 @@
       "categoria": "asado",
       "imagen": "https://static.americadigital.com/wp-content/uploads/2021/01/america_digital_papas_gratinadas_faciles_2020-1025x570.jpg",
       "id": 6
+    },
+    {
+      "nombreProducto": "Pizza",
+      "estado": "Disponible",
+      "precio": "500",
+      "detalle": "Pizza de uzzarella",
+      "categoria": "pasta",
+      "imagen": "https://img1.ak.crunchyroll.com/i/spire4/5568ffb263f6bcba85a639980b80dd9a1612993223_full.jpg",
+      "id": 7
     }
   ],
   "usuarios": [
@@ -74,11 +83,11 @@
       "id": 13
     },
     {
-      "nombreUsuario": "Susana",
-      "apellido": "Ocaranza",
-      "email": "susiO@gmail.com",
-      "contrasena": "Suci1234",
-      "id": 15
+      "nombreUsuario": "Romina",
+      "apellido": "Heredia",
+      "email": "Rheredia@gmail.com",
+      "contrasena": "1234Romi",
+      "id": 16
     }
   ]
 }

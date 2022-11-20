@@ -20,10 +20,12 @@ function App() {
   const usuario = JSON.parse(localStorage.getItem("tokenUsuario")) || [];
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
 
+  const saludo = JSON.parse(localStorage.getItem("saludo")) || [];
+  const [saludoNavbar, setSaludoNavbar] = useState(saludo);
 
   return (
  <BrowserRouter>
- <Menu></Menu>
+ <Menu saludoNavbar={saludoNavbar} setSaludoNavbar={setSaludoNavbar} usuarioLogueado={usuarioLogueado} setsetUsuarioLogueado={setUsuarioLogueado}></Menu>
  <Routes>
  <Route exact path='/' element={<Inicio></Inicio>}></Route>
  <Route exact path='/nosotros' element={<Nosotros></Nosotros>} />

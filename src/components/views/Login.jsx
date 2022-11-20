@@ -22,6 +22,11 @@ const Login = ({setUsuarioLogueado}) => {
             //almaceno el usuario en el state y localstorage
             localStorage.setItem("tokenUsuario", JSON.stringify(respuesta));
             setUsuarioLogueado(respuesta);
+
+            localStorage.getItem("tokenUsuario", JSON.stringify(respuesta));
+            const saludo = "Hola "+respuesta.apellido+", "+respuesta.nombreUsuario+"!!"
+            console.log(saludo)
+            localStorage.setItem("saludo", JSON.stringify(saludo))
             // si el usuario es correcto entonces redirecciono al admin
             navigate("/menu");
           } else {

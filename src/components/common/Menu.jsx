@@ -1,9 +1,21 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../components/img/Logo.png";
 import "../../components/style.css";
 
-const Menu = () => {
+const Menu = ({saludoNavbar, setSaludoNavbar, usuarioLogueado, setUsuarioLogueado}) => {
+
+const navegacion = useNavigate()
+
+const logout = ()=>{
+  //norrar el localstorage
+  localStorage.removeItem("tokenUsuario");
+  localStorage.removeItem("saludo");
+  setUsuarioLogueado({});
+  setSaludoNavbar("");
+  navegacion('/');
+}
+
   return (
     <section className="bgTransparente">
       <Container>
@@ -13,26 +25,41 @@ const Menu = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
+          <div className="text-light px-5 py-2">
+              {saludoNavbar}
+            </div>
             <Nav className="me-auto text-center">
               <NavLink end className="nav-item nav-link" to="/">
                 Inicio
               </NavLink>
-              <NavLink end className="nav-item nav-link" to="/login">
+
+              {usuarioLogueado.email ? (
+                <>
+                <NavLink end className="nav-item nav-link" to="/administrador">
+              Administrar
+            </NavLink>
+            <NavLink end className="nav-item nav-link" to="/adminUsuarios">
+              Usuarios
+            </NavLink>
+                <Button variant="danger" onClick={logout}>
+                Logout
+              </Button>
+                </>
+              ) : (
+                <>
+                <NavLink end className="nav-item nav-link" to="/login">
                 Login
               </NavLink>
               <NavLink end className="nav-item nav-link" to="/registro">
                 Registrarse
               </NavLink>
-              <NavLink end className="nav-item nav-link" to="/logout">
-                Logout
-              </NavLink>
-              <NavLink end className="nav-item nav-link" to="/administrador">
-                Administrar
-              </NavLink>
-              <NavLink end className="nav-item nav-link" to="/adminUsuarios">
-                Usuarios
-              </NavLink>
+                </>
+              )
+              }
+
+                
             </Nav>
+            
           </Navbar.Collapse>
         </Navbar>
       </Container>
