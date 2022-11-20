@@ -41,7 +41,7 @@ export const borrarProductoApi = async (id) => {
 
 export const obtenerProductoApi = async (id) => {
   try {
-    const respuesta = await fetch(`${url}/${id}`);
+    const respuesta = await fetch(url+'/'+id);
     const productoBuscado ={
       dato:await respuesta.json(),
       status: respuesta.status
@@ -55,7 +55,7 @@ export const obtenerProductoApi = async (id) => {
 
 export const editarProductoApi = async (id, datosActualizados) => {
   try {
-    const respuesta = await fetch(`${url}/${id}`, {
+    const respuesta = await fetch(url+'/'+id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
