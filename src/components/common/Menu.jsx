@@ -1,19 +1,20 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../../components/img/Logo.png";
 import "../../components/style.css";
 
 const Menu = ({saludoNavbar, setSaludoNavbar, usuarioLogueado, setUsuarioLogueado}) => {
 
-const navegacion = useNavigate()
-
-const logout = ()=>{
+  const navegar = useNavigate()
+  
+  const logout = ()=>{
   //norrar el localstorage
+  navegar("/");
   localStorage.removeItem("tokenUsuario");
   localStorage.removeItem("saludo");
   setUsuarioLogueado({});
   setSaludoNavbar("");
-  navegacion('/');
 }
 
   return (
@@ -28,11 +29,11 @@ const logout = ()=>{
           <div className="text-light px-5 py-2">
               {saludoNavbar}
             </div>
+ 
             <Nav className="me-auto text-center">
               <NavLink end className="nav-item nav-link" to="/">
                 Inicio
               </NavLink>
-
               {usuarioLogueado.email ? (
                 <>
                 <NavLink end className="nav-item nav-link" to="/administrador">
@@ -55,9 +56,7 @@ const logout = ()=>{
               </NavLink>
                 </>
               )
-              }
-
-                
+              }  
             </Nav>
             
           </Navbar.Collapse>

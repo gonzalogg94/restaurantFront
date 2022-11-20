@@ -110,30 +110,6 @@ export const borrarUserAPI = async (id)=>{
     }
 }
 
-// export const login = async (usuario)=>{
-//     try {
-//         //verificar si el usuario existe
-//         const respuesta = await fetch(URL);
-//         const listaUsuarios = await respuesta.json();
-//         //buscar cual usuario tiene el mail
-//         const usuarioBuscado = listaUsuarios.find((itemUsuario) => itemUsuario.email === usuario.email )
-//         if(usuarioBuscado){
-//             console.log('email encontrado')
-//             //verificar el password
-//             if(usuarioBuscado.contrasena === usuario.contrasena){
-//                 return usuarioBuscado
-//             }else{
-//                 console.log('el mail no existe')
-//                 return
-//             }
-//         } 
-//     } catch (error) {
-//         console.log('Errores en el login')
-//         return
-        
-//     }
-// }
-
 export const login = async (usuario) =>{
     try{
       //verificar si el usuario existe

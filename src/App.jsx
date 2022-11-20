@@ -37,7 +37,7 @@ function App() {
  <Route exact path='/administrador/editarProd' element={<EditarProducto/>} />
  <Route exact path='/registro' element={<Registro/>} />
  <Route exact path='/adminUsuarios' element={<AdminUsuarios/>} />
- <Route exact path='/login' element={<Login setUsuarioLogueado={setUsuarioLogueado}/>} />
+ <Route exact path='/login' element={<Login setUsuarioLogueado={setUsuarioLogueado} setSaludoNavbar={setSaludoNavbar}/>} />
  </Routes>
  <Footer></Footer>
  </BrowserRouter>

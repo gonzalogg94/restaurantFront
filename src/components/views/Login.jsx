@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { login } from '../helpers/queries';
 import { useForm } from 'react-hook-form';
 
-const Login = ({setUsuarioLogueado}) => {
+const Login = ({setUsuarioLogueado, setSaludoNavbar}) => {
 
     const navigate = useNavigate();
 
@@ -25,8 +25,8 @@ const Login = ({setUsuarioLogueado}) => {
 
             localStorage.getItem("tokenUsuario", JSON.stringify(respuesta));
             const saludo = "Hola "+respuesta.apellido+", "+respuesta.nombreUsuario+"!!"
-            console.log(saludo)
             localStorage.setItem("saludo", JSON.stringify(saludo))
+            setSaludoNavbar(saludo)
             // si el usuario es correcto entonces redirecciono al admin
             navigate("/menu");
           } else {
