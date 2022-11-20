@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { borrarProductoApi, consultarApi } from "../../helpers/queries";
 const TablaProducto = (props) => {
@@ -41,7 +42,7 @@ borrarProductoApi(props.producto.id).then((respuesta)=>{
       <td>{props.producto.imagen}</td>
       <td>
       <Button variant="none" onClick={borrarProducto} >  <i  className="bi bi-file-earmark-x-fill text-danger iconAdmin"></i></Button>
-      <Button variant="none" >  <i className="bi bi-file-earmark-diff-fill text-warning  iconAdmin"></i></Button>
+      <Link className="btn" to={"/administrador/editarProd/"+ props.producto.id}>  <i className="bi bi-file-earmark-diff-fill text-warning  iconAdmin"></i></Link>
           
         
          

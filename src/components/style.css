@@ -244,6 +244,23 @@ li {
   z-index: 5;
 }
 /* carrito */
+/* Background Navbar Transparente*/
+.bgTransparente{
+  background-color: #2C503B;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Footer*/
+.stylesFooter{
+  background-color: #2C503B;
+  min-height: 100uh;
+  display: flex;
+  flex-direction: column;
+}
+.mainSection{
+  flex-grow: 1;
+}
 
 /* media queries */
 @media all and (max-width: 767px) {
@@ -251,6 +268,7 @@ li {
     height: 250px;
     object-fit: cover;
   }
+
 }
 
 .iconAdmin{

@@ -1,5 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Inicio = () => {
   return (
@@ -61,13 +62,69 @@ const Inicio = () => {
       </article>
       {/* card */}
       <article class=" row  container-fluid justify-content-center">
+        <Link class="card card--1 m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black " to={'/menu'}>
+          <aside>
+            <div class="card__info-hover">
+              <div class="card__clock-info"></div>
+            </div>
+            <div class="card__img"></div>
+            <a href="#" class="card_link">
+              <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+              <span class="card__category">Pastas</span>
+              <h3 class="card__title">
+                Pastas caseras con la especialidad de la casa
+              </h3>
+            </div>
+          </aside>
+        </Link>
+        <Link class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3  text-decoration-none text-black " to={'/menu'}>
+          <aside>
+            <div class="card__img"></div>
+            <a href="#" class="card_link">
+              <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+              <span class="card__category">Parilla</span>
+              <h3 class="card__title">Los mejores cortes de carne</h3>
+            </div>
+          </aside>
+        </Link>
+        <Link class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black" to={'/menu'}>
+          <aside>
+            <div class="card__img"></div>
+            <a href="#" class="card_link">
+              <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+              <span class="card__category">Vinos</span>
+              <h3 class="card__title">
+                Las mejores elecciones estan en nuestra vinoteca
+              </h3>
+            </div>
+          </aside>
+        </Link>
+        <Link class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black " to={'/menu'}>
+          <aside>
+            <div class="card__img"></div>
+            <a href="#" class="card_link">
+              <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+              <span class="card__category">Postres</span>
+              <h3 class="card__title">Postres artesanales</h3>
+            </div>
+          </aside>
+        </Link>
         <aside class="card card--1 m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__info-hover">
             <div class="card__clock-info"></div>
           </div>
           <div class="card__img"></div>
           <a
-            href="#"
+            href="/"
+
             class="card_link"
           >
             <div class="card__img--hover"></div>
@@ -81,7 +138,7 @@ const Inicio = () => {
         </aside>
         <aside class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__img"></div>
-          <a href="#" class="card_link">
+          <a href="/" class="card_link">
             <div class="card__img--hover"></div>
           </a>
           <div class="card__info">
@@ -91,7 +148,7 @@ const Inicio = () => {
         </aside>
         <aside class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__img"></div>
-          <a href="#" class="card_link">
+          <a href="/" class="card_link">
             <div class="card__img--hover"></div>
           </a>
           <div class="card__info">
@@ -103,7 +160,7 @@ const Inicio = () => {
         </aside>
         <aside class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
           <div class="card__img"></div>
-          <a href="#" class="card_link">
+          <a href="/" class="card_link">
             <div class="card__img--hover"></div>
           </a>
           <div class="card__info">
