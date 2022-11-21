@@ -18,7 +18,7 @@ const ItemUsuario = ( {usuario, setUsuarios} ) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 //realizar consulta api
-                borrarUserAPI(usuario.id).then((respuesta)=>{
+                borrarUserAPI(usuario._id).then((respuesta)=>{
                     if(respuesta.status === 200){
                         consultarUsersAPI().then((respuesta)=>{
                             setUsuarios(respuesta)
@@ -42,7 +42,7 @@ const ItemUsuario = ( {usuario, setUsuarios} ) => {
 
     return (
         <tr>
-        <td>{usuario.id}</td>
+        <td>{usuario._id}</td>
         <td>{usuario.nombreUsuario}</td>
         <td>{usuario.apellido}</td>
         <td>{usuario.email}</td>
