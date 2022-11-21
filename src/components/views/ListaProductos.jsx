@@ -47,7 +47,9 @@ setProductos(respuesta)
         </div>
           <h2 className="text-center text-white">Pastas</h2>
         <article className="row my-5 justify-content-center container-fluid">
-        <CardProducto></CardProducto>
+        {
+          productos.map((producto)=>  <CardProducto key={producto._id} producto={producto}></CardProducto>)
+        }
         </article>
           <h2 className="text-center text-white mt-5">Parilla</h2>
           <article className="row my-5 justify-content-center container-fluid">
