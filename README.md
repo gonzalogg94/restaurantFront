@@ -37,4 +37,4 @@ Información útil para analizar este repositorio
 
 ## Autores
 
-- María Florencia Alonso (perfil de github o linkedin)
+- Alonso Mara Florencia, Alonso Mauricio Javier, Gallardo Carlos Gonzalo, Pereyra Jose Luis, Heredia Enzo Alejandro
