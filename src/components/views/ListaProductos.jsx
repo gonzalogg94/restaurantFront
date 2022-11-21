@@ -1,10 +1,19 @@
-
+import { useEffect, useState } from "react";
 import Badge from 'react-bootstrap/Badge';
 import { Link } from 'react-router-dom';
+import { consultarApi } from "../helpers/queries";
 import CardProducto from './producto/CardProducto';
 
 
+
 const ListaProductos = () => {
+  const [productos, setProductos] = useState([])
+  useEffect(()=>{
+    consultarApi().then((respuesta)=>{
+console.log(respuesta)
+setProductos(respuesta)
+    })
+  },[])
   return (
     <section className="fuente colorFondo">
       <div className='posicionBadge position-fixed'>
