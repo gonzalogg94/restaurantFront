@@ -33,7 +33,7 @@ function App() {
  <Route exact path='/administrador' element={<AdministradorProductos/>} />
  <Route exact path='/administrador/crearProd' element={<CrearProducto/>} />
  <Route exact path='/administrador/editarProd/:id' element={<EditarProducto/>} />
- <Route exact path='/detalles/producto/id' element={<DetalleProducto></DetalleProducto>} />
+ <Route exact path='/detalles/producto/:id' element={<DetalleProducto></DetalleProducto>} />
  <Route exact path='/administrador/editarProd' element={<EditarProducto/>} />
  <Route exact path='/registro' element={<Registro/>} />
  <Route exact path='/adminUsuarios' element={<AdminUsuarios/>} />
