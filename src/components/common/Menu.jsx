@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { Navbar, Nav, Container, Button, Col } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import logo from "../../components/img/Logo.png";
@@ -18,14 +18,21 @@ const Menu = ({saludoNavbar, setSaludoNavbar, usuarioLogueado, setUsuarioLoguead
 }
 
   return (
-    <section className="bgTransparente">
+    <section className="bgTransparente fuente fs-5  fw-bold">
       <Container>
-        <Navbar variant="dark" expand="lg" className="text-center">
-          <Navbar.Brand className="text-start mx-0 px-0" as={Link} to="/">
-            <img src={logo} alt="Logo" className="w-50" />
+        <Navbar variant="dark" expand="lg" className="row m-0 p-0">
+
+          <Col lg={6} className="text-center">
+          <Navbar.Brand className="text-start m-0 p-0 " as={Link} to="/">
+            <img src={logo} alt="Logo" className="w-50 m-0 p-0" />
           </Navbar.Brand>
+          </Col>
+
+
+          <Col lg={6} className="text-center pb-3">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
+
           <div className="text-light px-5 py-2">
               {saludoNavbar}
             </div>
@@ -60,6 +67,7 @@ const Menu = ({saludoNavbar, setSaludoNavbar, usuarioLogueado, setUsuarioLoguead
             </Nav>
             
           </Navbar.Collapse>
+          </Col>
         </Navbar>
       </Container>
     </section>
