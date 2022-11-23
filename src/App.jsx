@@ -16,6 +16,9 @@ import Login from './components/views/Login';
 import { useState } from 'react';
 import ListaEntradas from './components/views/ListaEntradas';
 import ListaPlatoPrincipal from './components/views/ListaPlatoPrincipal';
+import ListaPostres from './components/views/ListaPostres';
+import ListaBebidas from './components/views/ListaBebidas';
+import ListaAperitivos from './components/views/ListaAperitivos';
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("tokenUsuario")) || [];
@@ -32,6 +35,9 @@ function App() {
  <Route exact path='/nosotros' element={<Nosotros></Nosotros>} />
  <Route exact path='/entradas' element={<ListaEntradas></ListaEntradas>} />
  <Route exact path='/platos-principales' element={<ListaPlatoPrincipal></ListaPlatoPrincipal>} />
+ <Route exact path='/postres' element={<ListaPostres></ListaPostres>} />
+ <Route exact path='/bebidas' element={<ListaBebidas></ListaBebidas>} />
+ <Route exact path='/aperitivos' element={<ListaAperitivos></ListaAperitivos>} />
  <Route exact path='/administrador' element={<AdministradorProductos/>} />
  <Route exact path='/administrador/crearProd' element={<CrearProducto/>} />
  <Route exact path='/administrador/editarProd/:id' element={<EditarProducto/>} />

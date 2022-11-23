@@ -99,13 +99,13 @@ const Inicio = () => {
         </Link>
         <Link
           class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black"
-          to={"/menu"}
+          to={"/postres"}
         >
           <aside>
             <div class="card__img"></div>
-            <Link href="#" class="card_link">
-              <div class="card__img--hover"></div>
-            </Link>
+
+            <div class="card__img--hover"></div>
+
             <div class="card__info">
               <span class="card__category">Postres</span>
               <h3 class="card__title">Las mejores postres artesanales</h3>
@@ -114,13 +114,13 @@ const Inicio = () => {
         </Link>
         <Link
           class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black "
-          to={"/menu"}
+          to={"/bebidas"}
         >
           <aside>
             <div class="card__img"></div>
-            <Link href="#" class="card_link">
-              <div class="card__img--hover"></div>
-            </Link>
+
+            <div class="card__img--hover"></div>
+
             <div class="card__info">
               <span class="card__category">Bebidas</span>
               <h3 class="card__title">
@@ -132,13 +132,13 @@ const Inicio = () => {
         </Link>
         <Link
           class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black "
-          to={"/menu"}
+          to={"/aperitivos"}
         >
           <aside>
             <div class="card__img"></div>
-            <Link href="#" class="card_link">
-              <div class="card__img--hover"></div>
-            </Link>
+
+            <div class="card__img--hover"></div>
+
             <div class="card__info">
               <span class="card__category">Aperitivos</span>
               <h3 class="card__title">
