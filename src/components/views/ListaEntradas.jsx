@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import Badge from "react-bootstrap/Badge";
 import { Link } from "react-router-dom";
-import { consultarApi} from "../helpers/queries";
+import { consultarApi } from "../helpers/queries";
 import CardProducto from "./producto/CardProducto";
 
 const ListaEntradas = () => {
@@ -9,7 +8,9 @@ const ListaEntradas = () => {
   useEffect(() => {
     consultarApi().then((respuesta) => {
       console.log(respuesta);
-      setProductos(respuesta.filter(producto=>producto.categoria==="Entrada"));
+      setProductos(
+        respuesta.filter((producto) => producto.categoria === "Entrada")
+      );
     });
   }, []);
   return (
@@ -19,24 +20,29 @@ const ListaEntradas = () => {
         <aside class="col-lg-2 col-md-2 fondoLateral esconder">
           <div class="sidebar d-none d-md-grid col-md-2 col-lg-2 text-light">
             <ul class="list-group mt-5">
-              <Link className="text-decoration-none">
+              <Link className="text-decoration-none d-none">
                 <li class="list-group-item listSidebar">
-                  <a href="#pastas">Pastas</a>
+                  <a href="#Entradas">Entradas</a>
                 </li>
               </Link>
-              <Link className="text-decoration-none">
+              <Link className="text-decoration-none" to={"/platos-principales"}>
                 <li class="list-group-item listSidebar">
-                  <a href="#parrilla">Parilla</a>
+                  <a href="#PlatoPrincipal">Plato Principal</a>
                 </li>
               </Link>
-              <Link className="text-decoration-none">
+              <Link className="text-decoration-none" to={"/postres"}>
                 <li class="list-group-item listSidebar">
-                  <a href="#vinos">Vinos</a>
+                  <a href="#Postres">Postres</a>
                 </li>
               </Link>
-              <Link className="text-decoration-none">
+              <Link className="text-decoration-none" to={"/bebidas"}>
                 <li class="list-group-item listSidebar">
-                  <a href="#postres">Postres</a>
+                  <a href="#postres">Bebidas</a>
+                </li>
+              </Link>
+              <Link className="text-decoration-none" to={"/aperitivos"}>
+                <li class="list-group-item listSidebar">
+                  <a href="#postres">Aperivos</a>
                 </li>
               </Link>
             </ul>
