@@ -1,8 +1,15 @@
+import { useEffect } from "react";
 import { Container } from "react-bootstrap";
+import { consultarPedidosApi } from "../helpers/queries";
 import CardPedidos from "./pedidos/CardPedidos";
 
 
-const pedidosAdmin = () => {
+const PedidosAdmin = () => {
+
+    useEffect(() => {
+     consultarPedidosApi()
+    }, [])
+    
     return (
         <section className="colorFondo">
       <Container >
@@ -17,4 +24,4 @@ const pedidosAdmin = () => {
     );
 };
 
-export default pedidosAdmin;
+export default PedidosAdmin;
