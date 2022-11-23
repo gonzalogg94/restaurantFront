@@ -1,20 +1,20 @@
 {
   "productos": [
     {
-      "nombreProducto": "asado 2",
-      "estado": "en stock",
-      "precio": "18",
+      "nombreProducto": "asado 2 v3prueba",
+      "estado": "modificamos datos",
+      "precio": "1845",
       "detalle": "dghgsfdghd",
       "categoria": "asado",
       "imagen": "https://react-bootstrap.github.io/components/buttons/",
       "id": 3
     },
     {
-      "nombreProducto": "pasta casera modificada x cara",
-      "estado": "En stock porque nadie compra",
-      "precio": "1580",
-      "detalle": "pasta de los chinos que se hace con perros",
-      "categoria": "pasta",
+      "nombreProducto": "pasta casera modificada para probar de nuevo",
+      "estado": "test para ver editar",
+      "precio": "999",
+      "detalle": "pasta de los chinos que se hace con perros y gatos",
+      "categoria": "postre",
       "imagen": "https://mail.google.com/mail/u/0/#inbox",
       "id": 4
     },
