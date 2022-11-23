@@ -142,8 +142,8 @@ const urlPedidos = "http://localhost:4000/apirestaurante/pe/pedidos";
 export const consultarPedidosApi = async()=>{  
   try {
    const respuesta = await fetch(urlPedidos);
-  const listaProductos = await respuesta.json();
-  return listaProductos;
+  const listaPedidos = await respuesta.json();
+  return listaPedidos;
 } catch (error) {
   console.log(error);
 }};
