@@ -37,4 +37,13 @@ Información útil para analizar este repositorio
 
 ## Autores
 
-- Alonso Mara Florencia, Alonso Mauricio Javier, Gallardo Carlos Gonzalo, Pereyra Jose Luis, Heredia Enzo Alejandro
+- Alonso Mara Florencia 
+- Alonso Mauricio Javier
+-  Gallardo Carlos Gonzalo
+-  Pereyra Jose Luis
+-  Heredia Enzo Alejandro
+
+
+
+
+mensaje de prueba 

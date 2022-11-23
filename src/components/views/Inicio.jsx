@@ -62,112 +62,91 @@ const Inicio = () => {
       </article>
       {/* card */}
       <article class=" row  container-fluid justify-content-center">
-        <Link class="card card--1 m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black " to={'/menu'}>
+        <Link
+          class="card card--1 m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black "
+          to={"/entradas"}
+        >
           <aside>
             <div class="card__info-hover">
               <div class="card__clock-info"></div>
             </div>
             <div class="card__img"></div>
-            <Link href="#" class="card_link">
-              <div class="card__img--hover"></div>
-            </Link>
+
+            <div class="card__img--hover"></div>
+
             <div class="card__info">
-              <span class="card__category">Pastas</span>
+              <span class="card__category">Entradas</span>
               <h3 class="card__title">
-                Pastas caseras con la especialidad de la casa
+                Las mejores entradas de nuestra carta para iniciar tus comidas
               </h3>
             </div>
           </aside>
         </Link>
-        <Link class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3  text-decoration-none text-black " to={'/menu'}>
+        <Link
+          class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3  text-decoration-none text-black "
+          to={"/platos-principales"}
+        >
           <aside>
             <div class="card__img"></div>
-            <Link href="#" class="card_link">
-              <div class="card__img--hover"></div>
-            </Link>
+
+            <div class="card__img--hover"></div>
+
             <div class="card__info">
-              <span class="card__category">Parilla</span>
-              <h3 class="card__title">Los mejores cortes de carne</h3>
+              <span class="card__category">Plato Principal</span>
+              <h3 class="card__title">Tenemos las mejores opciones para vos</h3>
             </div>
           </aside>
         </Link>
-        <Link class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black" to={'/menu'}>
+        <Link
+          class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black"
+          to={"/postres"}
+        >
           <aside>
             <div class="card__img"></div>
-            <Link href="#" class="card_link">
-              <div class="card__img--hover"></div>
-            </Link>
-            <div class="card__info">
-              <span class="card__category">Vinos</span>
-              <h3 class="card__title">
-                Las mejores elecciones estan en nuestra vinoteca
-              </h3>
-            </div>
-          </aside>
-        </Link>
-        <Link class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black " to={'/menu'}>
-          <aside>
-            <div class="card__img"></div>
-            <Link href="#" class="card_link">
-              <div class="card__img--hover"></div>
-            </Link>
+
+            <div class="card__img--hover"></div>
+
             <div class="card__info">
               <span class="card__category">Postres</span>
-              <h3 class="card__title">Postres artesanales</h3>
+              <h3 class="card__title">Las mejores postres artesanales</h3>
             </div>
           </aside>
         </Link>
-        <aside class="card card--1 m-2 w-25 col-sm-6 col-md-6 col-lg-3">
-          <div class="card__info-hover">
-            <div class="card__clock-info"></div>
-          </div>
-          <div class="card__img"></div>
-          <a
-            href="/"
+        <Link
+          class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black "
+          to={"/bebidas"}
+        >
+          <aside>
+            <div class="card__img"></div>
 
-            class="card_link"
-          >
             <div class="card__img--hover"></div>
-          </a>
-          <div class="card__info">
-            <span class="card__category">Pastas</span>
-            <h3 class="card__title">
-              Pastas caseras con la especialidad de la casa
-            </h3>
-          </div>
-        </aside>
-        <aside class="card card--2  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
-          <div class="card__img"></div>
-          <a href="/" class="card_link">
+
+            <div class="card__info">
+              <span class="card__category">Bebidas</span>
+              <h3 class="card__title">
+                Contamos con una gran variedad de vinos para acompañar tus
+                comidas
+              </h3>
+            </div>
+          </aside>
+        </Link>
+        <Link
+          class="card card--5  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black "
+          to={"/aperitivos"}
+        >
+          <aside>
+            <div class="card__img"></div>
+
             <div class="card__img--hover"></div>
-          </a>
-          <div class="card__info">
-            <span class="card__category">Parilla</span>
-            <h3 class="card__title">Los mejores cortes de carne</h3>
-          </div>
-        </aside>
-        <aside class="card card--3  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
-          <div class="card__img"></div>
-          <a href="/" class="card_link">
-            <div class="card__img--hover"></div>
-          </a>
-          <div class="card__info">
-            <span class="card__category">Vinos</span>
-            <h3 class="card__title">
-              Las mejores elecciones estan en nuestra vinoteca
-            </h3>
-          </div>
-        </aside>
-        <aside class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3">
-          <div class="card__img"></div>
-          <a href="/" class="card_link">
-            <div class="card__img--hover"></div>
-          </a>
-          <div class="card__info">
-            <span class="card__category">Postres</span>
-            <h3 class="card__title">Postres artesanales</h3>
-          </div>
-        </aside>
+
+            <div class="card__info">
+              <span class="card__category">Aperitivos</span>
+              <h3 class="card__title">
+                Contamos con los mejores aperitivos del pais
+              </h3>
+            </div>
+          </aside>
+        </Link>
       </article>
       {/* card */}
       <Container>
