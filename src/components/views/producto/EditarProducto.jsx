@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 const EditarProducto = () => {
+  const {id}= useParams();
   const {
     register,
     handleSubmit,
@@ -16,23 +17,24 @@ const EditarProducto = () => {
     setValue
   } = useForm();
   
-  const {id}= useParams();
   console.log(id);
  
   const navegar = useNavigate();
   useEffect(() => {
- obtenerProductoApi(id).then((respuesta)=>{
-  
-  setValue("nombreProducto", respuesta.dato.nombreProducto)
-  setValue("estado", respuesta.dato.estado)
-  setValue("precio", respuesta.dato.precio)
-  setValue("detalle", respuesta.dato.detalle)
-  setValue("categoria", respuesta.dato.categoria)
-  setValue("imagen", respuesta.dato.imagen)
-  console.log(respuesta);
-  
- })
- }, [])
+        obtenerProductoApi(id).then((respuesta)=>{
+            if(respuesta.status===200){
+            setValue("nombreProducto", respuesta.dato.nombreProducto)
+            setValue("estado", respuesta.dato.estado)
+            setValue("precio", respuesta.dato.precio)
+            setValue("detalle", respuesta.dato.detalle)
+            setValue("categoria", respuesta.dato.categoria)
+            setValue("imagen", respuesta.dato.imagen)
+            console.log(respuesta);
+      }else{
+        Swal.fire('Ocurrio un error', 'Intente este paso en unos minutos', 'error')
+      }
+    })
+  },[])
  
   
   const onSubmit = (producto)=>{
@@ -50,26 +52,26 @@ const EditarProducto = () => {
 
     return (
       <section className="colorFondo fuente text-light">
-      <Container>
-        <h2 className="display-3 text-center by-3">Agregar Producto Nuevo</h2>
+    <Container>
+        <h2 className="display-3 text-center by-3">Administración </h2>
         <hr />
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formNombreProdcuto">
             <Form.Label>Nombre producto</Form.Label>
             <Form.Control
               minLength={2}
-              maxLength={100}
+              maxLength={50}
               type="text"
               placeholder="Nombre del Producto"
               {...register("nombreProducto", {
                 required: "Este dato es obligatorio",
                 minLength: {
                   value: 2,
-                  message: "Caracteres Minimos 2",
+                  message: "Caracteres Mínimos 2",
                 },
                 maxLength: {
-                  value: 100,
-                  message: "Caracteres maximos 100",
+                  value: 50,
+                  message: "Caracteres máximos 50",
                 },
               })}
             />
@@ -88,11 +90,11 @@ const EditarProducto = () => {
                 required: "Este dato es obligatorio",
                 minLength: {
                   value: 2,
-                  message: "Caracteres Minimos 2",
+                  message: "Caracteres Mínimos 2",
                 },
                 maxLength: {
                   value: 50,
-                  message: "Caracteres maximos 2",
+                  message: "Caracteres máximos 50",
                 },
               })}
             />
@@ -104,7 +106,7 @@ const EditarProducto = () => {
             <Form.Label>Precio</Form.Label>
             <Form.Control
               min={1}
-              max={10000}
+              max={20000}
               type="number"
               placeholder="Ingrese el Precio"
               {...register("precio", {
@@ -114,8 +116,8 @@ const EditarProducto = () => {
                   message: "El precio debe ser igual o mayor a $1",
                 },
                 max: {
-                  value: 10000,
-                  message: "El precio debe ser igual o menor a $10.000",
+                  value: 20000,
+                  message: "El precio debe ser igual o menor a $20.000",
                 },
               })}
             />
@@ -147,17 +149,18 @@ const EditarProducto = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formCategoria">
-            <Form.Label>Categoria*</Form.Label>
+            <Form.Label>Categoria</Form.Label>
             <Form.Select
               {...register("categoria", {
                 required: "Debe seleccionar una categoria",
               })}
             >
-              <option value="">Seleccione una opcion</option>
-              <option value="bebida">Bebida </option>
-              <option value="asado">Asado</option>
-              <option value="pasta">Pasta</option>
-              <option value="postre">Postre</option>
+              <option value="">Seleccione una opción</option>
+              <option value="Entrada">Entrada</option>
+              <option value="Plato principal">Plato principal</option>
+              <option value="Postre">Postre</option>
+              <option value="Bebida">Bebida</option>
+              <option value="Aperitivo">Aperitivo</option>
             </Form.Select>
             <Form.Text className="text-warning">
               {errors.categoria?.message}

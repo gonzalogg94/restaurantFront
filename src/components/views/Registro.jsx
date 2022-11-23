@@ -3,11 +3,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
 import { crearUserAPI } from "../helpers/queries";
-import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-
-const Registro = () => {
-    
+import { useNavigate } from "react-router-dom";
+const Registro = () => { 
   const {
     register,
     handleSubmit,
@@ -19,32 +17,26 @@ const Registro = () => {
       apellido:"",
       email: "",
       contrasena: "",
+      estado:"",
+      perfil:"",
     },
   });
 
   const navegacion = useNavigate()
 
   const onSubmit = (datos) => {
-    //datos validados
     console.log(datos);
+    console.log("desde el evento onsubmit");
     crearUserAPI(datos).then((respuesta) => {
-      if (respuesta.status === 201) {
-        //se crea el producto
-        Swal.fire(
-          "Usuario Generado!",
-          "El usuario se creó correctamente",
-          "success"
-        );
+      if (respuesta.status === 201){
+      Swal.fire("Usuario Generado!","El usuario se creó correctamente","success");
         reset();
-        //redireccionamiento
-        navegacion('/menu');
+        navegacion('/login');
       } else {
-        //mostrar mensaje de error al usuario
-        Swal.fire("Ocurrio un error", "Vuelva a intentarlo más tarde", "error");
+      Swal.fire("Ocurrio un error", "Vuelva a intentarlo más tarde", "error");
       }
     });
-    console.log("desde nuestra funcion submit");
-  };
+   };
 
   return (
     <section className="colorFondo fuente text-light">
@@ -105,16 +97,11 @@ const Registro = () => {
                 type="email"
                 placeholder="nombre@ejemplo.com"
                 {...register("email", {
-                  required: "Este dato es obligatorio",
-                  minLength: {
-                    value: 10,
-                    message: "Debe cumplir con un mínimo de 10 caracteres",
-                  },
-                  maxLength: { value: 60, message: "Máximo de 60 caracteres" },
-                  pattern: {
-                    value: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/,
-                    message: "Introduzca un E-mail válido",
-                  },
+                     required:'El mail es obligatorio',
+                     pattern:{
+                     value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                     message:'Debe ingresar un mail válido.'
+               },
                 })}
               />
               <Form.Text className="text-warning">
@@ -128,26 +115,49 @@ const Registro = () => {
                 type="password"
                 placeholder="Password"
                 {...register("contrasena", {
-                  required: "Este valor es obligatorio",
-                  minLength: {
-                    value: 8,
-                    message: "Debe contener un mínimo de 8 caracteéres",
-                  },
-                  maxLength: {
-                    value: 16,
-                    message: "Existe un máximo de 16 caracteres",
-                  },
-                  pattern: {
-                    value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
-                    message:
-                      "La contraseña debe tener al menos un dígito, al menos una minúscula y al menos una mayúscula",
-                  },
-                })}
+                required:'Es obligatorio ingresar una password',
+                pattern:{
+                value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+                message:'La contraseña debe como minimo 8 caracteres y al menos una letra, un número y un símbolo especial.'
+               },
+               })}
               />
               <Form.Text className="text-warning">
                 {errors.contrasena?.message}
               </Form.Text>
             </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formEstado">
+            <Form.Label>Estado</Form.Label>
+            <Form.Select
+              {...register("estado", {
+                required: "Debe seleccionar un estado",
+              })}
+            >
+              <option value="">Seleccione una opción</option>
+              <option value="Activo">Activo</option>
+              <option value="Inactivo">Inactivo</option>
+            </Form.Select>
+            <Form.Text className="text-warning">
+              {errors.estado?.message}
+            </Form.Text>
+          </Form.Group>
+                    <Form.Group className="mb-3" controlId="formPerfil">
+            <Form.Label>Perfil</Form.Label>
+            <Form.Select
+              {...register("perfil", {
+                required: "Debe seleccionar un estado",
+              })}
+            >
+              <option value="">Seleccione una opción</option>
+              <option value="Cliente">Cliente</option>
+              <option value="Administrador">Administrador</option>
+            </Form.Select>
+            <Form.Text className="text-warning">
+              {errors.perfil?.message}
+            </Form.Text>
+          </Form.Group>
+
 
             <Button
               variant="outline-info"
