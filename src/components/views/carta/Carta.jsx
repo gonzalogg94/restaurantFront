@@ -1,3 +1,4 @@
+import MenuBebidas from "./MenuBebidas";
 import MenuEntradas from "./MenuEntradas";
 import MenuPlatoPrincipal from "./MenuPlatoPrincipal";
 import MenuPostres from "./MenuPostres";
@@ -12,6 +13,7 @@ const Carta = () => {
       <MenuEntradas></MenuEntradas>
       <MenuPlatoPrincipal></MenuPlatoPrincipal>
       <MenuPostres></MenuPostres>
+      <MenuBebidas></MenuBebidas>
     </section>
   );
 };
