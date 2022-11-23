@@ -20,7 +20,7 @@ const MenuEntradas = () => {
                 <h2>Menu Entradas</h2>
                 <hr />
             </div>
-        <article className="row my-5 justify-content-center container-fluid">
+        <article className="row justify-content-center container-fluid">
         {productos.map((producto) => (
             <CardProducto
             key={producto._id}
