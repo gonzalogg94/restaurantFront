@@ -1,15 +1,6 @@
 {
   "productos": [
     {
-      "nombreProducto": "asado 2 v3prueba",
-      "estado": "modificamos datos",
-      "precio": "1845",
-      "detalle": "dghgsfdghd",
-      "categoria": "asado",
-      "imagen": "https://react-bootstrap.github.io/components/buttons/",
-      "id": 3
-    },
-    {
       "nombreProducto": "pasta casera modificada para probar de nuevo",
       "estado": "test para ver editar",
       "precio": "999",
@@ -26,6 +17,75 @@
       "categoria": "bebida",
       "imagen": "https://ar.pinterest.com/pin/296182113005005181/?nic_v3=1a1dUDSqB",
       "id": 5
+    },
+    {
+      "nombreProducto": "Papas Gratinadas",
+      "estado": "Activo",
+      "precio": "350",
+      "detalle": "Papas gratinadas con queso musarella",
+      "categoria": "asado",
+      "imagen": "https://static.americadigital.com/wp-content/uploads/2021/01/america_digital_papas_gratinadas_faciles_2020-1025x570.jpg",
+      "id": 6
+    },
+    {
+      "nombreProducto": "Pizza",
+      "estado": "Disponible",
+      "precio": "500",
+      "detalle": "Pizza de uzzarella",
+      "categoria": "pasta",
+      "imagen": "https://img1.ak.crunchyroll.com/i/spire4/5568ffb263f6bcba85a639980b80dd9a1612993223_full.jpg",
+      "id": 7
+    }
+  ],
+  "usuarios": [
+    {
+      "nombreUsuario": "Santiago",
+      "email": "santi@gmail.com",
+      "contrasena": "Santi1234gfdg",
+      "apellido": "Gonzalez",
+      "id": 9
+    },
+    {
+      "nombreUsuario": "Leandro",
+      "apellido": "Gonzalez",
+      "email": "leandrito@gmail.com",
+      "contrasena": "Leandrio1234",
+      "id": 10
+    },
+    {
+      "nombreUsuario": "Kike",
+      "apellido": "Heredia",
+      "email": "kiketuch@gmail.com",
+      "contrasena": "1234Aidjfk",
+      "id": 11
+    },
+    {
+      "nombreUsuario": "Enzo Alejandro",
+      "apellido": "Heredia",
+      "email": "eaheredia292@gmail.com",
+      "contrasena": "Enzo1234",
+      "id": 12
+    },
+    {
+      "nombreUsuario": "Clara",
+      "apellido": "Decima",
+      "email": "dClara@gmail.com",
+      "contrasena": "Clara1234",
+      "id": 13
+    },
+    {
+      "nombreUsuario": "Romina",
+      "apellido": "Heredia",
+      "email": "Rheredia@gmail.com",
+      "contrasena": "1234Romi",
+      "id": 16
+    },
+    {
+      "nombreUsuario": "florencia",
+      "apellido": "alonso",
+      "email": "floralonso@gmail.com",
+      "contrasena": "Contador1$",
+      "id": 17
     }
   ]
 }
