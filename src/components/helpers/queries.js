@@ -134,3 +134,5 @@ export const login = async (usuario) => {
     return;
   }
 };
+
+const urlPedidos = "http://localhost:4000/apirestaurante/pe/pedidos";

@@ -20,6 +20,8 @@ import ListaPostres from './components/views/ListaPostres';
 import ListaBebidas from './components/views/ListaBebidas';
 import ListaAperitivos from './components/views/ListaAperitivos';
 import Carta from './components/views/carta/Carta';
+import PedidosAdmin from "./components/views/PedidosAdmin"
+
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("tokenUsuario")) || [];
@@ -48,6 +50,7 @@ function App() {
  <Route exact path='/registro' element={<Registro/>} />
  <Route exact path='/adminUsuarios' element={<AdminUsuarios/>} />
  <Route exact path='/login' element={<Login setUsuarioLogueado={setUsuarioLogueado} setSaludoNavbar={setSaludoNavbar}/>} />
+ <Route exact path='/administrador/pedidosAdmin' element={<PedidosAdmin/>} />
  </Routes>
  <Footer></Footer>
  </BrowserRouter>
