@@ -3,8 +3,7 @@ import Inicio from './components/views/Inicio';
 import Nosotros from './components/views/Nosotros';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/style.css";
-import "bootstrap-icons/font/bootstrap-icons.css"
-import ListaProductos from './components/views/ListaProductos';
+import "bootstrap-icons/font/bootstrap-icons.css";
 import AdministradorProductos from './components/views/AdministradorProductos';
 import CrearProducto from './components/views/producto/CrearProducto';
 import EditarProducto from './components/views/producto/EditarProducto';
@@ -15,6 +14,8 @@ import Registro from './components/views/Registro';
 import AdminUsuarios from './components/views/AdminUsuarios';
 import Login from './components/views/Login';
 import { useState } from 'react';
+import ListaEntradas from './components/views/ListaEntradas';
+import ListaPlatoPrincipal from './components/views/ListaPlatoPrincipal';
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("tokenUsuario")) || [];
@@ -29,7 +30,8 @@ function App() {
  <Routes>
  <Route exact path='/' element={<Inicio></Inicio>}></Route>
  <Route exact path='/nosotros' element={<Nosotros></Nosotros>} />
- <Route exact path='/menu' element={<ListaProductos></ListaProductos>} />
+ <Route exact path='/entradas' element={<ListaEntradas></ListaEntradas>} />
+ <Route exact path='/platos-principales' element={<ListaPlatoPrincipal></ListaPlatoPrincipal>} />
  <Route exact path='/administrador' element={<AdministradorProductos/>} />
  <Route exact path='/administrador/crearProd' element={<CrearProducto/>} />
  <Route exact path='/administrador/editarProd/:id' element={<EditarProducto/>} />
