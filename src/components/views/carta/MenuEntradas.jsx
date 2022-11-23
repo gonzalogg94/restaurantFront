@@ -1,4 +1,4 @@
-import React from 'react';
+
 import CardProducto from '../producto/CardProducto';
 import { consultarApi } from '../../helpers/queries';
 import { useEffect, useState } from "react";
