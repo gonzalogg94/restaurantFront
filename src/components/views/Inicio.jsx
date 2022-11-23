@@ -131,7 +131,7 @@ const Inicio = () => {
           </aside>
         </Link>
         <Link
-          class="card card--4  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black "
+          class="card card--5  m-2 w-25 col-sm-6 col-md-6 col-lg-3 text-decoration-none text-black "
           to={"/aperitivos"}
         >
           <aside>

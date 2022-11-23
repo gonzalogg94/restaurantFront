@@ -18,17 +18,20 @@
 }
 /* card de inicio */
 .card--1 .card__img, .card--1 .card__img--hover {
-    background-image: url('https://media.ambito.com/p/eeeb0aa8490c86a5ed10e052acb243d0/adjuntos/239/imagenes/039/444/0039444907/pastasjpg.jpg');
+    background-image: url('http://www.laparcelacr.com/wp-content/uploads/2014/11/entradas-menu.jpg');
 }
 
 .card--2 .card__img, .card--2 .card__img--hover {
     background-image: url('https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/08/09173312/asado.jpg');
 }
 .card--3 .card__img, .card--3 .card__img--hover {
-    background-image: url('https://i.blogs.es/576a60/istock-837387558/840_560.jpg');
+    background-image: url('https://cdn7.kiwilimon.com/recetaimagen/25955/38379.jpg');
 }
 .card--4 .card__img, .card--4 .card__img--hover {
-    background-image: url('https://cdn7.kiwilimon.com/recetaimagen/25955/38379.jpg');
+    background-image: url(' https://i.blogs.es/576a60/istock-837387558/840_560.jpg');
+}
+.card--5 .card__img, .card--5 .card__img--hover {
+    background-image: url('https://i.blogs.es/7f7b5d/tartaletas_salmon/450_1000.jpg');
 }
 
 .card__time {
