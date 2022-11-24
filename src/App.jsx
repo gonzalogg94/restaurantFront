@@ -11,8 +11,10 @@ import Footer from './components/common/Footer';
 import Menu from './components/common/Menu';
 import DetalleProducto from './components/views/DetalleProducto';
 import Registro from './components/views/Registro';
+import AdminClientes from './components/views/AdminClientes';
 import AdminUsuarios from './components/views/AdminUsuarios';
-import Login from './components/views/Login';
+import LoginCliente from './components/views/LoginCliente';
+import LoginUsuario from './components/views/LoginUsuario';
 import { useState } from 'react';
 import ListaEntradas from './components/views/ListaEntradas';
 import ListaPlatoPrincipal from './components/views/ListaPlatoPrincipal';
@@ -22,6 +24,13 @@ import ListaAperitivos from './components/views/ListaAperitivos';
 import Carta from './components/views/carta/Carta';
 
 function App() {
+  const cliente = JSON.parse(localStorage.getItem("tokenCliente")) || [];
+  const [clienteLogueado, setClienteLogueado] = useState(cliente);
+
+  const saludoCliente = JSON.parse(localStorage.getItem("saludoCliente")) || [];
+  const [saludoNavbarCliente, setSaludoNavbarCliente] = useState(saludoCliente);
+    
+  
   const usuario = JSON.parse(localStorage.getItem("tokenUsuario")) || [];
   const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
 
@@ -30,7 +39,10 @@ function App() {
 
   return (
  <BrowserRouter>
- <Menu saludoNavbar={saludoNavbar} setSaludoNavbar={setSaludoNavbar} usuarioLogueado={usuarioLogueado} setsetUsuarioLogueado={setUsuarioLogueado}></Menu>
+ <Menu 
+ saludoNavbarCliente={saludoNavbarCliente} setSaludoNavbarCliente={setSaludoNavbarCliente} clienteLogueado={clienteLogueado} setClienteLogueado={setClienteLogueado}
+ saludoNavbar={saludoNavbar} setSaludoNavbar={setSaludoNavbar} usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}>
+ </Menu>
  <Routes>
  <Route exact path='/' element={<Inicio></Inicio>}></Route>
  <Route exact path='/nosotros' element={<Nosotros></Nosotros>} />
@@ -46,8 +58,11 @@ function App() {
  <Route exact path='/detalles/producto/:id' element={<DetalleProducto></DetalleProducto>} />
  <Route exact path='/administrador/editarProd' element={<EditarProducto/>} />
  <Route exact path='/registro' element={<Registro/>} />
+ <Route exact path='/adminClientes' element={<AdminClientes/>} />
  <Route exact path='/adminUsuarios' element={<AdminUsuarios/>} />
- <Route exact path='/login' element={<Login setUsuarioLogueado={setUsuarioLogueado} setSaludoNavbar={setSaludoNavbar}/>} />
+ <Route exact path='/loginCliente' element={<LoginCliente setClienteLogueado={setClienteLogueado} setSaludoNavbarCliente={setSaludoNavbarCliente}/>} />
+ <Route exact path='/loginUsuario' element={<LoginUsuario setUsuarioLogueado={setUsuarioLogueado} setSaludoNavbar={setSaludoNavbar}/>} />
+
  </Routes>
  <Footer></Footer>
  </BrowserRouter>

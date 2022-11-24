@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { login } from '../helpers/queries';
 import { useForm } from 'react-hook-form';
 
-const Login = ({setUsuarioLogueado, setSaludoNavbar}) => {
+const LoginUsuario = ({setUsuarioLogueado, setSaludoNavbar}) => {
 
     const navigate = useNavigate();
 
@@ -84,4 +84,4 @@ const Login = ({setUsuarioLogueado, setSaludoNavbar}) => {
       );
 };
 
-export default Login;
+export default LoginUsuario;

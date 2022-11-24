@@ -140,7 +140,7 @@ const URLclientes = "http://localhost:4000/apirestaurante/cl/clientes";
 // const URL = "http://localhost:3004/usuarios";
 
 //muestra usuarios
-export const consultarClientsAPI = async () => {
+export const consultarClientesAPI = async () => {
   try {
     const respuesta = await fetch(URLclientes);
     const listaClientes = await respuesta.json();
