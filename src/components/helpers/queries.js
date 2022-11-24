@@ -147,3 +147,32 @@ export const consultarPedidosApi = async()=>{
 } catch (error) {
   console.log(error);
 }};
+
+export const obtenerPedidoApi = async (_id) => {
+  try {
+    const respuesta = await fetch(urlPedidos + "/" + _id);
+    const pedidoBuscado = {
+      dato: await respuesta.json(),
+      status: respuesta.status,
+    };
+    return pedidoBuscado;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editarPedidoApi = async (_id, datosActualizados) => {
+  try {
+    const respuesta = await fetch(urlPedidos + "/" + _id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datosActualizados),
+    });
+
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
