@@ -1,7 +1,10 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+
 
 const CardPedidos = (props) => {
+    
   
   return (
     <Card className="bg-success text-light m-3" style={{ width: "18rem" }}>
@@ -12,9 +15,9 @@ const CardPedidos = (props) => {
         <Card.Text>Estado: {props.pedidos.estado}</Card.Text>
         <Card.Text>Costo Total: ${props.pedidos.costoTotal}</Card.Text>
         <div className="d-flex justify-content-end">
-          <Button variant="outline-warning" size="sm">
-            Warning
-          </Button>
+          <Link className="btn btn-outline-warning"size="sm" to={`/administrador/pedidosAdmin/editarPedido/${props.pedidos._id}`} >
+            Modificar
+          </Link>
         </div>
       </Card.Body>
     </Card>
