@@ -17,7 +17,7 @@ const Menu = ({
     localStorage.removeItem("saludo");
     setUsuarioLogueado({});
     setSaludoNavbar("");
-    navegar("/nosotros");
+    navegar("/");
   };
 
   return (
@@ -33,10 +33,9 @@ const Menu = ({
           <Col lg={6} className="text-center pb-3">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
-              <div className="text-light text-center pb-2 pt-4 mx-4 fuente fs-5 fw-bold">
+            <div className="text-light text-center pb-2 pt-4 mx-4 fuente fs-6 fw-bold">
                 {saludoNavbar}
               </div>
-
               <Nav className="me-auto text-center">
                 <NavLink end className="nav-item nav-link" to="/">
                   Inicio

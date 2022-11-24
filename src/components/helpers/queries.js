@@ -1,5 +1,5 @@
-const url = "http://localhost:4000/apirestaurante/pr/productos";
-// const url = "http://localhost:3004/productos";
+//const url = "http://localhost:4000/apirestaurante/pr/productos";
+ const url = "http://localhost:3004/productos";
 
 export const consultarApi = async () => {
   try {
