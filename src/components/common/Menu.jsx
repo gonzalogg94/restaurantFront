@@ -21,10 +21,10 @@ const Menu = ({
   };
 
   return (
-    <section className="bgTransparente fuente fs-5  fw-bold">
+    <section className="bgTransparente fuente fs-5 ">
       <Container>
         <Navbar variant="dark" expand="lg" className="row m-0 p-0">
-          <Col lg={6} className="text-center">
+          <Col lg={6} className="text-lg-start text-center">
             <Navbar.Brand className="text-start m-0 p-0 " as={Link} to="/">
               <img src={logo} alt="Logo" className="w-50 m-0 p-0" />
             </Navbar.Brand>
@@ -33,7 +33,7 @@ const Menu = ({
           <Col lg={6} className="text-center pb-3">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
-              <div className="text-light px-5 py-2 fuente fs-5 fw-bold">
+              <div className="text-light px-5 pb-2 pt-3 fuente fs-5 fw-bold">
                 {saludoNavbar}
               </div>
 
@@ -60,7 +60,7 @@ const Menu = ({
                     >
                       Usuarios
                     </NavLink>
-                    <Button variant="danger" onClick={logout}>
+                    <Button variant="danger" className="fuente fs-5 mx-2" onClick={logout}>
                       Logout
                     </Button>
                   </>

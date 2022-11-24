@@ -73,7 +73,7 @@ export const editarProductoApi = async (id, datosActualizados) => {
 //Consultas a API de usuarios
 
  const URL = "http://localhost:4000/apirestaurante/us/usuarios"
-// const URL = "http://localhost:3004/usuarios";
+//const URL = "http://localhost:3004/usuarios";
 
 //muestra usuarios
 export const consultarUsersAPI = async ()=>{
