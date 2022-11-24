@@ -12,12 +12,12 @@ const Menu = ({
   const navegar = useNavigate();
 
   const logout = () => {
-    //norrar el localstorage
-    navegar("/");
+    //borrar el localstorage
     localStorage.removeItem("tokenUsuario");
     localStorage.removeItem("saludo");
     setUsuarioLogueado({});
     setSaludoNavbar("");
+    navegar("/nosotros");
   };
 
   return (
@@ -33,7 +33,7 @@ const Menu = ({
           <Col lg={6} className="text-center pb-3">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
-              <div className="text-light px-5 pb-2 pt-3 fuente fs-5 fw-bold">
+              <div className="text-light text-center pb-2 pt-4 mx-4 fuente fs-5 fw-bold">
                 {saludoNavbar}
               </div>
 
