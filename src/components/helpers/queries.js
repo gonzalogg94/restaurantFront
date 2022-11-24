@@ -1,5 +1,5 @@
-//const url = "http://localhost:4000/apirestaurante/pr/productos";
- const url = "http://localhost:3004/productos";
+const url = "http://localhost:4000/apirestaurante/pr/productos";
+//const url = "http://localhost:3004/productos";
 
 export const consultarApi = async () => {
   try {
@@ -72,8 +72,8 @@ export const editarProductoApi = async (id, datosActualizados) => {
 
 //Consultas a API de usuarios
 
- //const URL = "http://localhost:4000/apirestaurante/us/usuarios"
-const URL = "http://localhost:3004/usuarios";
+const URL = "http://localhost:4000/apirestaurante/us/usuarios"
+//const URL = "http://localhost:3004/usuarios";
 
 //muestra usuarios
 export const consultarUsersAPI = async ()=>{
