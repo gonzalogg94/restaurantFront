@@ -134,3 +134,70 @@ export const login = async (usuario) => {
     return;
   }
 };
+
+
+const URLclientes = "http://localhost:4000/apirestaurante/cl/clientes";
+// const URL = "http://localhost:3004/usuarios";
+
+//muestra usuarios
+export const consultarClientesAPI = async () => {
+  try {
+    const respuesta = await fetch(URLclientes);
+    const listaClientes = await respuesta.json();
+    return listaClientes;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const crearClientesAPI = async (usuario) => {
+  try {
+    const respuesta = await fetch(URLclientes, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(usuario),
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const borrarClientesAPI = async (id) => {
+  try {
+    const respuesta = await fetch(`${URLclientes}/${id}`, {
+      method: "DELETE",
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const loginClientes = async (cliente) => {
+  try {
+    //verificar si el cliente existe
+    const respuesta = await fetch(URLclientes);
+    const listaClientes = await respuesta.json();
+    //buscar cual usuario tiene mi mail
+    const clienteBuscado = listaClientes.find(
+      (itemCliente) => itemCliente.email === cliente.email
+    );
+    if (clienteBuscado) {
+      console.log("email encontrado");
+      console.log(clienteBuscado);
+      //verificar el password
+      if (clienteBuscado.contrasena === cliente.password) {
+        return clienteBuscado;
+      }
+    } else {
+      console.log("el mail no existe");
+      return;
+    }
+  } catch (error) {
+    console.log("errores en el login");
+    return;
+  }
+};
