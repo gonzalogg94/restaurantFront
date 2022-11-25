@@ -136,28 +136,6 @@ export const login = async (usuario) => {
 };
 
 
-
-//Peticiones  Api Productos
-const urlPedidos = "http://localhost:4000/apirestaurante/pe/pedidos";
-
-export const consultarPedidosApi = async()=>{  
-  try {
-   const respuesta = await fetch(urlPedidos);
-  const listaPedidos = await respuesta.json();
-  return listaPedidos;
-} catch (error) {
-  console.log(error);
-}};
-
-export const obtenerPedidoApi = async (_id) => {
-  try {
-    const respuesta = await fetch(urlPedidos + "/" + _id);
-    const pedidoBuscado = {
-      dato: await respuesta.json(),
-      status: respuesta.status,
-    };
-    return pedidoBuscado;
-
 const URLclientes = "http://localhost:4000/apirestaurante/cl/clientes";
 // const URL = "http://localhost:3004/usuarios";
 
@@ -167,23 +145,10 @@ export const consultarClientesAPI = async () => {
     const respuesta = await fetch(URLclientes);
     const listaClientes = await respuesta.json();
     return listaClientes;
-
   } catch (error) {
     console.log(error);
   }
 };
-
-
-export const editarPedidoApi = async (_id, datosActualizados) => {
-  try {
-    const respuesta = await fetch(urlPedidos + "/" + _id, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(datosActualizados),
-    });
-
 
 export const crearClientesAPI = async (usuario) => {
   try {
@@ -205,14 +170,10 @@ export const borrarClientesAPI = async (id) => {
     const respuesta = await fetch(`${URLclientes}/${id}`, {
       method: "DELETE",
     });
-
     return respuesta;
   } catch (error) {
     console.log(error);
   }
-
-};
-
 };
 
 export const loginClientes = async (cliente) => {
@@ -240,4 +201,3 @@ export const loginClientes = async (cliente) => {
     return;
   }
 };
-

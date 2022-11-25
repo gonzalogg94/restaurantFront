@@ -1,11 +1,20 @@
 {
   "productos": [
     {
-      "nombreProducto": "pasta casera modificada para probar de nuevo",
-      "estado": "test para ver editar",
-      "precio": "999",
-      "detalle": "pasta de los chinos que se hace con perros y gatos",
-      "categoria": "postre",
+      "nombreProducto": "Asado ",
+      "estado": "en stock",
+      "precio": "1800",
+      "detalle": "dghgsfdghd",
+      "categoria": "asado",
+      "imagen": "https://resizer.glanacion.com/resizer/jzlqnY6FmB6J90xZKygafdLk6ps=/1920x1280/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/P3I7EMRO7BBSBGC3TULJSQZG5Q.jpg",
+      "id": 3
+    },
+    {
+      "nombreProducto": "pasta casera modificada x cara",
+      "estado": "En stock porque nadie compra",
+      "precio": "1580",
+      "detalle": "pasta de los chinos que se hace con perros",
+      "categoria": "pasta",
       "imagen": "https://mail.google.com/mail/u/0/#inbox",
       "id": 4
     },
