@@ -1,23 +1,26 @@
-import MenuAperitivos from "./MenuAperitivos";
-import MenuBebidas from "./MenuBebidas";
-import MenuEntradas from "./MenuEntradas";
-import MenuPlatoPrincipal from "./MenuPlatoPrincipal";
-import MenuPostres from "./MenuPostres";
+import React, {useState} from 'react';
+import '../carrito/carrito.css';
+import Products from '../carrito/Products';
+import Cart from '../carrito/Cart';
 
 const Carta = () => {
+ const [cart, setCart] = useState([]);
+  
+const removeFromCart = (productToRemove) =>{
+  setCart(cart.filter(product =>  product !== productToRemove))}
+
+const addToCart = (product) =>{    
+      setCart([...cart, {...product}])};
+
   return (
-    <section className="fuente colorFondo py-5">
-      <div className="text-center text-white container">
-        <h1>Carta Tafi De Mistol</h1>
-        <hr />
-      </div>
-      <MenuEntradas></MenuEntradas>
-      <MenuPlatoPrincipal></MenuPlatoPrincipal>
-      <MenuPostres></MenuPostres>
-      <MenuBebidas></MenuBebidas>
-      <MenuAperitivos></MenuAperitivos>
-    </section>
+    <div className="App">  
+      <header>
+        
+      </header>
+      <Products addToCart={addToCart} ></Products>
+      <Cart cart={cart} removeFromCart={removeFromCart}></Cart>  
+    </div>
   );
-};
+}
 
 export default Carta;
