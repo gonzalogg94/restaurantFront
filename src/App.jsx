@@ -22,9 +22,6 @@ import ListaPostres from './components/views/ListaPostres';
 import ListaBebidas from './components/views/ListaBebidas';
 import ListaAperitivos from './components/views/ListaAperitivos';
 import Carta from './components/views/carta/Carta';
-import PedidosAdmin from "./components/views/PedidosAdmin"
-import FormPedidos from './components/views/pedidos/FormPedidos';
-
 
 function App() {
   const cliente = JSON.parse(localStorage.getItem("tokenCliente")) || [];
@@ -63,14 +60,8 @@ function App() {
  <Route exact path='/registro' element={<Registro/>} />
  <Route exact path='/adminClientes' element={<AdminClientes/>} />
  <Route exact path='/adminUsuarios' element={<AdminUsuarios/>} />
-
- <Route exact path='/login' element={<Login setUsuarioLogueado={setUsuarioLogueado} setSaludoNavbar={setSaludoNavbar}/>} />
- <Route exact path='/administrador/pedidosAdmin' element={<PedidosAdmin/>} />
- <Route exact path='/administrador/pedidosAdmin/editarPedido/:id' element={<FormPedidos/>} />
-
  <Route exact path='/loginCliente' element={<LoginCliente setClienteLogueado={setClienteLogueado} setSaludoNavbarCliente={setSaludoNavbarCliente}/>} />
  <Route exact path='/loginUsuario' element={<LoginUsuario setUsuarioLogueado={setUsuarioLogueado} setSaludoNavbar={setSaludoNavbar}/>} />
-
 
  </Routes>
  <Footer></Footer>
