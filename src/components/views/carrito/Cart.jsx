@@ -10,7 +10,7 @@ export default function Cart({cart, removeFromCart}) {
         <h3>{product.nombreProducto}</h3>
         <h4>${product.precio}</h4>
         <img src={product.imagen} alt={product.nombreProducto}/>
-        <button onClick={()=>removeFromCart(product)}>Remove</button>
+        <button onClick={()=>removeFromCart(product)}>Quitar de la orden</button>
       </div> 
       ))}
       </div>  

@@ -17,8 +17,9 @@ const addToCart = (product) =>{
       <header>
         
       </header>
-      <Products addToCart={addToCart} ></Products>
       <Cart cart={cart} removeFromCart={removeFromCart}></Cart>  
+      <Products addToCart={addToCart} ></Products>
+
     </div>
   );
 }
