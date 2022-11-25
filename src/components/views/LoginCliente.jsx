@@ -1,10 +1,10 @@
 import { Form, Button, Container, Card } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { login } from '../helpers/queries';
+import { loginClientes } from '../helpers/queries';
 import { useForm } from 'react-hook-form';
 
-const Login = ({setUsuarioLogueado, setSaludoNavbar}) => {
+const LoginCliente = ({setClienteLogueado, setSaludoNavbarCliente}) => {
 
     const navigate = useNavigate();
 
@@ -16,19 +16,18 @@ const Login = ({setUsuarioLogueado, setSaludoNavbar}) => {
 
       const onSubmit = (data) => {
         console.log(data);
-        login(data).then((respuesta) => {
+        loginClientes(data).then((respuesta) => {
           console.log(respuesta);
           if (respuesta) {
             //almaceno el usuario en el state y localstorage
-            localStorage.setItem("tokenUsuario", JSON.stringify(respuesta));
-            setUsuarioLogueado(respuesta);
-
-            localStorage.getItem("tokenUsuario", JSON.stringify(respuesta));
-            const saludo = "Hola "+respuesta.apellido+", "+respuesta.nombreUsuario+"!!"
-            localStorage.setItem("saludo", JSON.stringify(saludo))
-            setSaludoNavbar(saludo)
+            localStorage.setItem("tokenCliente", JSON.stringify(respuesta));
+            setClienteLogueado(respuesta);
+            localStorage.getItem("tokenCliente", JSON.stringify(respuesta));
+            const saludoCliente = "Hola "+respuesta.apellido+", "+respuesta.nombreCliente+"!!"
+            localStorage.setItem("saludoCliente", JSON.stringify(saludoCliente))
+            setSaludoNavbarCliente(saludoCliente)
             // si el usuario es correcto entonces redirecciono al admin
-            navigate("/menu");
+            navigate("/carta");
           } else {
             Swal.fire(
               "Error",
@@ -84,4 +83,4 @@ const Login = ({setUsuarioLogueado, setSaludoNavbar}) => {
       );
 };
 
-export default Login;
+export default LoginCliente;
