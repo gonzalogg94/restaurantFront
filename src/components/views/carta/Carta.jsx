@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import './carritoEstilo.css';
 import Products from './Products';
-import Cart from './Cart-borrador';
+import Cart from './Cart';
+import { CartProvider} from "react-use-cart"
 
 const Carta = () => {
  const [cart, setCart] = useState([]);
@@ -18,8 +19,10 @@ const addToCart = (product) =>{
         
       </header>
       <div>
+      <CartProvider>
       <Cart cart={cart} removeFromCart={removeFromCart}></Cart> 
       <Products addToCart={addToCart} ></Products>
+      </CartProvider>
    
     </div>
     </div>

@@ -21,8 +21,7 @@ import ListaPlatoPrincipal from './components/views/ListaPlatoPrincipal';
 import ListaPostres from './components/views/ListaPostres';
 import ListaBebidas from './components/views/ListaBebidas';
 import ListaAperitivos from './components/views/ListaAperitivos';
-import Home from './components/views/carta/Home';
-import Itemcard from './components/views/carta/Itemcard';
+import Products from './components/views/carta/Products';
 import Carta from './components/views/carta/Carta';
 import Cart from './components/views/carta/Cart';
 
@@ -49,9 +48,9 @@ function App() {
  <Routes>
  <Route exact path='/' element={<Inicio></Inicio>}></Route>
  <Route exact path='/nosotros' element={<Nosotros></Nosotros>} />
- <Route exact path='/carta' element={<Carta></Carta>} />
- <Route exact path='/Home' element={<Home></Home>} />
- <Route exact path='/Itemcard' element={<Itemcard></Itemcard>} />
+ <Route exact path='/Carta' element={<Carta></Carta>} />
+ <Route exact path='/Cart' element={<Cart></Cart>} />
+ <Route exact path='/Products' element={<Products></Products>} />
  <Route exact path='/Cart' element={<Cart></Cart>} />
  <Route exact path='/entradas' element={<ListaEntradas></ListaEntradas>} />
  <Route exact path='/platos-principales' element={<ListaPlatoPrincipal></ListaPlatoPrincipal>} />

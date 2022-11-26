@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { consultarApi } from '../../helpers/queries';
+import {useCart} from "react-use-cart"
 
 export default function Products({addToCart}) {
+
 
 
 const [entrada, setEntrada] = useState([]);
@@ -44,6 +46,7 @@ console.log(respuesta)
 setAperitivo(respuesta.filter((producto) => producto.categoria === 'Aperitivo'))
 })
 },[])
+
 
   return (
     <div>
