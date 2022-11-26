@@ -1,19 +1,26 @@
 import Card from "react-bootstrap/Card";
 
 import { Link } from "react-router-dom";
+import ListGroup from "react-bootstrap/ListGroup";
+import { useState } from "react";
 
-import ListaPedidos from "./ListaPedidos";
+// import ListaPedidos from "./ListaPedidos";
 
 const CardPedidos = (props) => {
-    
-  console.log(props.pedidos.detallePedido.length)
+  const [pedido, setPedido] = useState()
+    const lista = ()=>{
+      setPedido(props.pedidos.detallePedido.Array)
+    }
+  console.log(pedido);
   return (
 
     <Card className="bg-success text-light m-3" style={{ width: "18rem" }}>
       <Card.Header>ID:{props.pedidos._id}</Card.Header>
       <Card.Body>
         <Card.Title className="mb-2">Gerald the Ribia</Card.Title>
-        <Card.Text>{props.pedidos.detallePedido.map((pedido)=><ListaPedidos key={pedido._id} pedidos={props.pedidos}/>)}</Card.Text>
+        <Card.Text>{props.pedidos.detallePedido.map((pedido, index)=>{return(<ListGroup.Item as="li" className="bg-success text-white">
+        {pedido}
+      </ListGroup.Item>)})}</Card.Text>
         <Card.Text>Estado: {props.pedidos.estado}</Card.Text>
         <Card.Text>Costo Total: ${props.pedidos.costoTotal}</Card.Text>
         <div className="d-flex justify-content-end">

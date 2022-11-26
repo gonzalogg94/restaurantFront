@@ -5,7 +5,7 @@ const ListaPedidos = (props) => {
     <ListGroup as="ol">
       
       <ListGroup.Item as="li" className="bg-success text-white">
-        {props.pedidos.detallePedido[0]}
+        {props.pedidos.detallePedido}
       </ListGroup.Item>
     </ListGroup>
   );
