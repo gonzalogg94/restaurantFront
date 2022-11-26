@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { consultarApi } from '../../helpers/queries';
-import {useCart} from "react-use-cart"
 
 export default function Products({addToCart}) {
 
@@ -52,16 +51,20 @@ setAperitivo(respuesta.filter((producto) => producto.categoria === 'Aperitivo'))
     <div>
   <>
       <h2>Entradas</h2>
-      <div className="products">
+      
       {entrada.map((product) => (
-      <div className="product" key={product._id}>
-        <h3>{product.nombreProducto}</h3>
-        <h4>${product.precio}</h4>
-        <img src={product.imagen} alt={product.nombreProducto}/>
-        <button onClick={()=>addToCart(product)}>Agregar a la orden</button>
+      <div className="card p-0 overflow-hidden h-100 shadow">
+      <div className="col-11 col-md-6 col-lg-3 mx-0 mb-4" key={product._id}>
+        <img className="card-img-top img-fluid" src={product.imagen} alt={product.nombreProducto}/>
+        <div className="card-body text-center">
+        <h5 className="card-title">{product.nombreProducto}</h5>
+        <h5 className="card-title">${product.precio}</h5>
+        <button className="btn btn-success" onClick={()=>addToCart(product)}>Agregar a la orden</button>
+        </div>
       </div> 
-      ))}
       </div>  
+      ))}
+      
   </>
   <>
       <h2>Platos principales</h2>
@@ -150,4 +153,14 @@ setProducts(respuesta)
   </>
 )
 }
+*/
+
+
+/*
+
+
+
+
+
+
 */

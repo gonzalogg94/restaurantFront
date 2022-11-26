@@ -3,10 +3,7 @@ import { useCart} from "react-use-cart"
 
 export default function Cart({cart, removeFromCart}) {
 
-const {
-  totalUniqueItems,
-  cartTotal,
-} = useCart();
+
 
 //  if(isEmpty) return <h1 className="text-center">Your Cart is Empty</h1>
   return (
@@ -22,10 +19,7 @@ const {
           </div> 
           ))}
           </div> 
-          <div className="col-auto ms-auto">
-                    <h2> Total Price: {cartTotal}</h2>
 
-                </div>
         <div>
       </div> 
       </>
