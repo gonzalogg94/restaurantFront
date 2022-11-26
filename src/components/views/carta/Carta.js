@@ -7,6 +7,19 @@ import { consultarApi } from '../../helpers/queries';
 
 
 function Carta () {
+const [cartItems, setCartItems] = useState([]);
+const onAdd = (product) =>{
+    const exist = cartItems.find(x=> x._id === product._id)
+    if(exist){
+        setCartItems(cartItems.map(x => x._id === product._id ? {...exist, qty: exist.qty +1 } : x
+            )
+        );
+    }else {
+        setCartItems([...cartItems, {...product, qty: 1}])
+    }
+
+}
+
 const [products, setProducts]=useState([])
 useEffect  (()=>{
 
@@ -20,8 +33,8 @@ setProducts(respuesta)
         <div className="App">
         <Header></Header>
         <div className="row">
-        <Main products={products}></Main>
-        <Basket></Basket>
+        <Main onAdd={onAdd} products={products}></Main>
+        <Basket onAdd={onAdd} cartItems={cartItems}></Basket>
         </div>
         </div>
     );
