@@ -21,9 +21,11 @@ import ListaPlatoPrincipal from './components/views/ListaPlatoPrincipal';
 import ListaPostres from './components/views/ListaPostres';
 import ListaBebidas from './components/views/ListaBebidas';
 import ListaAperitivos from './components/views/ListaAperitivos';
-import Products from './components/views/carta/Products';
+import Basket from './components/views/carta/Basket';
+import Main from './components/views/carta/Main';
 import Carta from './components/views/carta/Carta';
-import Cart from './components/views/carta/Cart';
+import Product from './components/views/carta/Product';
+
 
 function App() {
   const cliente = JSON.parse(localStorage.getItem("tokenCliente")) || [];
@@ -49,9 +51,9 @@ function App() {
  <Route exact path='/' element={<Inicio></Inicio>}></Route>
  <Route exact path='/nosotros' element={<Nosotros></Nosotros>} />
  <Route exact path='/Carta' element={<Carta></Carta>} />
- <Route exact path='/Cart' element={<Cart></Cart>} />
- <Route exact path='/Products' element={<Products></Products>} />
- <Route exact path='/Cart' element={<Cart></Cart>} />
+ <Route exact path='/Basket' element={<Basket></Basket>}/>
+ <Route exact path='/Main' element={<Main></Main>} />
+ <Route exact path='/Product' element={<Product></Product>} />
  <Route exact path='/entradas' element={<ListaEntradas></ListaEntradas>} />
  <Route exact path='/platos-principales' element={<ListaPlatoPrincipal></ListaPlatoPrincipal>} />
  <Route exact path='/postres' element={<ListaPostres></ListaPostres>} />
