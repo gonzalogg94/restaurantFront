@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import ListGroup from "react-bootstrap/ListGroup";
 
 
-// import ListaPedidos from "./ListaPedidos";
+
+
 
 const CardPedidos = (props) => {
 
+    
   console.log(props.pedidos.estado);
   return (
 
