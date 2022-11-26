@@ -136,43 +136,68 @@ export const login = async (usuario) => {
 };
 
 
-//Peticiones  Api Productos
-const urlPedidos = "http://localhost:4000/apirestaurante/pe/pedidos";
+const URLclientes = "http://localhost:4000/apirestaurante/cl/clientes";
+// const URL = "http://localhost:3004/usuarios";
 
-export const consultarPedidosApi = async()=>{  
+//muestra usuarios
+export const consultarClientesAPI = async () => {
   try {
-   const respuesta = await fetch(urlPedidos);
-  const listaPedidos = await respuesta.json();
-  return listaPedidos;
-} catch (error) {
-  console.log(error);
-}};
-
-export const obtenerPedidoApi = async (_id) => {
-  try {
-    const respuesta = await fetch(urlPedidos + "/" + _id);
-    const pedidoBuscado = {
-      dato: await respuesta.json(),
-      status: respuesta.status,
-    };
-    return pedidoBuscado;
+    const respuesta = await fetch(URLclientes);
+    const listaClientes = await respuesta.json();
+    return listaClientes;
   } catch (error) {
     console.log(error);
   }
 };
 
-export const editarPedidoApi = async (_id, datosActualizados) => {
+export const crearClientesAPI = async (usuario) => {
   try {
-    const respuesta = await fetch(urlPedidos + "/" + _id, {
-      method: "PUT",
+    const respuesta = await fetch(URLclientes, {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(datosActualizados),
+      body: JSON.stringify(usuario),
     });
-
     return respuesta;
   } catch (error) {
     console.log(error);
+  }
+};
+
+export const borrarClientesAPI = async (id) => {
+  try {
+    const respuesta = await fetch(`${URLclientes}/${id}`, {
+      method: "DELETE",
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const loginClientes = async (cliente) => {
+  try {
+    //verificar si el cliente existe
+    const respuesta = await fetch(URLclientes);
+    const listaClientes = await respuesta.json();
+    //buscar cual usuario tiene mi mail
+    const clienteBuscado = listaClientes.find(
+      (itemCliente) => itemCliente.email === cliente.email
+    );
+    if (clienteBuscado) {
+      console.log("email encontrado");
+      console.log(clienteBuscado);
+      //verificar el password
+      if (clienteBuscado.contrasena === cliente.password) {
+        return clienteBuscado;
+      }
+    } else {
+      console.log("el mail no existe");
+      return;
+    }
+  } catch (error) {
+    console.log("errores en el login");
+    return;
   }
 };
