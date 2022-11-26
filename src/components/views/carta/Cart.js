@@ -32,15 +32,15 @@ const Cart = () => {
                                     <td>
                                         <button 
                                             className="btn btn-info ms-2"
-                                            onClick={()=> updateItemQuantity (item.id, item.quantity - 1)}
+                                            onClick={()=> updateItemQuantity (item._id, item.quantity - 1)}
                                         >-</button>
                                         <button
                                              className="btn btn-info ms-2"
-                                             onClick={()=> updateItemQuantity (item.id, item.quantity + 1)}
+                                             onClick={()=> updateItemQuantity (item._id, item.quantity + 1)}
                                         >+</button>
                                         <button 
                                             className="btn btn-danger ms-2"
-                                            onClick={()=> removeItem(item.id)}
+                                            onClick={()=> removeItem(item._id)}
                                         >Remove Item</button>
                                     </td>
                                 </tr>
