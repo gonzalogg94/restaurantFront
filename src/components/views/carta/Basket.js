@@ -2,6 +2,11 @@ import React from "react";
 
 export default function Basket (props){
 const {cartItems, onAdd, onRemove}= props;
+const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.precio, 0);
+const taxPrice = itemsPrice * 0.14;
+const shippingPrice = itemsPrice > 2000 ? 0 : 20;
+const totalPrice = itemsPrice + taxPrice + shippingPrice;
+
      return (
      <aside className="block col-1">
           <h2> Cart Items</h2>
@@ -24,6 +29,27 @@ const {cartItems, onAdd, onRemove}= props;
           </div>
                
           ))}
+          {cartItems.length !== 0 &&(
+               <>
+               <hr></hr>
+               <div className="row">
+                    <div className="col-2">Items Price</div>
+                    <div className="col-1 text-right">${itemsPrice.toFixed(2)}</div>
+               </div>
+               <div className="row">
+                    <div className="col-2">Tax Price</div>
+                    <div className="col-1 text-right">${taxPrice.toFixed(2)}</div>
+               </div>
+               <div className="row">
+                    <div className="col-2">Shipping Price</div>
+                    <div className="col-1 text-right">${shippingPrice.toFixed(2)}</div>
+               </div>
+               <div className="row">
+                    <div className="col-2"><strong>Total Price</strong></div>
+                    <div className="col-1 text-right"><strong>${totalPrice.toFixed(2)}</strong></div>
+               </div>
+               </>
+          )}
      </aside>
      )
 }
