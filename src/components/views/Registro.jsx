@@ -48,7 +48,7 @@ const Registro = () => {
         <div>
           <Form className="by-3" onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formNombreUsuario">
-              <Form.Label>Nombre de Cliente</Form.Label>
+              <Form.Label>Nombre</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Nombre"

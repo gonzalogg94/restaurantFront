@@ -14,9 +14,9 @@ const AdministradorPedidos = () => {
     }, []);
   
     return (
-      <section className="colorFondo">
+      <section className="colorFondo fuente">
         <Container>
-          <h2 className="text-white text-center by-3 display-3">
+          <h2 className="text-white text-center py-3 m-0 display-3">
             Lista de Pedidos de Productos
           </h2>
           <div className="row justify-content-center">

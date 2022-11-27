@@ -19,13 +19,13 @@ const AdministradorProductos = () => {
     <section className="colorFondo fuente">
       <Container>
         <div>
-          <h2 className="display-3 text-center by-5 text-light">
+          <h2 className="display-3 text-center py-5 m-0 text-light">
             Administrador de Productos
           </h2>
           <hr />
         </div>
         <div className="table-responsive">
-          <div className="d-flex justify-content-around  my-3 text-light">
+          <div className="d-flex justify-content-around  py-3 text-light">
             <h3>Listado de Productos</h3>
             <Link className="btn btn-outline-info" to='/administrador/crearProd'>Agregar</Link>
           </div>
