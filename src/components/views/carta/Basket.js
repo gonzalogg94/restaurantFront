@@ -3,14 +3,14 @@ import React from "react";
 export default function Basket (props){
 const {cartItems, onAdd, onRemove}= props;
 const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.precio, 0);
-const taxPrice = itemsPrice * 0.14;
-const shippingPrice = itemsPrice > 2000 ? 0 : 20;
-const totalPrice = itemsPrice + taxPrice + shippingPrice;
+const cubiertos = itemsPrice * 0.05;
+const IVA = (itemsPrice + cubiertos) * 0.21;
+const totalPrice = itemsPrice + cubiertos + IVA;
 
      return (
      <aside className="block col-1">
-          <h2> Cart Items</h2>
-          <div>{cartItems.length === 0 && <div> Cart Is Empty</div>}</div>
+          <h2>Detalle de la orden</h2>
+          <div>{cartItems.length === 0 && <div> La orden está vacía</div>}</div>
           {cartItems.map ((item) =>(
           <div key={item._id} className="row">
                <div className="col-2">{item.nombreProducto}</div>
@@ -33,19 +33,19 @@ const totalPrice = itemsPrice + taxPrice + shippingPrice;
                <>
                <hr></hr>
                <div className="row">
-                    <div className="col-2">Items Price</div>
+                    <div className="col-2">Comida y bebida</div>
                     <div className="col-1 text-right">${itemsPrice.toFixed(2)}</div>
                </div>
                <div className="row">
-                    <div className="col-2">Tax Price</div>
-                    <div className="col-1 text-right">${taxPrice.toFixed(2)}</div>
+                    <div className="col-2">Cubiertos y espectáculo</div>
+                    <div className="col-1 text-right">${cubiertos.toFixed(2)}</div>
                </div>
                <div className="row">
-                    <div className="col-2">Shipping Price</div>
-                    <div className="col-1 text-right">${shippingPrice.toFixed(2)}</div>
+                    <div className="col-2">IVA</div>
+                    <div className="col-1 text-right">${IVA.toFixed(2)}</div>
                </div>
                <div className="row">
-                    <div className="col-2"><strong>Total Price</strong></div>
+                    <div className="col-2"><strong>Precio total</strong></div>
                     <div className="col-1 text-right"><strong>${totalPrice.toFixed(2)}</strong></div>
                </div>
                <hr/>

@@ -4,22 +4,22 @@ import './StyleCarta.css'
 export default function Header (props){
 const {countCartItems} = props
      return (
-        <header>
+        <header className="block row center">
             <div>
                 <a href="#/">
-                <h1>Small Shopping Cart</h1>
+                <h1>NUESTRA CARTA</h1>
                 </a>
             </div>
             <div>
                 <a href="#/">                  
                     
-                Cart { ' ' }
+                Usted está ordenando { ' ' }
                 {countCartItems? (
                     <button className="badge">{countCartItems}</button>
                 ):(
-                    ''
+                    '0'
                 )}            
-                </a><a href="#/">SignIn</a>
+                </a><a href="#/"> productos</a>
             </div>
         </header>
      )
