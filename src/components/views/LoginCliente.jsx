@@ -42,11 +42,11 @@ const LoginCliente = ({setClienteLogueado, setSaludoNavbarCliente}) => {
     return (
         <Container className="mainSection">
           <Card className="my-5">
-            <Card.Header as="h5">Login</Card.Header>
+            <Card.Header as="h5">Ingreso- Espacio Clientes</Card.Header>
             <Card.Body>
               <Form onSubmit={handleSubmit(onSubmit)}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Email</Form.Label>
+                  <Form.Label>Correo Electronico</Form.Label>
                   <Form.Control
                     type="email"
                     placeholder="Ingrese un email"
@@ -60,7 +60,7 @@ const LoginCliente = ({setClienteLogueado, setSaludoNavbarCliente}) => {
                 </Form.Group>
     
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
+                  <Form.Label>Contraseña</Form.Label>
                   <Form.Control
                     type="password"
                     placeholder="Password"

@@ -27,7 +27,7 @@ const ListaBebidas = () => {
                 </Link>
                 <Link className="text-decoration-none" to={"/platos-principales"}>
                   <li class="list-group-item listSidebar">
-                    <a href="#PlatoPrincipal">Plato Principal</a>
+                    <a href="#PlatoPrincipal">Platos Principales</a>
                   </li>
                 </Link>
                 <Link className="text-decoration-none" to={"/postres"}>

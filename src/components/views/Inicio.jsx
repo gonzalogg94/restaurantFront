@@ -13,7 +13,7 @@ const Inicio = () => {
             alt="Imagen banner"
           />
           <Carousel.Caption>
-            <h3>No existe la modernidad sin una buena tradicion</h3>
+            <h3>Honramos nuestras recetas tradicionales con los mejores ingredientes</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -25,8 +25,7 @@ const Inicio = () => {
 
           <Carousel.Caption>
             <h3>
-              Nuestra comida es poner nuestra personalidad en lo que hacemos y
-              ese sentimiento nos convierte en algo distinto
+            Con la distinción que nos caracteriza y la pasión que nos moviliza, nuestros platos se disfrutan y se destacan
             </h3>
           </Carousel.Caption>
         </Carousel.Item>
@@ -39,8 +38,7 @@ const Inicio = () => {
 
           <Carousel.Caption>
             <h3>
-              Porque amamos la vida y nustras tradiciones le ponemos pasion en
-              la cocina
+            Somos el complemento perfecto para tus ocasiones especiales
             </h3>
           </Carousel.Caption>
         </Carousel.Item>
@@ -50,14 +48,14 @@ const Inicio = () => {
         <hr className="container" />
         <p>
           {" "}
-          Tafi de Mistol se encuentra un espacio dedicado a la cocina Argentina,
-          su nombre es cultural . Es ideal para los amantes de la elegancia y el
-          confort, además la dulce vibración que emite el piano todas las
-          noches, termina de complementar el encanto del lugar acompañado por
-          sus platos fuertes.No podía faltar una amplia lista de vinos y
-          licores, que junto a la decoración y ambiente del lugar, logran ser un
-          lugar estratégico para cerrar negocios o disfrutar de una velada
-          romántica.
+          Tafi de Mistol es un restaurante de raíces tucumanas y cordobesas. La
+          pasión por los orígenes, tradiciones y culturas de nuestras tierras se
+          fusionaron en un nombre de tinte autóctono, para honrar lo que nos
+          une. En Tafi de Mistol encontrarás un lugar elegante y confortable;
+          aquí se busca el balance perfecto entre sabores, texturas y
+          presentación. Encontrarás vinos de selección, productos de estación,
+          ambiente agradable y un menú tradicional de tres tiempos con
+          estándares de excelencia.
         </p>
       </article>
       {/* card */}
@@ -77,7 +75,7 @@ const Inicio = () => {
             <div className="card__info">
               <span className="card__category">Entradas</span>
               <h3 className="card__title">
-                Las mejores entradas de nuestra carta para iniciar tus comidas
+              Selección de entrantes fríos y calientes
               </h3>
             </div>
           </aside>
@@ -93,7 +91,9 @@ const Inicio = () => {
 
             <div className="card__info">
               <span className="card__category">Plato Principal</span>
-              <h3 className="card__title">Tenemos las mejores opciones para vos</h3>
+              <h3 className="card__title">
+              Platos tradicionales con notas de autor
+              </h3>
             </div>
           </aside>
         </Link>
@@ -108,7 +108,7 @@ const Inicio = () => {
 
             <div className="card__info">
               <span className="card__category">Postres</span>
-              <h3 className="card__title">Las mejores postres artesanales</h3>
+              <h3 className="card__title">De tinte artesanal y gourmet</h3>
             </div>
           </aside>
         </Link>
@@ -124,8 +124,7 @@ const Inicio = () => {
             <div className="card__info">
               <span className="card__category">Bebidas</span>
               <h3 className="card__title">
-                Contamos con una gran variedad de vinos para acompañar tus
-                comidas
+              contamos con una cava privada de vinos para un maridaje perfecto
               </h3>
             </div>
           </aside>
@@ -142,7 +141,7 @@ const Inicio = () => {
             <div className="card__info">
               <span className="card__category">Aperitivos</span>
               <h3 className="card__title">
-                Contamos con los mejores aperitivos del pais
+              contamos con una cava privada de vinos para un maridaje perfecto
               </h3>
             </div>
           </aside>
@@ -153,20 +152,20 @@ const Inicio = () => {
         <hr className="text-white" />
         <article className="text-white container py-4 text-center">
           <h2>
-            Lo mejor de la comida argentina lo encontras en Tafi de Mistol
+          Tafi de Mistol, un espacio ideal para ocasiones especiales o reuniones de negocios
           </h2>
           <article className="row pt-4 justify-content-center">
             <div className="col-4 text-center text-white">
               <i className="bi bi-credit-card-2-back fs-1"></i>
-              <h3>Recibimos todas las tarjetas</h3>
+              <h3>Aceptamos todos los medios de pago</h3>
             </div>
             <div className="col-4 text-center text-white fs-1">
               <i className="bi bi-telephone-inbound"></i>
-              <h3>Realizar reserva previa</h3>
+              <h3>Reservá con anticipación</h3>
             </div>
             <div className="col-4 text-center text-white">
               <i className="bi bi-pencil-square text-white fs-1"></i>
-              <h3>Realiza tu pedido desde nuestra web</h3>
+              <h3>Pedidos online</h3>
             </div>
           </article>
         </article>
