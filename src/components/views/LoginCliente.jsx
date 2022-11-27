@@ -23,7 +23,7 @@ const LoginCliente = ({setClienteLogueado, setSaludoNavbarCliente}) => {
             localStorage.setItem("tokenCliente", JSON.stringify(respuesta));
             setClienteLogueado(respuesta);
             localStorage.getItem("tokenCliente", JSON.stringify(respuesta));
-            const saludoCliente = "Hola "+respuesta.apellido+", "+respuesta.nombreCliente+"!!"
+            const saludoCliente = "Hola "+respuesta.apellido+", "+respuesta.nombreUsuario+"!!"
             localStorage.setItem("saludoCliente", JSON.stringify(saludoCliente))
             setSaludoNavbarCliente(saludoCliente)
             // si el usuario es correcto entonces redirecciono al admin
