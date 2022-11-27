@@ -31,20 +31,53 @@ const onRemove =  (product) =>{
     }
 }
 
-const [products, setProducts]=useState([])
+const [entrada, setEntrada]=useState([])
 useEffect  (()=>{
 
 consultarApi().then((respuesta)=>{
 console.log(respuesta)
-setProducts(respuesta)
+setEntrada(respuesta.filter((producto) => producto.categoria === 'Entrada'))
 })
-
 },[])
+
+const [platoPrincipal, setPlatoPrincipal] = useState([]);
+useEffect  (()=>{
+consultarApi().then((respuesta)=>{
+console.log(respuesta)
+setPlatoPrincipal(respuesta.filter((producto) => producto.categoria === 'Plato principal'))
+})
+},[])
+
+const [postre, setPostre] = useState([]);
+useEffect  (()=>{
+consultarApi().then((respuesta)=>{
+console.log(respuesta)
+setPostre(respuesta.filter((producto) => producto.categoria === 'Postre'))
+})
+},[])
+
+const [bebida, setBebida] = useState([]);
+useEffect  (()=>{
+consultarApi().then((respuesta)=>{
+console.log(respuesta)
+setBebida(respuesta.filter((producto) => producto.categoria === 'Bebida'))
+})
+},[])
+
+const [aperitivo, setAperitivo] = useState([]);
+useEffect  (()=>{
+consultarApi().then((respuesta)=>{
+console.log(respuesta)
+setAperitivo(respuesta.filter((producto) => producto.categoria === 'Aperitivo'))
+})
+},[])
+
+
     return (
         <div className="App">
         <Header countCartItems ={cartItems.length}></Header>
         <div className="row">
-        <Main onAdd={onAdd} products={products}></Main>
+        <Main onAdd={onAdd} entrada={entrada} platoPrincipal={platoPrincipal} postre={postre} bebida={bebida} aperitivo={aperitivo}></Main>
         <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Basket>
         </div>
         </div>
