@@ -11,6 +11,13 @@
   min-height: 100vh;
 }
 
+/* Botón Footer*/
+.botonFooter{
+  background: none;
+  border: none;
+}
+.botonFooter:hover{background-color: transparent !important;}
+
 /* clase para dar tamaño al banner principal de pa pagina */
 .bannerPagina {
   height: 500px;
