@@ -2,6 +2,7 @@ import React from "react";
 import './StyleCarta.css'
 
 export default function Header (props){
+const {countCartItems} = props
      return (
         <header>
             <div>
@@ -10,8 +11,15 @@ export default function Header (props){
                 </a>
             </div>
             <div>
-                <a href="#/">Cart</a>
-                <a href="#/">SignIn</a>
+                <a href="#/">                  
+                    
+                Cart { ' ' }
+                {countCartItems? (
+                    <button className="badge">{countCartItems}</button>
+                ):(
+                    ''
+                )}            
+                </a><a href="#/">SignIn</a>
             </div>
         </header>
      )

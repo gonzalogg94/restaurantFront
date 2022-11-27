@@ -42,7 +42,7 @@ setProducts(respuesta)
 },[])
     return (
         <div className="App">
-        <Header></Header>
+        <Header countCartItems ={cartItems.length}></Header>
         <div className="row">
         <Main onAdd={onAdd} products={products}></Main>
         <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Basket>
