@@ -59,7 +59,9 @@ const Footer = () => {
               Entradas
             </NavLink>
             <NavLink end className="nav-item nav-link text-light my-2" to="./components/views/portada/ListaPlatoPrincipal">
+
             Platos Principales
+
             </NavLink>
             <NavLink end className="nav-item nav-link text-light" to="./components/views/portada/ListaPostres">
               Postres
