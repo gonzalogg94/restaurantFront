@@ -44,6 +44,24 @@
       "categoria": "pasta",
       "imagen": "https://img1.ak.crunchyroll.com/i/spire4/5568ffb263f6bcba85a639980b80dd9a1612993223_full.jpg",
       "id": 7
+    },
+    {
+      "nombreProducto": "Milanesa",
+      "estado": "Disponible",
+      "precio": "1500",
+      "detalle": "Milanesa con guarnicion",
+      "categoria": "Plato principal",
+      "imagen": "https://www.clarin.com/img/2021/12/15/la-milanesa-con-papas-fritas___OFsTMm3-P_2000x1500__1.jpg",
+      "id": 8
+    },
+    {
+      "nombreProducto": "Ñioquis",
+      "estado": "en stock",
+      "precio": "800",
+      "detalle": "Ñoquis con salsa roja",
+      "categoria": "Plato principal",
+      "imagen": "https://img1.ak.crunchyroll.com/i/spire4/5568ffb263f6bcba85a639980b80dd9a1612993223_full.jpg",
+      "id": 9
     }
   ],
   "usuarios": [
@@ -95,6 +113,15 @@
       "email": "floralonso@gmail.com",
       "contrasena": "Contador1$",
       "id": 17
+    },
+    {
+      "nombreUsuario": "Alejandro",
+      "apellido": "Heredia",
+      "email": "ale@gmail.com",
+      "contrasena": "Enzo1234*",
+      "estado": "Activo",
+      "perfil": "Administrador",
+      "id": 18
     }
   ]
 }
