@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { consultarApi } from "../helpers/queries";
-import CardProducto from "./producto/CardProducto";
+import { consultarApi } from "../../helpers/queries";
+import CardProducto from "../../views/producto/CardProducto"
 
 const ListaPlatoPrincipal = () => {
     const [productos, setProductos] = useState([]);

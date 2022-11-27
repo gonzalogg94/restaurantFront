@@ -1,26 +1,26 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { consultarApi } from "../helpers/queries";
-import CardProducto from "./producto/CardProducto";
+import { consultarApi } from "../../helpers/queries";
+import CardProducto from "../../views/producto/CardProducto"
 
-const ListaAperitivos = () => {
-    const [productos, setProductos] = useState([]);
+const ListaEntradas = () => {
+  const [productos, setProductos] = useState([]);
   useEffect(() => {
     consultarApi().then((respuesta) => {
       console.log(respuesta);
       setProductos(
-        respuesta.filter((producto) => producto.categoria === "Aperitivo")
+        respuesta.filter((producto) => producto.categoria === "Entrada")
       );
     });
   }, []);
-    return (
-        <section className="fuente colorFondo">
+  return (
+    <section className="fuente colorFondo">
       <div className="posicionBadge position-fixed"></div>
       <article className="row">
         <aside class="col-lg-2 col-md-2 fondoLateral esconder">
           <div class="sidebar d-none d-md-grid col-md-2 col-lg-2 text-light">
             <ul class="list-group mt-5">
-              <Link className="text-decoration-none">
+              <Link className="text-decoration-none d-none">
                 <li class="list-group-item listSidebar">
                   <a href="#Entradas">Entradas</a>
                 </li>
@@ -40,7 +40,7 @@ const ListaAperitivos = () => {
                   <a href="#postres">Bebidas</a>
                 </li>
               </Link>
-              <Link className="text-decoration-none d-none" to={"/aperitivos"}>
+              <Link className="text-decoration-none" to={"/aperitivos"}>
                 <li class="list-group-item listSidebar">
                   <a href="#postres">Aperivos</a>
                 </li>
@@ -64,7 +64,7 @@ const ListaAperitivos = () => {
         </aside>
       </article>
     </section>
-    );
+  );
 };
 
-export default ListaAperitivos;
+export default ListaEntradas;

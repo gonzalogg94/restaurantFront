@@ -150,14 +150,14 @@ export const consultarClientesAPI = async () => {
   }
 };
 
-export const crearClientesAPI = async (usuario) => {
+export const crearClientesAPI = async (cliente) => {
   try {
     const respuesta = await fetch(URLclientes, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(usuario),
+      body: JSON.stringify(cliente),
     });
     return respuesta;
   } catch (error) {

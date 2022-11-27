@@ -59,8 +59,8 @@ const Registro = () => {
                     message: "Debe ingresar como mínimo 2 caracteres",
                   },
                   maxLength: {
-                    value: 20,
-                    message: "Existe un máximo 20 caracteres",
+                    value: 50,
+                    message: "Existe un máximo 50 caracteres",
                   },
                 })}
               />
@@ -69,7 +69,7 @@ const Registro = () => {
               </Form.Text>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formNombreUsuario">
+            <Form.Group className="mb-3" controlId="formApellido">
               <Form.Label>Apellido</Form.Label>
               <Form.Control
                 type="text"
@@ -81,8 +81,8 @@ const Registro = () => {
                     message: "Debe ingresar como mínimo 2 caracteres",
                   },
                   maxLength: {
-                    value: 20,
-                    message: "Existe un máximo 20 caracteres",
+                    value: 50,
+                    message: "Existe un máximo 50 caracteres",
                   },
                 })}
               />
@@ -146,7 +146,7 @@ const Registro = () => {
             <Form.Label>Perfil</Form.Label>
             <Form.Select
               {...register("perfil", {
-                required: "Debe seleccionar un estado",
+                required: "Debe seleccionar un perfil",
               })}
             >
               <option value="">Seleccione una opción</option>
