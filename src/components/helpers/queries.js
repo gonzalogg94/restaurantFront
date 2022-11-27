@@ -201,3 +201,46 @@ export const loginClientes = async (cliente) => {
     return;
   }
 };
+
+
+
+//Peticiones  Api Productos
+const urlPedidos = "http://localhost:4000/apirestaurante/pe/pedidos";
+
+export const consultarPedidosApi = async()=>{  
+  try {
+   const respuesta = await fetch(urlPedidos);
+  const listaPedidos = await respuesta.json();
+  return listaPedidos;
+} catch (error) {
+  console.log(error);
+}};
+
+export const obtenerPedidoApi = async (_id) => {
+  try {
+    const respuesta = await fetch(urlPedidos + "/" + _id);
+    const pedidoBuscado = {
+      dato: await respuesta.json(),
+      status: respuesta.status,
+    };
+    return pedidoBuscado;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editarPedidoApi = async (_id, datosActualizados) => {
+  try {
+    const respuesta = await fetch(urlPedidos + "/" + _id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datosActualizados),
+    });
+
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
