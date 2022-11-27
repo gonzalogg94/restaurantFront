@@ -27,6 +27,7 @@ import Carta from './components/views/carta/Carta';
 import Product from './components/views/carta/Product';
 import AdministradorPedidos from './components/views/AdministradorPedidos';
 import EditarPedido from './components/views/pedidos/EditarPedido';
+import Error404 from './components/views/Error404';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
  <Routes>
  <Route exact path='/' element={<Inicio></Inicio>}></Route>
  <Route exact path='/nosotros' element={<Nosotros></Nosotros>} />
+ <Route exact path='/error' element={<Error404></Error404>} />
  <Route exact path='/Carta' element={<Carta></Carta>} />
  <Route exact path='/Basket' element={<Basket></Basket>}/>
  <Route exact path='/Main' element={<Main></Main>} />
