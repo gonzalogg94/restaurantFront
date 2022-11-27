@@ -1,5 +1,5 @@
 const url = "http://localhost:4000/apirestaurante/pr/productos";
-// const url = "http://localhost:3004/productos";
+//const url = "http://localhost:3004/productos";
 
 export const consultarApi = async () => {
   try {
@@ -70,7 +70,7 @@ export const editarProductoApi = async (id, datosActualizados) => {
 //Consultas a API de usuarios
 
 const URL = "http://localhost:4000/apirestaurante/us/usuarios";
-// const URL = "http://localhost:3004/usuarios";
+//const URL = "http://localhost:3004/usuarios";
 
 //muestra usuarios
 export const consultarUsersAPI = async () => {
@@ -137,7 +137,7 @@ export const login = async (usuario) => {
 
 
 const URLclientes = "http://localhost:4000/apirestaurante/cl/clientes";
-// const URL = "http://localhost:3004/usuarios";
+//const URLclientes = "http://localhost:3004/usuarios";
 
 //muestra usuarios
 export const consultarClientesAPI = async () => {
@@ -199,5 +199,48 @@ export const loginClientes = async (cliente) => {
   } catch (error) {
     console.log("errores en el login");
     return;
+  }
+};
+
+
+
+//Peticiones  Api Productos
+const urlPedidos = "http://localhost:4000/apirestaurante/pe/pedidos";
+
+export const consultarPedidosApi = async()=>{  
+  try {
+   const respuesta = await fetch(urlPedidos);
+  const listaPedidos = await respuesta.json();
+  return listaPedidos;
+} catch (error) {
+  console.log(error);
+}};
+
+export const obtenerPedidoApi = async (_id) => {
+  try {
+    const respuesta = await fetch(urlPedidos + "/" + _id);
+    const pedidoBuscado = {
+      dato: await respuesta.json(),
+      status: respuesta.status,
+    };
+    return pedidoBuscado;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editarPedidoApi = async (_id, datosActualizados) => {
+  try {
+    const respuesta = await fetch(urlPedidos + "/" + _id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datosActualizados),
+    });
+
+    return respuesta;
+  } catch (error) {
+    console.log(error);
   }
 };
