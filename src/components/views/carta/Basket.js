@@ -8,7 +8,7 @@ const IVA = (itemsPrice + cubiertos) * 0.21;
 const totalPrice = itemsPrice + cubiertos + IVA;
 
      return (
-     <aside className="block col-1">
+     <aside className="col-12 col-md-4 col-lg-3">
           <h2>Detalle de la orden</h2>
           <div>{cartItems.length === 0 && <div> La orden está vacía</div>}</div>
           {cartItems.map ((item) =>(
@@ -51,7 +51,7 @@ const totalPrice = itemsPrice + cubiertos + IVA;
                <hr/>
                <div className="row">
                     <button onClick={() => alert ('Implement Checkout')}>
-                         Checkout
+                         Remitir orden
                     </button>
                </div>
                </>
