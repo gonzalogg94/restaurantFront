@@ -45,9 +45,3 @@ Información útil para analizar este repositorio
 
 
 
-
-<<<<<<< HEAD
-prueba para modificar el repo
-=======
-Prueba para modificar el repo
->>>>>>> ebb2b2c2d32b9a1eba47a2ab1848316f52bf7d1d
