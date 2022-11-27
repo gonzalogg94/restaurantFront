@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useForm } from "react-hook-form";
-import { crearUserAPI } from "../helpers/queries";
+import { crearClientesAPI } from "../helpers/queries";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 const Registro = () => { 
@@ -27,7 +27,7 @@ const Registro = () => {
   const onSubmit = (datos) => {
     console.log(datos);
     console.log("desde el evento onsubmit");
-    crearUserAPI(datos).then((respuesta) => {
+    crearClientesAPI(datos).then((respuesta) => {
       if (respuesta.status === 201){
       Swal.fire("Usuario Generado!","El usuario se creó correctamente","success");
         reset();
@@ -42,13 +42,13 @@ const Registro = () => {
     <section className="colorFondo fuente text-light">
       <Container className="py-5">
         <div>
-          <h2 className="display-3 text-center by-3">Nuevo Usuario</h2>
+          <h2 className="display-3 text-center by-3">Nuevo Cliente</h2>
           <hr />
         </div>
         <div>
           <Form className="by-3" onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formNombreUsuario">
-              <Form.Label>Nombre de Usuario</Form.Label>
+              <Form.Label>Nombre de Cliente</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Nombre"
