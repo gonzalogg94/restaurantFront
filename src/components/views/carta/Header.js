@@ -1,5 +1,5 @@
 import React from "react";
-import './StyleCarta.css'
+
 
 export default function Header (props){
 const {countCartItems} = props
