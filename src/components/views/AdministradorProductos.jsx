@@ -1,43 +1,56 @@
 import { Container } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
 import TablaProducto from "./producto/TablaProducto";
+import { useEffect, useState } from "react";
+import { consultarApi } from "../helpers/queries";
+import { Link } from "react-router-dom";
 
 const AdministradorProductos = () => {
-    return (
-        <section className="colorFondo fuente">
-        <Container>
-          <div>
-            <h2 className="display-3 text-center by-5 text-light">
-              Administrador de Productos
-            </h2>
-            <hr />
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    consultarApi().then((respuesta) => {
+      console.log(respuesta);
+      setProductos(respuesta);
+    });
+  }, []);
+
+  return (
+    <section className="colorFondo fuente">
+      <Container>
+        <div>
+          <h2 className="display-3 text-center py-5 m-0 text-light">
+            Administrador de Productos
+          </h2>
+          <hr />
+        </div>
+        <div className="table-responsive">
+          <div className="d-flex justify-content-around  py-3 text-light">
+            <h3>Listado de Productos</h3>
+            <Link className="btn btn-outline-info" to='/administrador/crearProd'>Agregar</Link>
           </div>
-          <div className="table-responsive">
-            <div className="d-flex justify-content-around  my-3 text-light">
-              <h3>Listado de Productos</h3>
-              <Button variant="outline-info">Agregar</Button>
-            </div>
-            <Table striped bordered hover variant="dark">
-              <thead>
-                <tr>
-                  <th>Codigo</th>
-                  <th> nombreProducto</th>
-                  <th> estado</th>
-                  <th> precio</th>
-                  <th> detalle</th>
-                  <th> categoria</th>
-                  <th> imagen</th>
-                </tr>
-              </thead>
-              <tbody>
-             <TablaProducto/>
-              </tbody>
-            </Table>
-          </div>
-        </Container>
-      </section>
-    );
+          <Table striped bordered hover variant="dark">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th> NombreProducto</th>
+                <th> Estado</th>
+                <th> Precio</th>
+                <th> Detalle</th>
+                <th> Categoria</th>
+                <th> Imagen</th>
+                <th> Administrar</th>
+              </tr>
+            </thead>
+            <tbody>
+              {productos.map((producto) =><TablaProducto key={producto._id} producto={producto} setProductos={setProductos} />
+              )}
+            </tbody>
+          </Table>
+        </div>
+      </Container>
+    </section>
+  );
 };
 
 export default AdministradorProductos;

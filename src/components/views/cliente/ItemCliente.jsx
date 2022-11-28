@@ -1,14 +1,14 @@
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { borrarUserAPI } from "../../helpers/queries";
-import { consultarUsersAPI } from "../../helpers/queries";
+import { borrarClientesAPI } from "../../helpers/queries";
+import { consultarClientesAPI } from "../../helpers/queries";
 
-const ItemUsuario = ( {usuario, setUsuarios} ) => {
+const ItemCliente = ( {cliente, setClientes} ) => {
 
-    const borrarUsuario = ()=>{
+    const borrarCliente = ()=>{
         Swal.fire({
             title: '¿Está seguro?',
-            text: "Se está por borrar el usuario seleccionado",
+            text: "Se está por borrar el cliente seleccionado",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -18,14 +18,14 @@ const ItemUsuario = ( {usuario, setUsuarios} ) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 //realizar consulta api
-                borrarUserAPI(usuario._id).then((respuesta)=>{
+                borrarClientesAPI(cliente._id).then((respuesta)=>{
                     if(respuesta.status === 200){
-                        consultarUsersAPI().then((respuesta)=>{
-                            setUsuarios(respuesta)
+                        consultarClientesAPI().then((respuesta)=>{
+                            setClientes(respuesta)
                         })
                         Swal.fire(
                           'Listo',
-                          'El usuario fue borrado',
+                          'El cliente fue borrado',
                           'success'
                         )
                     }else{
@@ -42,13 +42,13 @@ const ItemUsuario = ( {usuario, setUsuarios} ) => {
 
     return (
         <tr>
-        <td>{usuario._id}</td>
-        <td>{usuario.nombreUsuario}</td>
-        <td>{usuario.apellido}</td>
-        <td>{usuario.email}</td>
-        <td>{usuario.contrasena}</td>
+        <td>{cliente._id}</td>
+        <td>{cliente.nombreCliente}</td>
+        <td>{cliente.apellido}</td>
+        <td>{cliente.email}</td>
+        <td>{cliente.contrasena}</td>
         <td>
-        <Button className="m-1" variant="danger" onClick={borrarUsuario}>
+        <Button className="m-1" variant="danger" onClick={borrarCliente}>
           Borrar
         </Button>
         </td>
@@ -56,4 +56,4 @@ const ItemUsuario = ( {usuario, setUsuarios} ) => {
     );
 };
 
-export default ItemUsuario;
+export default ItemCliente;
