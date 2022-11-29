@@ -11,11 +11,15 @@ const [cartItems, setCartItems] = useState([]);
 const onAdd = (product) =>{
     const exist = cartItems.find(x=> x._id === product._id)
     if(exist){
-        setCartItems(cartItems.map(x => x._id === product._id ? {...exist, qty: exist.qty +1 } : x
+        const newCartItems = cartItems.map(x => x._id === product._id ? {...exist, qty: exist.qty +1 } : x
             )
-        );
+        setCartItems(newCartItems)
+        localStorage.setItem('cartItems', JSON.stringify(newCartItems))
+                
     }else {
-        setCartItems([...cartItems, {...product, qty: 1}])
+        const newCartItems = [...cartItems, {...product, qty: 1}]
+        setCartItems(newCartItems)
+        localStorage.setItem('cartItems', JSON.stringify(newCartItems))
     }
 
 };
@@ -23,22 +27,25 @@ const onAdd = (product) =>{
 const onRemove =  (product) =>{
     const exist = cartItems.find((x) => x._id === product._id);
     if(exist.qty === 1){
-        setCartItems(cartItems.filter((x) => x._id !== product._id))
+        const newCartItems = cartItems.filter((x) => x._id !== product._id) 
+        setCartItems(newCartItems)
     }else{
-       setCartItems(cartItems.map((x) => x._id === product._id ? {...exist, qty: exist.qty  -1 } : x
+        const newCartItems = cartItems.map(x => x._id === product._id ? {...exist, qty: exist.qty - 1 } : x
             )
-        );  
+        setCartItems(newCartItems)
+        localStorage.setItem('cartItems', JSON.stringify(newCartItems))
     }
 }
 
+
+
 const [entrada, setEntrada]=useState([])
 useEffect  (()=>{
-
 consultarApi().then((respuesta)=>{
 console.log(respuesta)
 setEntrada(respuesta.filter((producto) => producto.categoria === 'Entrada'))
 })
-},[])
+},[]);
 
 const [platoPrincipal, setPlatoPrincipal] = useState([]);
 useEffect  (()=>{
@@ -46,7 +53,7 @@ consultarApi().then((respuesta)=>{
 console.log(respuesta)
 setPlatoPrincipal(respuesta.filter((producto) => producto.categoria === 'Plato principal'))
 })
-},[])
+},[]);
 
 const [postre, setPostre] = useState([]);
 useEffect  (()=>{
@@ -54,7 +61,7 @@ consultarApi().then((respuesta)=>{
 console.log(respuesta)
 setPostre(respuesta.filter((producto) => producto.categoria === 'Postre'))
 })
-},[])
+},[]);
 
 const [bebida, setBebida] = useState([]);
 useEffect  (()=>{
@@ -62,7 +69,7 @@ consultarApi().then((respuesta)=>{
 console.log(respuesta)
 setBebida(respuesta.filter((producto) => producto.categoria === 'Bebida'))
 })
-},[])
+},[]);
 
 const [aperitivo, setAperitivo] = useState([]);
 useEffect  (()=>{
@@ -70,8 +77,16 @@ consultarApi().then((respuesta)=>{
 console.log(respuesta)
 setAperitivo(respuesta.filter((producto) => producto.categoria === 'Aperitivo'))
 })
-},[])
+},[]);
 
+useEffect (()=>{
+    setCartItems(
+        localStorage.getItem('cartItems')
+        ? JSON.parse(localStorage.getItem('cartItems'))
+        :[]
+    );
+    
+},[]);
 
     return (
         <div className="App">
