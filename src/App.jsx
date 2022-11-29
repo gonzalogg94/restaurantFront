@@ -23,6 +23,7 @@ import Product from './components/views/carta/Product';
 import Error404 from './components/views/Error404';
 import RutasProtegidas from './components/Routes/RutasProtegidas';
 import RutasAdministrador from './components/Routes/RutasAdministrador';
+import AgregarPedido from './components/views/pedidos/AgregarPedido';
 
 
 function App() {
@@ -65,6 +66,9 @@ function App() {
    <RutasAdministrador></RutasAdministrador>
  </RutasProtegidas>
 <Route exact path='/error' element={<Error404></Error404>} />
+ <Route exact path='/administrador/pedidosAdmin' element={<AdministradorPedidos/>} />
+ <Route exact path='/administrador/pedidosAdmin/editarPedido/:id' element={<EditarPedido/>} />
+ <Route exact path='/administrador/pedidosAdmin/creadPed' element={<AgregarPedido/>} />
  </Routes>
  <Footer></Footer>
  </BrowserRouter>
