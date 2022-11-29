@@ -28,6 +28,7 @@ import Product from './components/views/carta/Product';
 import AdministradorPedidos from './components/views/AdministradorPedidos';
 import EditarPedido from './components/views/pedidos/EditarPedido';
 import Error404 from './components/views/Error404';
+import AgregarPedido from './components/views/pedidos/AgregarPedido';
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
  <Route exact path='/loginUsuario' element={<LoginUsuario setUsuarioLogueado={setUsuarioLogueado} setSaludoNavbar={setSaludoNavbar}/>} />
  <Route exact path='/administrador/pedidosAdmin' element={<AdministradorPedidos/>} />
  <Route exact path='/administrador/pedidosAdmin/editarPedido/:id' element={<EditarPedido/>} />
+ <Route exact path='/administrador/pedidosAdmin/creadPed' element={<AgregarPedido/>} />
  </Routes>
  <Footer></Footer>
  </BrowserRouter>

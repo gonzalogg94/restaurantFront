@@ -244,3 +244,19 @@ export const editarPedidoApi = async (_id, datosActualizados) => {
     console.log(error);
   }
 };
+
+export const crearPedidoApi = async (pedido) => {
+  try {
+    const respuesta = await fetch(urlPedidos, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(pedido),
+    });
+
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
