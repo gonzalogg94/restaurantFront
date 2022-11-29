@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 
 export default function Basket (props){
 const {cartItems, onAdd, onRemove}= props;
@@ -9,7 +10,7 @@ const totalPrice = itemsPrice + cubiertos + IVA;
 
      return (
      <aside className="col-12 col-md-4 col-lg-3">
-          <h2>Detalle de la orden</h2>
+          <h2 className="text-center border">Tu Selección</h2>
           <div>{cartItems.length === 0 && <div> La orden está vacía</div>}</div>
           {cartItems.map ((item) =>(
           <div key={item._id} className="row">
@@ -50,8 +51,15 @@ const totalPrice = itemsPrice + cubiertos + IVA;
                </div>
                <hr/>
                <div className="row">
-                    <button onClick={() => alert ('Implement Checkout')}>
-                         Remitir orden
+                                             <button onClick={() =>  Swal.fire({
+                         title: '¡Contáctate con nosotros!',
+                         text: 'Haremos que tu velada sea un momento especial',
+                         imageUrl: 'https://cdn.pixabay.com/photo/2016/11/23/14/44/hands-1853302_960_720.jpg',
+                         imageWidth: 400,
+                         imageHeight: 200,
+                         imageAlt: 'Custom image',
+                         })}>
+                         ¡Contáctate con nosotros!
                     </button>
                </div>
                </>

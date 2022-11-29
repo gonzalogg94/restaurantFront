@@ -29,7 +29,7 @@ const AdminUsuarios = () => {
           <div className="table-responsive">
             <div className="d-flex justify-content-around  my-3 text-light">
               <h3>Listado de Usuarios</h3>
-              <Link className="btn btn-success" variant="outline-info" to="/registro">Agregar</Link>
+              <Link className="btn btn-success" variant="outline-info" to="/registroAdministrador">Agregar</Link>
             </div>
             <Table striped bordered hover variant="dark">
               <thead>

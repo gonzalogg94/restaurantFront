@@ -11,6 +11,7 @@ import Footer from './components/common/Footer';
 import Menu from './components/common/Menu';
 import DetalleProducto from './components/views/DetalleProducto';
 import Registro from './components/views/Registro';
+import RegistroAdministrador from './components/views/RegistroAdministrador';
 import AdminClientes from './components/views/AdminClientes';
 import AdminUsuarios from './components/views/AdminUsuarios';
 import LoginCliente from './components/views/LoginCliente';
@@ -70,6 +71,7 @@ function App() {
  <Route exact path='/detalles/producto/:id' element={<DetalleProducto></DetalleProducto>} />
  <Route exact path='/administrador/editarProd' element={<EditarProducto/>} />
  <Route exact path='/registro' element={<Registro/>} />
+<Route exact path='/registroAdministrador' element={<RegistroAdministrador/>} />
  <Route exact path='/adminClientes' element={<AdminClientes/>} />
  <Route exact path='/adminUsuarios' element={<AdminUsuarios/>} />
  <Route exact path='/loginCliente' element={<LoginCliente setClienteLogueado={setClienteLogueado} setSaludoNavbarCliente={setSaludoNavbarCliente}/>} />

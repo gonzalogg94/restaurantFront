@@ -89,7 +89,7 @@ useEffect (()=>{
 },[]);
 
     return (
-        <div className="App">
+        <div className="App container">
         <Header countCartItems ={cartItems.length}></Header>
         <div className="row">
         <Main onAdd={onAdd} entrada={entrada} platoPrincipal={platoPrincipal} postre={postre} bebida={bebida} aperitivo={aperitivo}></Main>

@@ -7,20 +7,20 @@ const {countCartItems} = props
         <header className="block row center">
             <div>
                 <a href="#/">
-                <h1>NUESTRA CARTA</h1>
+                <h1 className="text-center">NUESTRA CARTA - ¡Cotiza tu velada!</h1>
                 </a>
             </div>
-            <div>
+            {/* <div>
                 <a href="#/">                  
                     
-                Usted está ordenando { ' ' }
+                Usted está seleccionando { ' ' }
                 {countCartItems? (
                     <button className="badge">{countCartItems}</button>
                 ):(
                     '0'
                 )}            
                 </a><a href="#/"> productos</a>
-            </div>
+            </div> */}
         </header>
      )
 }
