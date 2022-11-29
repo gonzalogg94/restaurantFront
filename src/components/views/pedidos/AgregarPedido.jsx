@@ -31,7 +31,31 @@ const AgregarPedido = () => {
     <section className="colorFondo fuente">
     <Container className="text-white">
       <Form onSubmit={handleSubmit(onSubmit)}>
+                <Form.Group className="mb-3" controlId="formNombreCliente">
+              <Form.Label>Nombre Cliente</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Nombre"
+                {...register("nombreClientePedido", {
+                  required: "Este dato es obligatorio",
+                  minLength: {
+                    value: 2,
+                    message: "Debe ingresar como mínimo 2 caracteres",
+                  },
+                  maxLength: {
+                    value: 50,
+                    message: "Existe un máximo 50 caracteres",
+                  },
+                })}
+              />
+              <Form.Text className="text-warning">
+                {errors.nombreClientePedido?.message}
+              </Form.Text>
+            </Form.Group>         
+        
+        
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
+          
           <Form.Label>detalle Pedido</Form.Label>
           <Form.Control
             minLength={2}
