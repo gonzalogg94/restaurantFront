@@ -129,9 +129,6 @@ const Menu = ({
                   </>
                 ) : (
                   <>
-                    {/* <NavLink end className="nav-item nav-link" to="/loginUsuario">
-                Ingreso Administrador
-              </NavLink> */}
                   </>
                 )}
               </Nav>
