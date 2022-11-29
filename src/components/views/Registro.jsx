@@ -13,7 +13,7 @@ const Registro = () => {
     reset,
   } = useForm({
     defaultValues: {
-      nombreUsuario: "",
+      nombreCliente: "",
       apellido:"",
       email: "",
       contrasena: "",
@@ -31,7 +31,7 @@ const Registro = () => {
       if (respuesta.status === 201){
       Swal.fire("Usuario Generado!","El usuario se creó correctamente","success");
         reset();
-        navegacion('/login');
+        navegacion('/loginCliente');
       } else {
       Swal.fire("Ocurrio un error", "Vuelva a intentarlo más tarde", "error");
       }
@@ -47,12 +47,12 @@ const Registro = () => {
         </div>
         <div>
           <Form className="by-3" onSubmit={handleSubmit(onSubmit)}>
-            <Form.Group className="mb-3" controlId="formNombreUsuario">
+            <Form.Group className="mb-3" controlId="formNombreCliente">
               <Form.Label>Nombre</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Nombre"
-                {...register("nombreUsuario", {
+                {...register("nombreCliente", {
                   required: "Este dato es obligatorio",
                   minLength: {
                     value: 2,
@@ -65,7 +65,7 @@ const Registro = () => {
                 })}
               />
               <Form.Text className="text-warning">
-                {errors.nombreUsuario?.message}
+                {errors.nombreCliente?.message}
               </Form.Text>
             </Form.Group>
 
@@ -135,8 +135,8 @@ const Registro = () => {
               })}
             >
               <option value="">Seleccione una opción</option>
-              <option value="Activo">Activo</option>
-              <option value="Inactivo">Inactivo</option>
+              <option value="Familiar">Familiar</option>
+              <option value="Institucional">Institucional</option>
             </Form.Select>
             <Form.Text className="text-warning">
               {errors.estado?.message}
@@ -150,8 +150,8 @@ const Registro = () => {
               })}
             >
               <option value="">Seleccione una opción</option>
-              <option value="Cliente">Cliente</option>
-              <option value="Administrador">Administrador</option>
+              <option value="Sin restricciones">Sin restricciones</option>
+              <option value="Celíaco, vegano, etc">Celíaco, vegano, etc</option>
             </Form.Select>
             <Form.Text className="text-warning">
               {errors.perfil?.message}

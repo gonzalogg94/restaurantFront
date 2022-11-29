@@ -42,7 +42,7 @@ const ListaEntradas = () => {
               </Link>
               <Link className="text-decoration-none" to={"/aperitivos"}>
                 <li class="list-group-item listSidebar">
-                  <a href="#postres">Aperivos</a>
+                  <a href="#postres">Aperitivos</a>
                 </li>
               </Link>
             </ul>

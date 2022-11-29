@@ -24,8 +24,8 @@ borrarProductoApi(props.producto._id).then((respuesta)=>{
   }
 })
         Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
+          '¡Eliminado!',
+          'Tu producto ha sido eliminado.',
           'success'
         )
       }

@@ -28,7 +28,7 @@ const LoginUsuario = ({setUsuarioLogueado, setSaludoNavbar}) => {
             localStorage.setItem("saludo", JSON.stringify(saludo))
             setSaludoNavbar(saludo)
             // si el usuario es correcto entonces redirecciono al admin
-            navigate("/menu");
+            navigate("/administrador");
           } else {
             Swal.fire(
               "Error",

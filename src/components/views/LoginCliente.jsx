@@ -23,7 +23,7 @@ const LoginCliente = ({setClienteLogueado, setSaludoNavbarCliente}) => {
             localStorage.setItem("tokenCliente", JSON.stringify(respuesta));
             setClienteLogueado(respuesta);
             localStorage.getItem("tokenCliente", JSON.stringify(respuesta));
-            const saludoCliente = "Hola "+respuesta.apellido+", "+respuesta.nombreUsuario+"!!"
+            const saludoCliente = "Hola "+respuesta.apellido+", "+respuesta.nombreCliente+"!!"
             localStorage.setItem("saludoCliente", JSON.stringify(saludoCliente))
             setSaludoNavbarCliente(saludoCliente)
             // si el usuario es correcto entonces redirecciono al admin
@@ -55,7 +55,7 @@ const LoginCliente = ({setClienteLogueado, setSaludoNavbarCliente}) => {
                     })}
                   />
                   <Form.Text className="text-danger">
-                    {errors.usuario?.message}
+                    {errors.email?.message}
                   </Form.Text>
                 </Form.Group>
     

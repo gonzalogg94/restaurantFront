@@ -42,7 +42,7 @@ const ListaPostres = () => {
               </Link>
               <Link className="text-decoration-none" to={"/aperitivos"}>
                 <li class="list-group-item listSidebar">
-                  <a href="#postres">Aperivos</a>
+                  <a href="#postres">Aperitivos</a>
                 </li>
               </Link>
             </ul>
@@ -50,7 +50,7 @@ const ListaPostres = () => {
         </aside>
         <aside className="col-lg-10 col-md-10 col-sm-12">
           <div className="text-center text-white py-5 container">
-            <h1> Nuestras Entradas</h1>
+            <h1> Nuestros Postres</h1>
             <hr />
           </div>
           <article className="row my-5 justify-content-center container-fluid">
