@@ -102,6 +102,7 @@ const Menu = ({
               <Nav className="me-auto text-center">
                 {usuarioLogueado.email ? (
                   <>
+                  <div className="text-light text-center pb-2 pt-1 mx-4 fuente fs-6 fw-bold"></div>
                     <NavLink
                       end
                       className="nav-item nav-link"
@@ -129,6 +130,23 @@ const Menu = ({
                   </>
                 ) : (
                   <>
+                  <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/loginCliente"
+                    >
+                      Login
+                    </NavLink>
+                    <NavLink end className="nav-item nav-link" to="/registro">
+                      Registrarse
+                    </NavLink>
+                    <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/loginUsuario"
+                    >
+                      Administrador
+                    </NavLink>
                     {/* <NavLink end className="nav-item nav-link" to="/loginUsuario">
                 Ingreso Administrador
               </NavLink> */}
