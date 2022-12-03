@@ -59,9 +59,9 @@ const Inicio = () => {
         </p>
       </article>
       {/* card */}
-      <article className=" row  container-fluid justify-content-center text-center">
+      <article className=" row justify-content-center text-center p-3 container-fluid">
         <Link
-          className="card card--1 m-2  col-12 col-md-3 col-lg-3 text-decoration-none text-black "
+          className="card card--1 m-2  col-12 col-md-3 col-lg-3 text-decoration-none text-black"
           to={"/entradas"}
         >
           <aside>
