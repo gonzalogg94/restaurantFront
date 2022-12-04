@@ -27,24 +27,33 @@ const AdministradorProductos = () => {
         <div className="table-responsive">
           <div className="d-flex justify-content-around  py-3 text-light">
             <h3>Listado de Productos</h3>
-            <Link className="btn btn-outline-info" to='/administrador/crearProd'>Agregar</Link>
+            <Link
+              className="btn btn-outline-info"
+              to="/administrador/crearProd"
+            >
+              Agregar
+            </Link>
           </div>
           <Table striped bordered hover variant="dark">
             <thead>
               <tr>
-                <th>Código</th>
                 <th> NombreProducto</th>
                 <th> Estado</th>
                 <th> Precio</th>
                 <th> Detalle</th>
                 <th> Categoria</th>
-                <th> Imagen</th>
+
                 <th> Administrar</th>
               </tr>
             </thead>
             <tbody>
-              {productos.map((producto) =><TablaProducto key={producto._id} producto={producto} setProductos={setProductos} />
-              )}
+              {productos.map((producto) => (
+                <TablaProducto
+                  key={producto._id}
+                  producto={producto}
+                  setProductos={setProductos}
+                />
+              ))}
             </tbody>
           </Table>
         </div>
