@@ -1,52 +1,51 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { borrarProductoApi, consultarApi } from "../../helpers/queries";
 const TablaProducto = (props) => {
-  const borrarProducto = ()=>{
+  const borrarProducto = () => {
     Swal.fire({
-      title: '¿Estas Seguro?',
+      title: "¿Estas Seguro?",
       text: "No podras recuperar el Producto",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Eliminar!',
-      cancelButtonText: 'Cancelar!'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Eliminar!",
+      cancelButtonText: "Cancelar!",
     }).then((result) => {
       if (result.isConfirmed) {
-borrarProductoApi(props.producto._id).then((respuesta)=>{
-  if(respuesta.status===200){
-    consultarApi().then((respuesta)=>{
-      props.setProductos(respuesta)
-    })
-  }
-})
-        Swal.fire(
-          '¡Eliminado!',
-          'Tu producto ha sido eliminado.',
-          'success'
-        )
+        borrarProductoApi(props.producto._id).then((respuesta) => {
+          if (respuesta.status === 200) {
+            consultarApi().then((respuesta) => {
+              props.setProductos(respuesta);
+            });
+          }
+        });
+        Swal.fire("¡Eliminado!", "Tu producto ha sido eliminado.", "success");
       }
-    })
-  }
+    });
+  };
   return (
     <tr>
-      <td>{props.producto._id}</td>
       <td>{props.producto.nombreProducto}</td>
       <td>{props.producto.estado}</td>
       <td>{props.producto.precio}</td>
       <td>{props.producto.detalle}</td>
       <td>{props.producto.categoria}</td>
-      <td>{props.producto.imagen}</td>
-      <td>
-      <Button variant="none" onClick={borrarProducto} >  <i  className="bi bi-file-earmark-x-fill text-danger iconAdmin"></i></Button>
-      <Link className="btn" to={`/administrador/editarProd/${props.producto._id}`}>  <i className="bi bi-file-earmark-diff-fill text-warning  iconAdmin"></i></Link>
-          
-        
-         
-    
+      <td className="d-flex">
+        <Button variant="none" onClick={borrarProducto}>
+          {" "}
+          <i className="bi bi-file-earmark-x-fill text-danger iconAdmin"></i>
+        </Button>
+        <Link
+          className="btn"
+          to={`/administrador/editarProd/${props.producto._id}`}
+        >
+          {" "}
+          <i className="bi bi-file-earmark-diff-fill text-warning  iconAdmin"></i>
+        </Link>
       </td>
     </tr>
   );
