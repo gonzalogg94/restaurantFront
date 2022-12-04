@@ -20,7 +20,7 @@ const ListaAperitivos = () => {
         <aside class="col-lg-2 col-md-2 fondoLateral esconder">
           <div class="sidebar d-none d-md-grid col-md-2 col-lg-2 text-light">
             <ul class="list-group mt-5">
-              <Link className="text-decoration-none">
+              <Link className="text-decoration-none" to={"/entradas"}>
                 <li class="list-group-item listSidebar">
                   <a href="#Entradas">Entradas</a>
                 </li>

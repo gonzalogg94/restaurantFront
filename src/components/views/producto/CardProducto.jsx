@@ -7,7 +7,7 @@ const CardProducto = ({ producto }) => {
   return (
     <aside class="col-lg-3 col-md-4 col-sm-8 m-3">
       <div class="card">
-        <img src={imagen} class="w-100" alt="Lasagna" />
+        <img src={imagen} class="tamañoCard" alt={nombreProducto} />
         <div class="card-body text-center text-bg-dark">
           <h5 class="card-title">{nombreProducto}</h5>
           <h5>{precio}</h5>
