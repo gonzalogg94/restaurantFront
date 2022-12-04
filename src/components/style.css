@@ -247,6 +247,9 @@ li {
 .tamañoLogoSM {
   box-sizing: border-box;
 }
+.tamañoCard{
+  height:300px;
+}
 /* menu barra lateral */
 /* carrito */
 .posicionBadge {
