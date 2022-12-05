@@ -39,16 +39,16 @@ const Registro = () => {
    };
 
   return (
-    <section className="colorFondo fuente text-light">
+    <section className="colorFondo text-light">
       <Container className="py-5">
         <div>
-          <h2 className="display-3 text-center by-3">Nuevo Cliente</h2>
+          <h2 className="display-3 text-center by-3 fuente">Nuevo Cliente</h2>
           <hr />
         </div>
         <div>
           <Form className="by-3" onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formNombreCliente">
-              <Form.Label>Nombre</Form.Label>
+              <Form.Label className="fuente fs-4">Nombre</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Nombre"
@@ -70,7 +70,7 @@ const Registro = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formApellido">
-              <Form.Label>Apellido</Form.Label>
+              <Form.Label className="fuente fs-4">Apellido</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Apellido"
@@ -92,7 +92,7 @@ const Registro = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formEmail">
-              <Form.Label>E-mail</Form.Label>
+              <Form.Label className="fuente fs-4">E-mail</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="nombre@ejemplo.com"
@@ -110,7 +110,7 @@ const Registro = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formPassword">
-              <Form.Label>Contraseña</Form.Label>
+              <Form.Label className="fuente fs-4">Contraseña</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Password"
@@ -128,7 +128,7 @@ const Registro = () => {
             </Form.Group>
 
           <Form.Group className="mb-3" controlId="formEstado">
-            <Form.Label>Estado</Form.Label>
+            <Form.Label className="fuente fs-4">Estado</Form.Label>
             <Form.Select
               {...register("estado", {
                 required: "Debe seleccionar un estado",
@@ -143,7 +143,7 @@ const Registro = () => {
             </Form.Text>
           </Form.Group>
                     <Form.Group className="mb-3" controlId="formPerfil">
-            <Form.Label>Perfil</Form.Label>
+            <Form.Label className="fuente fs-4">Perfil</Form.Label>
             <Form.Select
               {...register("perfil", {
                 required: "Debe seleccionar un perfil",
@@ -160,9 +160,9 @@ const Registro = () => {
 
 
             <Button
-              variant="outline-info"
+              variant="success"
               type="submit"
-              className="my-3 "
+              className="my-3 fw-bold fs-3 fuente "
               size="lg"
             >
               Guardar

@@ -22,12 +22,12 @@ const AdministradorProductos = () => {
           <h2 className="display-3 text-center py-5 m-0 text-light">
             Administrador de Productos
           </h2>
-          <hr />
+          <hr className="text-light"></hr>
         </div>
         <div className="table-responsive">
           <div className="d-flex justify-content-around  py-3 text-light">
-            <h3>Listado de Productos</h3>
-            <Link className="btn btn-outline-info" to='/administrador/crearProd'>Agregar</Link>
+            <h3 className="fs-4">Listado de Productos</h3>
+            <Link className="btn btn-success fs-5" to='/administrador/crearProd'>Agregar</Link>
           </div>
           <Table striped bordered hover variant="dark">
             <thead>
