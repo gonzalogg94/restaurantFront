@@ -2,7 +2,6 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import "../style.css";
 import logo from "../../components/img/Logo.png";
 import { Link, NavLink } from "react-router-dom";
-import {AiOutlineInstagram} from "react-icons/ai"
 
 const Footer = () => {
 
@@ -122,4 +121,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 

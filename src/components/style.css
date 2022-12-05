@@ -54,7 +54,6 @@
     font-size: 12px;
     color: #AD7D52;
     vertical-align: middle;
-    margin-left: 5px;
 }
 
 .card__clock-info {
@@ -76,7 +75,7 @@ border-top-right-radius: 12px;
 .card__info-hover {
     position: absolute;
     padding: 16px;
-  width: 100%;
+  width: 90%;
   opacity: 0;
   top: 0;
 }
@@ -86,7 +85,7 @@ border-top-right-radius: 12px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 90%;
   position: absolute;
     height: 235px;
   border-top-left-radius: 12px;
@@ -257,6 +256,9 @@ li {
 .tamañoLogoSM {
   box-sizing: border-box;
 }
+.tamañoCard{
+  height:300px;
+}
 /* menu barra lateral */
 /* carrito */
 .posicionBadge {
@@ -282,14 +284,24 @@ li {
 }
 
 /* media queries */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+ 
+  .tamañoCard{
+    height:200px;
+  }
+}
+
 @media all and (max-width: 767px) {
   .bannerPagina {
     height: 250px;
     object-fit: cover;
   }
 
-}
-
-.iconAdmin{
-  font-size: 2rem;
+  .tamañoCard{
+    height:300px;
+  }
+  
+  .iconAdmin{
+    font-size: 2rem;
+  }
 }
