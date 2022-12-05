@@ -66,13 +66,6 @@
   ],
   "usuarios": [
     {
-      "nombreUsuario": "Santiago",
-      "email": "santi@gmail.com",
-      "contrasena": "Santi1234gfdg",
-      "apellido": "Gonzalez",
-      "id": 9
-    },
-    {
       "nombreUsuario": "Leandro",
       "apellido": "Gonzalez",
       "email": "leandrito@gmail.com",
@@ -92,13 +85,6 @@
       "email": "eaheredia292@gmail.com",
       "contrasena": "Enzo1234",
       "id": 12
-    },
-    {
-      "nombreUsuario": "Clara",
-      "apellido": "Decima",
-      "email": "dClara@gmail.com",
-      "contrasena": "Clara1234",
-      "id": 13
     },
     {
       "nombreUsuario": "Romina",
@@ -122,6 +108,15 @@
       "estado": "Activo",
       "perfil": "Administrador",
       "id": 18
+    },
+    {
+      "nombreCliente": "Enzo",
+      "apellido": "Heredia",
+      "email": "enzo@gmail.com",
+      "contrasena": "Ale1234*",
+      "estado": "Familiar",
+      "perfil": "Celíaco, vegano, etc",
+      "id": 19
     }
   ]
 }

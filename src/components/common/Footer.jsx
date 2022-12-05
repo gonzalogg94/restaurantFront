@@ -2,6 +2,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import "../style.css";
 import logo from "../../components/img/Logo.png";
 import { Link, NavLink } from "react-router-dom";
+import {AiOutlineInstagram} from "react-icons/ai"
 
 const Footer = () => {
 
@@ -31,14 +32,15 @@ const Footer = () => {
 
   return (
     <section className="stylesFooter mainSection fuente pt-3">
-      <Container className="py-4">
+      <Container className="py-4 text-light">
+        <hr className="py-4"></hr>
         <Row className="justify-content-between">
-          <Col md={3} className="text-center mt-4" >
+          <Col md={2} className="text-center mt-4" >
           <Link to={"/"}>
-            <img src={logo} alt="Logo" className="w-50" />
+            <img src={logo} alt="Logo" className="w-100" />
             </Link>
           </Col>
-          <Col md={2} className="mb-3 text-center">
+          <Col md={2} className="mb-4 text-center">
             <h5 className="text-light fw-bold">Sucursales</h5>
             <Col>
               <Button onClick={cordobaCapi} className="botonFooter">Córdoba - Capital</Button>
@@ -47,29 +49,30 @@ const Footer = () => {
               <Button onClick={tucumanYerba} className="botonFooter">Tucumán - Yerba Buena</Button>
             </Col>
           </Col>
-          <Col md={2} className="mb-3 text-center">
+          <Col md={2} className="mb-4 text-center">
             <h5 className="text-light fw-bold">Categorías</h5>
-            <NavLink end className="nav-item nav-link text-light my-2" to="./components/views/portada/ListaAperitivos">
+            <NavLink end className="nav-item nav-link text-light my-3" to="/aperitivos">
               Aperitivos
             </NavLink>
-            <NavLink end className="nav-item nav-link text-light my-2" to="./components/views/portada/ListaBebidas">
+            <NavLink end className="nav-item nav-link text-light my-3" to="/bebidas">
               Bebidas
             </NavLink>
-            <NavLink end className="nav-item nav-link text-light my-2" to="./components/views/portada/ListaEntradas">
+            <NavLink end className="nav-item nav-link text-light my-3" to="/entradas">
               Entradas
             </NavLink>
-            <NavLink end className="nav-item nav-link text-light my-2" to="./components/views/portada/ListaPlatoPrincipal">
+            <NavLink end className="nav-item nav-link text-light my-3" to="/platos-principales">
 
             Platos Principales
 
             </NavLink>
-            <NavLink end className="nav-item nav-link text-light" to="./components/views/portada/ListaPostres">
+            <NavLink end className="nav-item nav-link text-light my-3" to="/postres">
               Postres
             </NavLink>
           </Col>
           <Col md={2} className="mb-3 text-center">
             <h5 className="text-light fw-bold">Redes</h5>
-            <Col>
+            <Container>
+
               <div className="text-light">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -81,8 +84,9 @@ const Footer = () => {
                 >
                   <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z "></path>
                 </svg>
-                 <Button onClick={facebook} className="botonFooter " >Facebook</Button>
+                <Button onClick={facebook} className="botonFooter " >Facebook</Button>
               </div>
+            
               <div className="text-light">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +113,7 @@ const Footer = () => {
                 </svg>
                 <Button onClick={twitter} className="botonFooter" >Twitter</Button>
               </div>
-            </Col>
+            </Container>
           </Col>
         </Row>
       </Container>

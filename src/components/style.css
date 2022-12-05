@@ -16,6 +16,15 @@
   background: none;
   border: none;
 }
+
+.alineamiento{
+  
+}
+
+/*Iconos*/
+.iconos{
+  flex-direction: row;
+}
 .botonFooter:hover{background-color: transparent !important;}
 
 /* clase para dar tamaño al banner principal de pa pagina */
