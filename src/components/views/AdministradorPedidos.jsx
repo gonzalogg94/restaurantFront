@@ -22,7 +22,7 @@ const AdministradorPedidos = () => {
             Lista de Pedidos de Productos
           </h2>
           
-          <Link className="btn btn-outline-info" to='/administrador/pedidosAdmin/creadPed'>Tomar Pedido</Link>
+          <Link className="btn btn-success fs-5" to='/administrador/pedidosAdmin/creadPed'>Tomar Pedido</Link>
           <div className="row justify-content-center">
             {pedidos.map((pedidos) => (
               <CardPedido key={pedidos._id} pedidos={pedidos} />

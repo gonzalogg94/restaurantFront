@@ -19,16 +19,16 @@ const AdminUsuarios = () => {
     <section className="colorFondo fuente">
       <Container className="py-5">
         <div>
-          <h2 className="display-3 text-center by-5 text-light">
+          <h2 className="display-3 text-center py-5 m-0 text-light">
             Administrador de Usuarios
           </h2>
-          <hr />
+          <hr className="text-light"></hr>
         </div>
         <div className="table-responsive">
           <div className="d-flex justify-content-around  my-3 text-light">
-            <h3>Listado de Usuarios</h3>
+            <h3 className="fs-4">Listado de Usuarios</h3>
             <Link
-              className="btn btn-outline-info"
+              className="btn btn-success fs-5"
               variant="outline-info"
               to="/registroAdministrador"
             >
