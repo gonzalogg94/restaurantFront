@@ -9,8 +9,7 @@ const ListaPlatoPrincipal = () => {
     consultarApi().then((respuesta) => {
       console.log(respuesta);
       setProductos(
-        respuesta.filter((producto) => producto.categoria === "Plato principal")
-      );
+        respuesta.filter((producto) => producto.categoria === "Plato principal" && producto.estado === 'Disponible')); 
     });
   }, []);
     return (

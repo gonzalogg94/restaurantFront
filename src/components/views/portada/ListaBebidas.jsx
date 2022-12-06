@@ -9,8 +9,7 @@ const ListaBebidas = () => {
     consultarApi().then((respuesta) => {
       console.log(respuesta);
       setProductos(
-        respuesta.filter((producto) => producto.categoria === "Bebida")
-      );
+        respuesta.filter((producto) => producto.categoria === "Bebida" && producto.estado === 'Disponible'));
     });
   }, []);
     return (

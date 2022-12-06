@@ -9,8 +9,7 @@ const ListaAperitivos = () => {
     consultarApi().then((respuesta) => {
       console.log(respuesta);
       setProductos(
-        respuesta.filter((producto) => producto.categoria === "Aperitivo")
-      );
+        respuesta.filter((producto) => producto.categoria === "Aperitivo" && producto.estado === 'Disponible'));   
     });
   }, []);
     return (

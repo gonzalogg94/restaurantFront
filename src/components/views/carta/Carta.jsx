@@ -43,7 +43,7 @@ const [entrada, setEntrada]=useState([])
 useEffect  (()=>{
 consultarApi().then((respuesta)=>{
 console.log(respuesta)
-setEntrada(respuesta.filter((producto) => producto.categoria === 'Entrada'))
+setEntrada(respuesta.filter((producto) => producto.categoria === 'Entrada' && producto.estado === 'Disponible'))
 })
 },[]);
 
@@ -51,7 +51,7 @@ const [platoPrincipal, setPlatoPrincipal] = useState([]);
 useEffect  (()=>{
 consultarApi().then((respuesta)=>{
 console.log(respuesta)
-setPlatoPrincipal(respuesta.filter((producto) => producto.categoria === 'Plato principal'))
+setPlatoPrincipal(respuesta.filter((producto) => producto.categoria === 'Plato principal' && producto.estado === 'Disponible'))
 })
 },[]);
 
@@ -59,7 +59,7 @@ const [postre, setPostre] = useState([]);
 useEffect  (()=>{
 consultarApi().then((respuesta)=>{
 console.log(respuesta)
-setPostre(respuesta.filter((producto) => producto.categoria === 'Postre'))
+setPostre(respuesta.filter((producto) => producto.categoria === 'Postre' && producto.estado === 'Disponible'))
 })
 },[]);
 
@@ -67,7 +67,7 @@ const [bebida, setBebida] = useState([]);
 useEffect  (()=>{
 consultarApi().then((respuesta)=>{
 console.log(respuesta)
-setBebida(respuesta.filter((producto) => producto.categoria === 'Bebida'))
+setBebida(respuesta.filter((producto) => producto.categoria === 'Bebida' && producto.estado === 'Disponible'))
 })
 },[]);
 
@@ -75,7 +75,7 @@ const [aperitivo, setAperitivo] = useState([]);
 useEffect  (()=>{
 consultarApi().then((respuesta)=>{
 console.log(respuesta)
-setAperitivo(respuesta.filter((producto) => producto.categoria === 'Aperitivo'))
+setAperitivo(respuesta.filter((producto) => producto.categoria === 'Aperitivo' && producto.estado === 'Disponible'))
 })
 },[]);
 

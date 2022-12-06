@@ -9,8 +9,7 @@ const ListaEntradas = () => {
     consultarApi().then((respuesta) => {
       console.log(respuesta);
       setProductos(
-        respuesta.filter((producto) => producto.categoria === "Entrada")
-      );
+        respuesta.filter((producto) => producto.categoria === "Entrada" && producto.estado === 'Disponible'));
     });
   }, []);
   return (

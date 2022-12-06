@@ -9,8 +9,7 @@ const ListaPostres = () => {
     consultarApi().then((respuesta) => {
       console.log(respuesta);
       setProductos(
-        respuesta.filter((producto) => producto.categoria === "Postre")
-      );
+        respuesta.filter((producto) => producto.categoria === "Postre"  && producto.estado === 'Disponible'));
     });
   }, []);
   return (
