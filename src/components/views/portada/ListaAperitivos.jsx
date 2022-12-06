@@ -14,10 +14,10 @@ const ListaAperitivos = () => {
     });
   }, []);
     return (
-        <section className="fuente colorFondo">
+        <section className="fuente colorFondo container-fluid">
       <div className="posicionBadge position-fixed"></div>
       <article className="row">
-        <aside class="col-lg-2 col-md-2 fondoLateral esconder">
+        <aside class="col-lg-2 col-md-2 fondoLateral esconder container-fluid">
           <div class="sidebar d-none d-md-grid col-md-2 col-lg-2 text-light">
             <ul class="list-group mt-5">
               <Link className="text-decoration-none" to={"/entradas"}>
@@ -48,7 +48,7 @@ const ListaAperitivos = () => {
             </ul>
           </div>
         </aside>
-        <aside className="col-lg-10 col-md-10 col-sm-12">
+        <aside className="col-lg-10 col-md-10 col-sm-12 container-fluid">
           <div className="text-center text-white py-5 container">
             <h1> Nuestros Aperitivos</h1>
             <hr />

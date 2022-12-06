@@ -14,10 +14,10 @@ const ListaEntradas = () => {
     });
   }, []);
   return (
-    <section className="fuente colorFondo">
+    <section className="fuente colorFondo container-fluid">
       <div className="posicionBadge position-fixed"></div>
-      <article className="row">
-        <aside class="col-lg-2 col-md-2 fondoLateral esconder">
+      <article className="row container-fluid">
+        <aside class="col-lg-2 col-md-2 col-sm-0 fondoLateral esconder">
           <div class="sidebar d-none d-md-grid col-md-2 col-lg-2 text-light">
             <ul class="list-group mt-5">
               <Link className="text-decoration-none d-none">
@@ -48,12 +48,12 @@ const ListaEntradas = () => {
             </ul>
           </div>
         </aside>
-        <aside className="col-lg-10 col-md-10 col-sm-12">
+        <aside className="col-lg-10 col-md-10 col-sm-12 container-fluid">
           <div className="text-center text-white py-5 container">
             <h1> Nuestras Entradas</h1>
             <hr />
           </div>
-          <article className="row my-5 justify-content-center container-fluid">
+          <article className="row my-5 justify-content-center">
             {productos.map((producto) => (
               <CardProducto
                 key={producto._id}
