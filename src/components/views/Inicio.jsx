@@ -59,16 +59,16 @@ const Inicio = () => {
         </p>
       </article>
       {/* card */}
-      <article className=" row justify-content-center text-center p-3 container-fluid">
+      <article className=" row justify-content-center text-center  container-fluid">
         <Link
-          className="card card--1 m-2  col-12 col-md-3 col-lg-3 text-decoration-none text-black"
+          className="card mb-2 card--1 col-sm-12 col-md-3 col-lg-3 text-decoration-none text-black ms-4"
           to={"/entradas"}
         >
           <aside>
             <div className="card__info-hover">
               <div className="card__clock-info"></div>
             </div>
-            <div className="card__img"></div>
+            <div className="card__img text-center"></div>
 
             <div className="card__img--hover"></div>
 
@@ -81,7 +81,7 @@ const Inicio = () => {
           </aside>
         </Link>
         <Link
-          className="card card--2  m-2 col-12 col-md-3 col-lg-3  text-decoration-none text-black "
+          className="card mb-2 card--2 col-sm-12 col-md-3 col-lg-3  text-decoration-none text-black  ms-4 "
           to={"/platos-principales"}
         >
           <aside>
@@ -98,7 +98,7 @@ const Inicio = () => {
           </aside>
         </Link>
         <Link
-          className="card card--3  my-2  col-12 col-md-3 col-lg-3 text-decoration-none text-black"
+          className="card mb-2 card--3  col-sm-12 col-md-3 col-lg-3 text-decoration-none text-black  ms-4 "
           to={"/postres"}
         >
           <aside>
@@ -113,7 +113,7 @@ const Inicio = () => {
           </aside>
         </Link>
         <Link
-          className="card card--4  m-2  col-12 col-md-3 col-lg-3 text-decoration-none text-black "
+          className="card card--4 mb-2 col-sm-12 col-md-3 col-lg-3 text-decoration-none text-black   ms-4 "
           to={"/bebidas"}
         >
           <aside>
@@ -130,7 +130,7 @@ const Inicio = () => {
           </aside>
         </Link>
         <Link
-          className="card card--5  m-2 col-12 col-md-3 col-lg-3 text-decoration-none text-black "
+          className="card card--5  m-2 col-12 col-md-3 col-lg-3 text-decoration-none text-black  ms-4 "
           to={"/aperitivos"}
         >
           <aside>
