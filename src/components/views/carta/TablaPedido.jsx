@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { borrarPedidoApiCliente, consultarPedidosApi } from "../../helpers/queries";
 const TablaPedido = (props) => {
@@ -17,8 +16,8 @@ console.log(clienteCarro)
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Eliminar!',
-      cancelButtonText: 'Cancelar!'
+      confirmButtonText: '¡Eliminar!',
+      cancelButtonText: '¡Cancelar!'
     }).then((result) => {
       if (result.isConfirmed) {
 borrarPedidoApiCliente(props.pedido._id).then((respuesta)=>{

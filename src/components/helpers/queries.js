@@ -261,28 +261,47 @@ export const crearPedidoApi = async (pedido) => {
   }
 };
 
-export const crearPedidoApiCliente = async (pedido) => {
-  try {
-    const respuesta = await fetch(urlPedidos, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(pedido),
-    });
+// export const crearPedidoApiCliente = async (pedido) => {
+//   try {
+//     const respuesta = await fetch(urlPedidos, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(pedido),
+//     });
 
-    return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+//     return respuesta;
+//   } catch (error) {
+//     console.log(error);
+//   }
   
-};
+// };
 
 export const borrarPedidoApiCliente = async (id) => {
   try {
     const respuesta = await fetch(`${urlPedidos}/${id}`, {
       method: "DELETE",
     });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+
+export const tomarPedidoCliente = async  (pedido) => {
+  try {
+     const respuesta = await fetch(urlPedidos, {
+      method: "POST",
+      headers: {
+         'Accept': 'application/json',
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(pedido)
+    });
+
     return respuesta;
   } catch (error) {
     console.log(error);
