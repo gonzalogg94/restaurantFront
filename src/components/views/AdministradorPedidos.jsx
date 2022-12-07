@@ -19,6 +19,18 @@ const AdministradorPedidos = () => {
       setPedidos(respuesta.filter((pedido)=>pedido.estado === "Pendiente"))
     })
   }
+  const onClickEntregado = ()=>{
+    console.log("desde la funcion pendiente");
+    consultarPedidosApi().then((respuesta)=>{
+      setPedidos(respuesta.filter((pedido)=>pedido.estado === "Entregado"))
+    })
+  }
+  const onClickCancelado = ()=>{
+    console.log("desde la funcion pendiente");
+    consultarPedidosApi().then((respuesta)=>{
+      setPedidos(respuesta.filter((pedido)=>pedido.estado === "Cancelado"))
+    })
+  }
     return (
       <section className="colorFondo fuente">
         <Container>
@@ -28,8 +40,8 @@ const AdministradorPedidos = () => {
           </h2>
           <div className="d-flex justify-content-around">
             <Button onClick={onClickPendiente} className="btn btn-success fs-5 m-5" size="sm" type="button">Pendientes</Button>
-            <Button className="btn btn-success fs-5 m-5" size="sm" type="button">Entregados</Button>
-            <Button className="btn btn-success fs-5 m-5" size="sm" type="button">Cancelados</Button>
+            <Button onClick={onClickEntregado} className="btn btn-success fs-5 m-5" size="sm" type="button">Entregados</Button>
+            <Button onClick={onClickCancelado} className="btn btn-success fs-5 m-5" size="sm" type="button">Cancelados</Button>
           </div>
           <Link className="btn btn-success fs-5" to='/administrador/pedidosAdmin/creadPed'>Tomar Pedido</Link>
           <div className="row justify-content-center">
