@@ -17,8 +17,6 @@ const Registro = () => {
       apellido:"",
       email: "",
       contrasena: "",
-      estado:"",
-      perfil:"",
     },
   });
 
@@ -125,40 +123,7 @@ const Registro = () => {
               <Form.Text className="text-warning">
                 {errors.contrasena?.message}
               </Form.Text>
-            </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formEstado">
-            <Form.Label className="fuente fs-4">Estado</Form.Label>
-            <Form.Select
-              {...register("estado", {
-                required: "Debe seleccionar un estado",
-              })}
-            >
-              <option value="">Seleccione una opción</option>
-              <option value="Activo">Activo</option>
-              <option value="Inactivo">Inactivo</option>
-            </Form.Select>
-            <Form.Text className="text-warning">
-              {errors.estado?.message}
-            </Form.Text>
-          </Form.Group>
-                    <Form.Group className="mb-3" controlId="formPerfil">
-            <Form.Label className="fuente fs-4">Perfil</Form.Label>
-            <Form.Select
-              {...register("perfil", {
-                required: "Debe seleccionar un perfil",
-              })}
-            >
-              <option value="">Seleccione una opción</option>
-              <option value="Cliente">Cliente</option>
-              <option value="Administrador">Administrador</option>
-            </Form.Select>
-            <Form.Text className="text-warning">
-              {errors.perfil?.message}
-            </Form.Text>
-          </Form.Group>
-
-
+            </Form.Group>        
             <Button
               variant="success"
               type="submit"
