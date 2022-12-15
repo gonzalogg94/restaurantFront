@@ -2,16 +2,30 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { consultarApi } from "../../helpers/queries";
 import CardProducto from "../../views/producto/CardProducto"
+import Spinner from "../../common/Spinner"
 
 const ListaEntradas = () => {
-  const [productos, setProductos] = useState([]);
+const [productos, setProductos] = useState([]);
+const [mostrarSpinner, setMostrarSpinner] = useState(true)
+
   useEffect(() => {
     consultarApi().then((respuesta) => {
-      console.log(respuesta);
-      setProductos(
-        respuesta.filter((producto) => producto.categoria === "Entrada" && producto.estado === 'Disponible'));
-    });
+    console.log(respuesta);
+    setProductos(
+    respuesta.filter((producto) => producto.categoria === "Entrada" && producto.estado === 'Disponible'));
+    setMostrarSpinner(false);
+      });
   }, []);
+
+  
+const mostrarComponente = (mostrarSpinner === true) ? (<Spinner></Spinner>):(
+             productos.map((producto) => (
+              <CardProducto
+                key={producto._id}
+                producto={producto}
+              ></CardProducto>
+            )))
+
   return (
     <section className="fuente colorFondo container-fluid">
       <div className="posicionBadge position-fixed"></div>
@@ -53,12 +67,7 @@ const ListaEntradas = () => {
             <hr />
           </div>
           <article className="row my-5 justify-content-center">
-            {productos.map((producto) => (
-              <CardProducto
-                key={producto._id}
-                producto={producto}
-              ></CardProducto>
-            ))}
+            {mostrarComponente}
           </article>
         </aside>
       </article>
@@ -67,3 +76,4 @@ const ListaEntradas = () => {
 };
 
 export default ListaEntradas;
+
