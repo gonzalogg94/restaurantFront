@@ -34,7 +34,7 @@
 }
 /* card de inicio */
 .card--1 .card__img, .card--1 .card__img--hover {
-    background-image: url('http://www.laparcelacr.com/wp-content/uploads/2014/11/entradas-menu.jpg');
+    background-image: url('https://images.pexels.com/photos/370984/pexels-photo-370984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 }
 
 .card--2 .card__img, .card--2 .card__img--hover {
@@ -44,7 +44,7 @@
     background-image: url('https://cdn7.kiwilimon.com/recetaimagen/25955/38379.jpg');
 }
 .card--4 .card__img, .card--4 .card__img--hover {
-    background-image: url(' https://i.blogs.es/576a60/istock-837387558/840_560.jpg');
+    background-image: url('https://images.pexels.com/photos/391213/pexels-photo-391213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 }
 .card--5 .card__img, .card--5 .card__img--hover {
     background-image: url('https://i.blogs.es/7f7b5d/tartaletas_salmon/450_1000.jpg');

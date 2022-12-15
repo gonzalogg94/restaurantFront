@@ -61,7 +61,7 @@ const Inicio = () => {
       {/* card */}
       <article className=" row justify-content-center text-center  container-fluid">
         <Link
-          className="card mb-2 card--1 col-sm-12 col-md-3 col-lg-3 text-decoration-none text-black ms-4"
+          className="card  my-4 card--1 col-sm-12 col-md-3 col-lg-3 text-decoration-none text-black ms-4"
           to={"/entradas"}
         >
           <aside>
@@ -81,7 +81,7 @@ const Inicio = () => {
           </aside>
         </Link>
         <Link
-          className="card mb-2 card--2 col-sm-12 col-md-3 col-lg-3  text-decoration-none text-black  ms-4 "
+          className="card  my-4 card--2 col-sm-12 col-md-3 col-lg-3  text-decoration-none text-black  ms-4 "
           to={"/platos-principales"}
         >
           <aside>
@@ -98,7 +98,7 @@ const Inicio = () => {
           </aside>
         </Link>
         <Link
-          className="card mb-2 card--3  col-sm-12 col-md-3 col-lg-3 text-decoration-none text-black  ms-4 "
+          className="card  my-4 card--3  col-sm-12 col-md-3 col-lg-3 text-decoration-none text-black  ms-4 "
           to={"/postres"}
         >
           <aside>
@@ -113,7 +113,7 @@ const Inicio = () => {
           </aside>
         </Link>
         <Link
-          className="card card--4 mb-2 col-sm-12 col-md-3 col-lg-3 text-decoration-none text-black   ms-4 "
+          className="card card--4 my-4 col-sm-12 col-md-3 col-lg-3 text-decoration-none text-black  ms-4 "
           to={"/bebidas"}
         >
           <aside>
@@ -130,7 +130,7 @@ const Inicio = () => {
           </aside>
         </Link>
         <Link
-          className="card card--5  m-2 col-12 col-md-3 col-lg-3 text-decoration-none text-black  ms-4 "
+          className="card card--5  my-4 col-12 col-md-3 col-lg-3 text-decoration-none text-black  ms-4 "
           to={"/aperitivos"}
         >
           <aside>
