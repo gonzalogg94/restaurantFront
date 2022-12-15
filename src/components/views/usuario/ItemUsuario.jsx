@@ -4,6 +4,10 @@ import { borrarUserAPI } from "../../helpers/queries";
 import { consultarUsersAPI } from "../../helpers/queries";
 
 const ItemUsuario = ({ usuario, setUsuarios }) => {
+
+const titularUsuario = JSON.parse(localStorage.getItem("tokenUsuario"))
+console.log(titularUsuario._id)
+
   const borrarUsuario = () => {
     Swal.fire({
       title: "¿Está seguro?",
@@ -15,10 +19,10 @@ const ItemUsuario = ({ usuario, setUsuarios }) => {
       confirmButtonText: "Continuar",
       cancelButtonText: "Cancelar",
     }).then((result) => {
-      if (result.isConfirmed) {
+      if (result.isConfirmed  && usuario._id !== titularUsuario._id) {
         //realizar consulta api
         borrarUserAPI(usuario._id).then((respuesta) => {
-          if (respuesta.status === 200) {
+          if (respuesta.status === 200 ) {
             consultarUsersAPI().then((respuesta) => {
               setUsuarios(respuesta);
             });
@@ -26,11 +30,17 @@ const ItemUsuario = ({ usuario, setUsuarios }) => {
           } else {
             Swal.fire(
               "Se produjo un error",
-              "Vuelva a intentarlo más tarde",
+              "No puede eliminar el usuario logueado",
               "error"
             );
           }
         });
+      }else{
+      Swal.fire(
+              "Se produjo un error",
+              "No puede eliminar el usuario logueado.",
+              "error"
+            );
       }
     });
   };
