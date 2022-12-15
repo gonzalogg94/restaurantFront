@@ -18,7 +18,7 @@ const Registro = () => {
       email: "",
       contrasena: "",
     },
-  });
+  });git a
 
   const navegacion = useNavigate()
 
@@ -29,7 +29,7 @@ const Registro = () => {
       if (respuesta.status === 201){
       Swal.fire("Usuario Generado!","El usuario se creó correctamente","success");
         reset();
-        navegacion('/loginCliente');
+        navegacion('/loginUsuario');
       } else {
       Swal.fire("Ocurrio un error", "Vuelva a intentarlo más tarde", "error");
       }
