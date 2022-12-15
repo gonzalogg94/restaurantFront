@@ -18,7 +18,7 @@ const Registro = () => {
       email: "",
       contrasena: "",
     },
-  });git a
+  });
 
   const navegacion = useNavigate()
 
