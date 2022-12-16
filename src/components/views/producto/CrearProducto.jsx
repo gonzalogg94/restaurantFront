@@ -57,23 +57,15 @@ const CrearProducto = () => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="formEstado">
             <Form.Label>Estado</Form.Label>
-            <Form.Control
-              minLength={2}
-              maxLength={50}
-              type="text"
-              placeholder="Estado"
+              <Form.Select
               {...register("estado", {
-                required: "Este dato es obligatorio",
-                minLength: {
-                  value: 2,
-                  message: "Caracteres Mínimos 2",
-                },
-                maxLength: {
-                  value: 50,
-                  message: "Caracteres máximos 50",
-                },
+                required: "Debe seleccionar un estado",
               })}
-            />
+            >
+              <option value="">Seleccione una opción</option>
+              <option value="Disponible">Disponible</option>
+              <option value="No disponible">No disponible</option>
+            </Form.Select>
             <Form.Text className="text-warning">
               {errors.estado?.message}
             </Form.Text>
