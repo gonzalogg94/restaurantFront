@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Card,Col,Badge,Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { obtenerProductoApi } from "../helpers/queries";
+import { Link } from "react-router-dom"
 import Swal from "sweetalert2";
 
 const DetalleProducto = () => {
@@ -22,13 +23,14 @@ const DetalleProducto = () => {
     })
   },[]);
     return (
-        <Card className="container my-5 mainSection py-5">
-        <Row className="w-75">
-          <Col md={5}>
+       <section className=" container py=5">
+       <Card className="container my-5 mainSection py-5">
+        <Row className="w-sm-75 row">
+          <Col className="col-12 col-md-5 col-lg-5">
             <img src={producto.imagen} alt="producto" className="w-100" />
           </Col>
-          <Col md={5} className="py-3">
-            <h3>{producto.nombreProducto}</h3>
+          <Col className="col-12 col-md-7 col-lg-7 py-3">
+            <h2 className="fs-2">{producto.nombreProducto}</h2>
             <hr />
             <Badge bg="success">{producto.categoria}</Badge>
             <div>
@@ -37,13 +39,18 @@ const DetalleProducto = () => {
             </p>
             </div>
             <div>
-                <h4>Descripcion</h4>
+                <h3 className="fs-4">Descripción</h3>
                 <p>{producto.detalle}</p>
             </div>
+             <hr />
+            <div className="text-center">
+                <Link to="/" className="btn btn-secondary">Volver</Link>
+             </div>
           </Col>
         </Row>
       </Card>
-    );
+      </section>
+  );
 };
 
 export default DetalleProducto;

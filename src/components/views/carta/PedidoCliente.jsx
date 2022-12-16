@@ -3,18 +3,14 @@ import Table from "react-bootstrap/Table";
 import TablaPedido from "./TablaPedido";
 import { useEffect, useState } from "react";
 import { consultarPedidosApi} from "../../helpers/queries";
-import { Link } from "react-router-dom";
 
 const AdministradorPedidos = () => {
  
 const titularCarro = (JSON.parse(localStorage.getItem("tokenCliente")));
 const clienteCarro = titularCarro.nombreCliente + ' ' + titularCarro.apellido
-console.log(clienteCarro)
-
+console.log(clienteCarro) 
  
- 
- 
-  const [pedidos, setPedidos] = useState([]);
+ const [pedidos, setPedidos] = useState([]);
 
   useEffect(() => {
     consultarPedidosApi().then((respuesta) => {

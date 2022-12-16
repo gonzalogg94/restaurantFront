@@ -17,9 +17,9 @@
   border: none;
 }
 
-.alineamiento{
+/* .alineamiento{
   
-}
+} */
 
 /*Iconos*/
 .iconos{
@@ -81,7 +81,7 @@ border-top-right-radius: 12px;
 }
 
 .card__img--hover {
-  transition: 0.2s all ease-out;
+  transition: 1s all ease-out;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

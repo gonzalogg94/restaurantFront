@@ -144,7 +144,7 @@ const CrearProducto = () => {
               {...register("imagen", {
                 required: "Este campo es obligatorio",
                 pattern: {
-                  value: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
+                  value: /^https?:\/\/[\w]+(\.[\w]+)+[/#?]?.*$/,
                   message: "Ingrese una Url valida",
                 },
               })}
