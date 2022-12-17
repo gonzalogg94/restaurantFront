@@ -44,7 +44,7 @@ const DetalleProducto = () => {
             </div>
              <hr />
             <div className="text-center">
-                <Link to="/" className="btn btn-secondary">Volver</Link>
+                <Link to="/" className="btn btn-success">Volver</Link>
              </div>
           </Col>
         </Row>

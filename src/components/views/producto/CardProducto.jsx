@@ -20,9 +20,7 @@ const CardProducto = ({ producto }) => {
           <div className="row mt-4">
             <div className="col-12">
               <Link to={`/detalles/producto/${_id}`}>
-                <button className="btn">
-                  <Link className="text-white text-decoration-none">Detalles</Link>
-                </button>
+                <button className="btn text-white">Detalles</button>
               </Link>
             </div>
           </div>
