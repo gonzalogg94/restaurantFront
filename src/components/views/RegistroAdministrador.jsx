@@ -31,7 +31,7 @@ const Registro = () => {
         reset();
         navegacion('/loginUsuario');
       } else {
-      Swal.fire("Ocurrio un error", "Vuelva a intentarlo más tarde", "error");
+      Swal.fire("Ocurrio un error", "Ya existe un usuario con el email elegido.", "error");
       }
     });
    };

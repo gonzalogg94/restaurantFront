@@ -29,11 +29,11 @@ const Registro = () => {
     console.log("desde el evento onsubmit");
     crearClientesAPI(datos).then((respuesta) => {
       if (respuesta.status === 201){
-      Swal.fire("Usuario Generado!","El usuario se creó correctamente","success");
+      Swal.fire("¡Cliente Generado!","El registro se completó correctamente","success");
         reset();
         navegacion('/loginCliente');
       } else {
-      Swal.fire("Ocurrio un error", "Vuelva a intentarlo más tarde", "error");
+      Swal.fire("Ocurrio un error", "El email ya pertenece a un cliente registrado.", "error");
       }
     });
    };
