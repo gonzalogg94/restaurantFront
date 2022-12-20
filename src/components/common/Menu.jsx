@@ -1,5 +1,4 @@
-
-import { Navbar, Nav, Container, Button, Col} from "react-bootstrap";
+import { Navbar, Nav, Container, Button, Col } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import logo from "../../components/img/Logo.png";
@@ -46,7 +45,6 @@ const Menu = ({
           <Col lg={5} className="alineamiento">
             <Navbar.Toggle aria-controls="basic-navbar-nav" className="mb-2" />
             <Navbar.Collapse>
-              
               <Nav className="me-auto text-center">
                 <NavLink end className="nav-item nav-link" to="/">
                   Inicio
@@ -68,47 +66,48 @@ const Menu = ({
                       variant="danger"
                       className="fuente fs-5 mb-3"
                       onClick={logoutCliente}
-                    >Logout
+                    >
+                      Logout
                     </Button>
                     <div className="text-light text-center pb-2 pt-1 mx-4 fuente fs-6 fw-bold">
-                {saludoNavbarCliente}
-              </div>
+                      {saludoNavbarCliente}
+                    </div>
+                  </>
+                ) : usuarioLogueado.email ? (
+                  <>
+                    <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/administrador"
+                    >
+                      Productos
+                    </NavLink>
+                    <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/adminUsuarios"
+                    >
+                      Usuarios
+                    </NavLink>
+                    <NavLink
+                      end
+                      className="nav-item nav-link"
+                      to="/administrador/pedidosAdmin"
+                    >
+                      Pedidos
+                    </NavLink>
+                    <Button
+                      variant="danger"
+                      className="fuente fs-4 mx-2 mb-3"
+                      onClick={logout}
+                    >
+                      Logout
+                    </Button>
+                    <div className="text-light px-3 pb-2 fw-bold my-3">
+                      {saludoNavbar}
+                    </div>
                   </>
                 ) : (
-                  usuarioLogueado.email ? (
-                    <>
-                      <NavLink
-                        end
-                        className="nav-item nav-link"
-                        to="/administrador"
-                      >
-                        Productos
-                      </NavLink>
-                      <NavLink
-                        end
-                        className="nav-item nav-link"
-                        to="/adminUsuarios"
-                      >
-                        Usuarios
-                      </NavLink>
-                      <NavLink
-                        end
-                        className="nav-item nav-link"
-                        to="/administrador/pedidosAdmin"
-                      >
-                        Pedidos
-                      </NavLink>
-                      <Button
-                        variant="danger"
-                        className="fuente fs-4 mx-2 mb-3"
-                        onClick={logout}
-                      >Logout
-                      </Button>
-                      <div className="text-light px-3 pb-2 fw-bold my-3">
-                        {saludoNavbar}
-                      </div>
-                    </>
-                  ):(
                   <>
                     <NavLink
                       end
@@ -128,9 +127,7 @@ const Menu = ({
                       Administrador
                     </NavLink>
                   </>
-                )
-              )
-              }
+                )}
               </Nav>
             </Navbar.Collapse>
           </Col>
@@ -141,4 +138,3 @@ const Menu = ({
 };
 
 export default Menu;
-

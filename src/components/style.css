@@ -5,71 +5,73 @@
 }
 
 .colorFondo {
-  background-color:#2C503B;
+  background-color: #2c503b;
   min-height: 100vh;
 }
 
-
-.botonFooter{
+.botonFooter {
   background: none;
   border: none;
 }
 
-
-
-.iconos{
+.iconos {
   flex-direction: row;
 }
-.botonFooter:hover{background-color: transparent !important;}
-
+.botonFooter:hover {
+  background-color: transparent !important;
+}
 
 .bannerPagina {
   height: 500px;
   object-fit: cover;
 }
 
-.card--1 .card__img, .card--1 .card__img--hover {
-    background-image: url('https://images.pexels.com/photos/718742/pexels-photo-718742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+.card--1 .card__img,
+.card--1 .card__img--hover {
+  background-image: url("https://images.pexels.com/photos/718742/pexels-photo-718742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
-.card--2 .card__img, .card--2 .card__img--hover {
-    background-image: url('https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/08/09173312/asado.jpg');
+.card--2 .card__img,
+.card--2 .card__img--hover {
+  background-image: url("https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/08/09173312/asado.jpg");
 }
-.card--3 .card__img, .card--3 .card__img--hover {
-    background-image: url('https://cdn7.kiwilimon.com/recetaimagen/25955/38379.jpg');
+.card--3 .card__img,
+.card--3 .card__img--hover {
+  background-image: url("https://cdn7.kiwilimon.com/recetaimagen/25955/38379.jpg");
 }
-.card--4 .card__img, .card--4 .card__img--hover {
-    background-image: url(' https://i.blogs.es/576a60/istock-837387558/840_560.jpg');
+.card--4 .card__img,
+.card--4 .card__img--hover {
+  background-image: url(" https://i.blogs.es/576a60/istock-837387558/840_560.jpg");
 }
-.card--5 .card__img, .card--5 .card__img--hover {
-    background-image: url('https://i.blogs.es/7f7b5d/tartaletas_salmon/450_1000.jpg');
+.card--5 .card__img,
+.card--5 .card__img--hover {
+  background-image: url("https://i.blogs.es/7f7b5d/tartaletas_salmon/450_1000.jpg");
 }
 
 .card__time {
-    font-size: 12px;
-    color: #AD7D52;
-    vertical-align: middle;
+  font-size: 12px;
+  color: #ad7d52;
+  vertical-align: middle;
 }
 
 .card__clock-info {
-    float: right;
+  float: right;
 }
 
 .card__img {
   visibility: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 235px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
   border-top-left-radius: 12px;
-border-top-right-radius: 12px;
-  
+  border-top-right-radius: 12px;
 }
 
 .card__info-hover {
-    position: absolute;
-    padding: 16px;
+  position: absolute;
+  padding: 16px;
   width: 90%;
   opacity: 0;
   top: 0;
@@ -77,75 +79,73 @@ border-top-right-radius: 12px;
 
 .card__img--hover {
   transition: 1s all ease-out;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 90%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 90%;
   position: absolute;
-    height: 235px;
+  height: 235px;
   border-top-left-radius: 12px;
-border-top-right-radius: 12px;
-top: 0;
-  
+  border-top-right-radius: 12px;
+  top: 0;
 }
 .card {
-  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
 }
 .card:hover {
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
-    transform: scale(1.10, 1.10);
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1, 1.1);
 }
 
 .card__info {
-z-index: 2;
+  z-index: 2;
   background-color: #fff;
   border-bottom-left-radius: 12px;
-border-bottom-right-radius: 12px;
-   padding: 16px 24px 24px 24px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
 }
 
 .card__category {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 2px;
-    font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
   color: #868686;
 }
 
 .card__title {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-family: 'Roboto Slab', serif;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: "Roboto Slab", serif;
 }
 
 .card__by {
-    font-size: 12px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
 }
 
 .card__author {
-    font-weight: 600;
-    text-decoration: none;
-    color: #AD7D52;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ad7d52;
 }
 
 .card:hover .card__img--hover {
-    height: 100%;
-    opacity: 0.3;
+  height: 100%;
+  opacity: 0.3;
 }
 
 .card:hover .card__info {
-    background-color: transparent;
-   
+  background-color: transparent;
 }
 
 .card:hover .card__info-hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .fondoLateral {
@@ -249,36 +249,33 @@ li {
 .tamañoLogoSM {
   box-sizing: border-box;
 }
-.tamañoCard{
-  height:300px;
+.tamañoCard {
+  height: 300px;
 }
 
 .posicionBadge {
   z-index: 5;
 }
 
-.bgTransparente{
-  background-color: #2C503B;
+.bgTransparente {
+  background-color: #2c503b;
   padding: 0px;
   margin: 0px;
 }
 
-
-.stylesFooter{
-  background-color: #2C503B;
+.stylesFooter {
+  background-color: #2c503b;
   min-height: 100uh;
   display: flex;
   flex-direction: column;
 }
-.mainSection{
+.mainSection {
   flex-grow: 1;
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 991px) {
- 
-  .tamañoCard{
-    height:200px;
+  .tamañoCard {
+    height: 200px;
   }
 }
 
@@ -288,11 +285,11 @@ li {
     object-fit: cover;
   }
 
-  .tamañoCard{
-    height:300px;
+  .tamañoCard {
+    height: 300px;
   }
-  
-  .iconAdmin{
+
+  .iconAdmin {
     font-size: 2rem;
   }
 }

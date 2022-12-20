@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { crearClientesAPI } from "../helpers/queries";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-const Registro = () => { 
+const Registro = () => {
   const {
     register,
     handleSubmit,
@@ -14,29 +14,37 @@ const Registro = () => {
   } = useForm({
     defaultValues: {
       nombreCliente: "",
-      apellido:"",
+      apellido: "",
       email: "",
       contrasena: "",
-      estado:"",
-      perfil:"",
+      estado: "",
+      perfil: "",
     },
   });
 
-  const navegacion = useNavigate()
+  const navegacion = useNavigate();
 
   const onSubmit = (datos) => {
     console.log(datos);
     console.log("desde el evento onsubmit");
     crearClientesAPI(datos).then((respuesta) => {
-      if (respuesta.status === 201){
-      Swal.fire("¡Cliente Generado!","El registro se completó correctamente","success");
+      if (respuesta.status === 201) {
+        Swal.fire(
+          "¡Cliente Generado!",
+          "El registro se completó correctamente",
+          "success"
+        );
         reset();
-        navegacion('/loginCliente');
+        navegacion("/loginCliente");
       } else {
-      Swal.fire("Ocurrio un error", "El email ya pertenece a un cliente registrado.", "error");
+        Swal.fire(
+          "Ocurrio un error",
+          "El email ya pertenece a un cliente registrado.",
+          "error"
+        );
       }
     });
-   };
+  };
 
   return (
     <section className="colorFondo text-light">
@@ -97,11 +105,12 @@ const Registro = () => {
                 type="email"
                 placeholder="nombre@ejemplo.com"
                 {...register("email", {
-                     required:'El mail es obligatorio',
-                     pattern:{
-                     value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                     message:'Debe ingresar un mail válido.'
-               },
+                  required: "El mail es obligatorio",
+                  pattern: {
+                    value:
+                      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    message: "Debe ingresar un mail válido.",
+                  },
                 })}
               />
               <Form.Text className="text-warning">
@@ -115,49 +124,52 @@ const Registro = () => {
                 type="password"
                 placeholder="Password"
                 {...register("contrasena", {
-                required:'Es obligatorio ingresar una password',
-                pattern:{
-                value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-                message:'La contraseña debe como minimo 8 caracteres y al menos una letra, un número y un símbolo especial.'
-               },
-               })}
+                  required: "Es obligatorio ingresar una password",
+                  pattern: {
+                    value:
+                      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+                    message:
+                      "La contraseña debe como minimo 8 caracteres y al menos una letra, un número y un símbolo especial.",
+                  },
+                })}
               />
               <Form.Text className="text-warning">
                 {errors.contrasena?.message}
               </Form.Text>
             </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formEstado">
-            <Form.Label className="fuente fs-4">Estado</Form.Label>
-            <Form.Select
-              {...register("estado", {
-                required: "Debe seleccionar un estado",
-              })}
-            >
-              <option value="">Seleccione una opción</option>
-              <option value="Familiar">Familiar</option>
-              <option value="Institucional">Institucional</option>
-            </Form.Select>
-            <Form.Text className="text-warning">
-              {errors.estado?.message}
-            </Form.Text>
-          </Form.Group>
-                    <Form.Group className="mb-3" controlId="formPerfil">
-            <Form.Label className="fuente fs-4">Perfil</Form.Label>
-            <Form.Select
-              {...register("perfil", {
-                required: "Debe seleccionar un perfil",
-              })}
-            >
-              <option value="">Seleccione una opción</option>
-              <option value="Sin restricciones">Sin restricciones</option>
-              <option value="Celíaco, vegano, etc">Celíaco, vegano, etc</option>
-            </Form.Select>
-            <Form.Text className="text-warning">
-              {errors.perfil?.message}
-            </Form.Text>
-          </Form.Group>
-
+            <Form.Group className="mb-3" controlId="formEstado">
+              <Form.Label className="fuente fs-4">Estado</Form.Label>
+              <Form.Select
+                {...register("estado", {
+                  required: "Debe seleccionar un estado",
+                })}
+              >
+                <option value="">Seleccione una opción</option>
+                <option value="Familiar">Familiar</option>
+                <option value="Institucional">Institucional</option>
+              </Form.Select>
+              <Form.Text className="text-warning">
+                {errors.estado?.message}
+              </Form.Text>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formPerfil">
+              <Form.Label className="fuente fs-4">Perfil</Form.Label>
+              <Form.Select
+                {...register("perfil", {
+                  required: "Debe seleccionar un perfil",
+                })}
+              >
+                <option value="">Seleccione una opción</option>
+                <option value="Sin restricciones">Sin restricciones</option>
+                <option value="Celíaco, vegano, etc">
+                  Celíaco, vegano, etc
+                </option>
+              </Form.Select>
+              <Form.Text className="text-warning">
+                {errors.perfil?.message}
+              </Form.Text>
+            </Form.Group>
 
             <Button
               variant="success"

@@ -15,16 +15,16 @@ const CrearProducto = () => {
   const onSubmit = (datos) => {
     console.log(datos);
     console.log("desde el evento onsubmit");
-    crearProductoApi(datos).then((respuesta)=>{
-      if(respuesta.status===201){
-        Swal.fire("Producto Creado","Creado Con Exito","success");
+    crearProductoApi(datos).then((respuesta) => {
+      if (respuesta.status === 201) {
+        Swal.fire("Producto Creado", "Creado Con Exito", "success");
         navegacion("/administrador");
-      }else{
-        Swal.fire("Error","No se pudo Crear ","error");
+      } else {
+        Swal.fire("Error", "No se pudo Crear ", "error");
       }
-    })
+    });
   };
-  const navegacion= useNavigate();
+  const navegacion = useNavigate();
 
   return (
     <section className="colorFondo fuente text-light">
@@ -57,7 +57,7 @@ const CrearProducto = () => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="formEstado">
             <Form.Label>Estado</Form.Label>
-              <Form.Select
+            <Form.Select
               {...register("estado", {
                 required: "Debe seleccionar un estado",
               })}
@@ -96,8 +96,8 @@ const CrearProducto = () => {
           <Form.Group className="mb-3" controlId="formDetalle">
             <Form.Label>Detalle</Form.Label>
             <Form.Control
-            minLength={2}
-            maxLength={1000}
+              minLength={2}
+              maxLength={1000}
               type="text"
               placeholder="Ingrese el Detalle"
               {...register("detalle", {
@@ -137,8 +137,8 @@ const CrearProducto = () => {
           <Form.Group className="mb-3" controlId="formImagen">
             <Form.Label>Imagen</Form.Label>
             <Form.Control
-            minLength={2}
-            maxLength={500}
+              minLength={2}
+              maxLength={500}
               type="text"
               placeholder="Ej: ingrese un Url"
               {...register("imagen", {
@@ -155,13 +155,13 @@ const CrearProducto = () => {
           </Form.Group>
 
           <Button
-                variant="outline-info"
-                type="submit"
-                className="my-3 "
-                size="lg"
-              >
-                Guardar
-              </Button>
+            variant="outline-info"
+            type="submit"
+            className="my-3 "
+            size="lg"
+          >
+            Guardar
+          </Button>
         </Form>
       </Container>
     </section>

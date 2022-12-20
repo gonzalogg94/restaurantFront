@@ -7,7 +7,9 @@ const CardPedidos = (props) => {
     <Card className="bg-success text-light m-3" style={{ width: "18rem" }}>
       <Card.Header>ID:{props.pedidos._id}</Card.Header>
       <Card.Body>
-        <Card.Title className="mb-2 text-center">{props.pedidos.nombreClientePedido}</Card.Title>
+        <Card.Title className="mb-2 text-center">
+          {props.pedidos.nombreClientePedido}
+        </Card.Title>
         <Card.Text>
           {props.pedidos.detallePedido.map((pedido, index) => {
             return (

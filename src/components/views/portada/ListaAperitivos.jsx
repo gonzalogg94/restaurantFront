@@ -1,33 +1,38 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { consultarApi } from "../../helpers/queries";
-import CardProducto from "../../views/producto/CardProducto"
-import Spinner from "../../common/Spinner"
-
+import CardProducto from "../../views/producto/CardProducto";
+import Spinner from "../../common/Spinner";
 
 const ListaAperitivos = () => {
-const [productos, setProductos] = useState([]);
-const [mostrarSpinner, setMostrarSpinner] = useState(true)
+  const [productos, setProductos] = useState([]);
+  const [mostrarSpinner, setMostrarSpinner] = useState(true);
 
   useEffect(() => {
     consultarApi().then((respuesta) => {
-    console.log(respuesta);
-    setProductos(
-    respuesta.filter((producto) => producto.categoria === "Aperitivo" && producto.estado === 'Disponible'));   
-    setMostrarSpinner(false);
-      });
+      console.log(respuesta);
+      setProductos(
+        respuesta.filter(
+          (producto) =>
+            producto.categoria === "Aperitivo" &&
+            producto.estado === "Disponible"
+        )
+      );
+      setMostrarSpinner(false);
+    });
   }, []);
 
-const mostrarComponente = (mostrarSpinner === true) ? (<Spinner></Spinner>):(
-             productos.map((producto) => (
-              <CardProducto
-                key={producto._id}
-                producto={producto}
-              ></CardProducto>
-            )))
-            
-    return (
-        <section className="fuente colorFondo container-fluid">
+  const mostrarComponente =
+    mostrarSpinner === true ? (
+      <Spinner></Spinner>
+    ) : (
+      productos.map((producto) => (
+        <CardProducto key={producto._id} producto={producto}></CardProducto>
+      ))
+    );
+
+  return (
+    <section className="fuente colorFondo container-fluid">
       <div className="posicionBadge position-fixed"></div>
       <article className="row">
         <aside class="col-lg-2 col-md-2 fondoLateral esconder container-fluid">
@@ -72,7 +77,7 @@ const mostrarComponente = (mostrarSpinner === true) ? (<Spinner></Spinner>):(
         </aside>
       </article>
     </section>
-    );
+  );
 };
 
 export default ListaAperitivos;

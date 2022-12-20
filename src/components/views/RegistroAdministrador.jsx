@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { crearUserAPI } from "../helpers/queries";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-const Registro = () => { 
+const Registro = () => {
   const {
     register,
     handleSubmit,
@@ -14,27 +14,35 @@ const Registro = () => {
   } = useForm({
     defaultValues: {
       nombreUsuario: "",
-      apellido:"",
+      apellido: "",
       email: "",
       contrasena: "",
     },
   });
 
-  const navegacion = useNavigate()
+  const navegacion = useNavigate();
 
   const onSubmit = (datos) => {
     console.log(datos);
     console.log("desde el evento onsubmit");
     crearUserAPI(datos).then((respuesta) => {
-      if (respuesta.status === 201){
-      Swal.fire("Usuario Generado!","El usuario se creó correctamente","success");
+      if (respuesta.status === 201) {
+        Swal.fire(
+          "Usuario Generado!",
+          "El usuario se creó correctamente",
+          "success"
+        );
         reset();
-        navegacion('/loginUsuario');
+        navegacion("/loginUsuario");
       } else {
-      Swal.fire("Ocurrio un error", "Ya existe un usuario con el email elegido.", "error");
+        Swal.fire(
+          "Ocurrio un error",
+          "Ya existe un usuario con el email elegido.",
+          "error"
+        );
       }
     });
-   };
+  };
 
   return (
     <section className="colorFondo text-light">
@@ -95,11 +103,12 @@ const Registro = () => {
                 type="email"
                 placeholder="nombre@ejemplo.com"
                 {...register("email", {
-                     required:'El mail es obligatorio',
-                     pattern:{
-                     value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                     message:'Debe ingresar un mail válido.'
-               },
+                  required: "El mail es obligatorio",
+                  pattern: {
+                    value:
+                      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    message: "Debe ingresar un mail válido.",
+                  },
                 })}
               />
               <Form.Text className="text-warning">
@@ -113,17 +122,19 @@ const Registro = () => {
                 type="password"
                 placeholder="Password"
                 {...register("contrasena", {
-                required:'Es obligatorio ingresar una password',
-                pattern:{
-                value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-                message:'La contraseña debe como minimo 8 caracteres y al menos una letra, un número y un símbolo especial.'
-               },
-               })}
+                  required: "Es obligatorio ingresar una password",
+                  pattern: {
+                    value:
+                      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+                    message:
+                      "La contraseña debe como minimo 8 caracteres y al menos una letra, un número y un símbolo especial.",
+                  },
+                })}
               />
               <Form.Text className="text-warning">
                 {errors.contrasena?.message}
               </Form.Text>
-            </Form.Group>        
+            </Form.Group>
             <Button
               variant="success"
               type="submit"

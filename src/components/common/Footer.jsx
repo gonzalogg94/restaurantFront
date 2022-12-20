@@ -59,7 +59,7 @@ const Footer = () => {
               </Button>
             </Col>
           </Col>
-          
+
           <Col md={2} className="mb-4 text-center">
             <h5 className="text-light fw-bold">Categorías</h5>
             <NavLink

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const CardProducto = ({ producto }) => {
-  const { _id, nombreProducto, precio, imagen, categoria, estado} = {
+  const { _id, nombreProducto, precio, imagen, categoria, estado } = {
     ...producto,
   };
   return (

@@ -27,7 +27,12 @@ const AdministradorProductos = () => {
         <div className="table-responsive">
           <div className="d-flex justify-content-around  py-3 text-light">
             <h3 className="fs-4">Listado de Productos</h3>
-            <Link className="btn btn-success fs-5" to='/administrador/crearProd'>Agregar</Link>
+            <Link
+              className="btn btn-success fs-5"
+              to="/administrador/crearProd"
+            >
+              Agregar
+            </Link>
           </div>
           <Table striped bordered hover variant="dark">
             <thead>

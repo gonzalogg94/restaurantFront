@@ -13,7 +13,10 @@ const Inicio = () => {
             alt="Imagen banner"
           />
           <Carousel.Caption>
-            <h3>Honramos nuestras recetas tradicionales con los mejores ingredientes</h3>
+            <h3>
+              Honramos nuestras recetas tradicionales con los mejores
+              ingredientes
+            </h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -25,7 +28,8 @@ const Inicio = () => {
 
           <Carousel.Caption>
             <h3>
-            Con la distinción que nos caracteriza y la pasión que nos moviliza, nuestros platos se disfrutan y se destacan
+              Con la distinción que nos caracteriza y la pasión que nos
+              moviliza, nuestros platos se disfrutan y se destacan
             </h3>
           </Carousel.Caption>
         </Carousel.Item>
@@ -37,9 +41,7 @@ const Inicio = () => {
           />
 
           <Carousel.Caption>
-            <h3>
-            Somos el complemento perfecto para tus ocasiones especiales
-            </h3>
+            <h3>Somos el complemento perfecto para tus ocasiones especiales</h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -75,7 +77,7 @@ const Inicio = () => {
             <div className="card__info">
               <span className="card__category">Entradas</span>
               <h3 className="card__title">
-              Selección de entrantes fríos y calientes
+                Selección de entrantes fríos y calientes
               </h3>
             </div>
           </aside>
@@ -92,7 +94,7 @@ const Inicio = () => {
             <div className="card__info">
               <span className="card__category">Plato Principal</span>
               <h3 className="card__title">
-              Platos tradicionales con notas de autor
+                Platos tradicionales con notas de autor
               </h3>
             </div>
           </aside>
@@ -124,7 +126,7 @@ const Inicio = () => {
             <div className="card__info">
               <span className="card__category">Bebidas</span>
               <h3 className="card__title">
-              contamos con una cava privada de vinos para un maridaje perfecto
+                contamos con una cava privada de vinos para un maridaje perfecto
               </h3>
             </div>
           </aside>
@@ -141,7 +143,7 @@ const Inicio = () => {
             <div className="card__info">
               <span className="card__category">Aperitivos</span>
               <h3 className="card__title">
-              contamos con una cava privada de vinos para un maridaje perfecto
+                contamos con una cava privada de vinos para un maridaje perfecto
               </h3>
             </div>
           </aside>
@@ -151,7 +153,8 @@ const Inicio = () => {
         <hr className="text-white" />
         <article className="text-white container py-4 text-center">
           <h2>
-          Tafi de Mistol, un espacio ideal para ocasiones especiales o reuniones de negocios
+            Tafi de Mistol, un espacio ideal para ocasiones especiales o
+            reuniones de negocios
           </h2>
           <article className="row pt-4 justify-content-center">
             <div className="col-4 text-center text-white">

@@ -9,50 +9,52 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 const EditarProducto = () => {
-  const {id}= useParams();
+  const { id } = useParams();
   const {
     register,
     handleSubmit,
     formState: { errors },
-    setValue
+    setValue,
   } = useForm();
-  
+
   console.log(id);
- 
+
   const navegar = useNavigate();
   useEffect(() => {
-        obtenerProductoApi(id).then((respuesta)=>{
-            if(respuesta.status===200){
-            setValue("nombreProducto", respuesta.dato.nombreProducto)
-            setValue("estado", respuesta.dato.estado)
-            setValue("precio", respuesta.dato.precio)
-            setValue("detalle", respuesta.dato.detalle)
-            setValue("categoria", respuesta.dato.categoria)
-            setValue("imagen", respuesta.dato.imagen)
-            console.log(respuesta);
-      }else{
-        Swal.fire('Ocurrio un error', 'Intente este paso en unos minutos', 'error')
+    obtenerProductoApi(id).then((respuesta) => {
+      if (respuesta.status === 200) {
+        setValue("nombreProducto", respuesta.dato.nombreProducto);
+        setValue("estado", respuesta.dato.estado);
+        setValue("precio", respuesta.dato.precio);
+        setValue("detalle", respuesta.dato.detalle);
+        setValue("categoria", respuesta.dato.categoria);
+        setValue("imagen", respuesta.dato.imagen);
+        console.log(respuesta);
+      } else {
+        Swal.fire(
+          "Ocurrio un error",
+          "Intente este paso en unos minutos",
+          "error"
+        );
       }
-    })
-  },[])
- 
-  
-  const onSubmit = (producto)=>{
-    editarProductoApi(id, producto).then((respuesta)=>{
-      if(respuesta.status === 200){
-        Swal.fire("Producto Actualizado","Actualizacion Correcta", "success")
-        navegar('/administrador');
-      }else{
-        Swal.fire("Error inesperado","Intente Nuevamente","error")
+    });
+  }, []);
+
+  const onSubmit = (producto) => {
+    editarProductoApi(id, producto).then((respuesta) => {
+      if (respuesta.status === 200) {
+        Swal.fire("Producto Actualizado", "Actualizacion Correcta", "success");
+        navegar("/administrador");
+      } else {
+        Swal.fire("Error inesperado", "Intente Nuevamente", "error");
       }
-    })
+    });
     console.log(producto);
   };
 
-
-    return (
-      <section className="colorFondo fuente text-light">
-    <Container>
+  return (
+    <section className="colorFondo fuente text-light">
+      <Container>
         <h2 className="display-3 text-center by-3">Administración </h2>
         <hr />
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -79,9 +81,9 @@ const EditarProducto = () => {
               {errors.nombreProducto?.message}
             </Form.Text>
           </Form.Group>
-                   <Form.Group className="mb-3" controlId="formEstado">
+          <Form.Group className="mb-3" controlId="formEstado">
             <Form.Label>Estado</Form.Label>
-              <Form.Select
+            <Form.Select
               {...register("estado", {
                 required: "Debe seleccionar un estado",
               })}
@@ -120,8 +122,8 @@ const EditarProducto = () => {
           <Form.Group className="mb-3" controlId="formDetalle">
             <Form.Label>Detalle</Form.Label>
             <Form.Control
-            minLength={2}
-            maxLength={1000}
+              minLength={2}
+              maxLength={1000}
               type="text"
               placeholder="Ingrese el Detalle"
               {...register("detalle", {
@@ -161,8 +163,8 @@ const EditarProducto = () => {
           <Form.Group className="mb-3" controlId="formImagen">
             <Form.Label>Imagen</Form.Label>
             <Form.Control
-            minLength={2}
-            maxLength={500}
+              minLength={2}
+              maxLength={500}
               type="text"
               placeholder="Ej: ingrese un Url"
               {...register("imagen", {
@@ -179,17 +181,17 @@ const EditarProducto = () => {
           </Form.Group>
 
           <Button
-                variant="outline-info"
-                type="submit"
-                className="my-3 "
-                size="lg"
-              >
-                Guardar
-              </Button>
+            variant="outline-info"
+            type="submit"
+            className="my-3 "
+            size="lg"
+          >
+            Guardar
+          </Button>
         </Form>
       </Container>
     </section>
-    );
+  );
 };
 
 export default EditarProducto;

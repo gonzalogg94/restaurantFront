@@ -1,7 +1,6 @@
 import bcrypt from "bcryptjs";
 
-const url ="http://localhost:4000/apirestaurante/pr/productos";
-
+const url = "http://localhost:4000/apirestaurante/pr/productos";
 
 export const consultarApi = async () => {
   try {
@@ -70,7 +69,7 @@ export const editarProductoApi = async (id, datosActualizados) => {
   }
 };
 
-const URL ="http://localhost:4000/apirestaurante/us/usuarios";
+const URL = "http://localhost:4000/apirestaurante/us/usuarios";
 
 export const consultarUsersAPI = async () => {
   try {
@@ -118,11 +117,13 @@ export const login = async (usuario) => {
     if (usuarioBuscado) {
       console.log("email encontrado");
       console.log(usuarioBuscado);
-      const passwordValido = bcrypt.compareSync(usuario.password, usuarioBuscado.contrasena)
-       if (passwordValido)  {
+      const passwordValido = bcrypt.compareSync(
+        usuario.password,
+        usuarioBuscado.contrasena
+      );
+      if (passwordValido) {
         return usuarioBuscado;
       }
-     
     } else {
       console.log("el mail no existe");
       return;
@@ -132,7 +133,6 @@ export const login = async (usuario) => {
     return;
   }
 };
-
 
 const URLclientes = "http://localhost:4000/apirestaurante/cl/clientes";
 
@@ -182,8 +182,11 @@ export const loginClientes = async (cliente) => {
     if (clienteBuscado) {
       console.log("email encontrado");
       console.log(clienteBuscado);
-      const passwordValido = bcrypt.compareSync(cliente.password, clienteBuscado.contrasena)
-       if (passwordValido)  {
+      const passwordValido = bcrypt.compareSync(
+        cliente.password,
+        clienteBuscado.contrasena
+      );
+      if (passwordValido) {
         return clienteBuscado;
       }
     } else {
@@ -198,14 +201,15 @@ export const loginClientes = async (cliente) => {
 
 const urlPedidos = "http://localhost:4000/apirestaurante/pe/pedidos";
 
-export const consultarPedidosApi = async()=>{  
+export const consultarPedidosApi = async () => {
   try {
-   const respuesta = await fetch(urlPedidos);
-  const listaPedidos = await respuesta.json();
-  return listaPedidos;
-} catch (error) {
-  console.log(error);
-}};
+    const respuesta = await fetch(urlPedidos);
+    const listaPedidos = await respuesta.json();
+    return listaPedidos;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const obtenerPedidoApi = async (_id) => {
   try {
@@ -263,15 +267,15 @@ export const borrarPedidoApiCliente = async (id) => {
   }
 };
 
-export const tomarPedidoCliente = async  (pedido) => {
+export const tomarPedidoCliente = async (pedido) => {
   try {
-     const respuesta = await fetch(urlPedidos, {
+    const respuesta = await fetch(urlPedidos, {
       method: "POST",
       headers: {
-         'Accept': 'application/json',
-          'Content-Type': 'application/json',
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(pedido)
+      body: JSON.stringify(pedido),
     });
     return respuesta;
   } catch (error) {

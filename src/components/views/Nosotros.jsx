@@ -23,7 +23,8 @@ const Nosotros = () => {
             </div>
             <div className="col-12 col-md-6 col-lg-6">
               <h3 className="text-white">
-                <i className="bi bi-chat-heart-fill "></i> Carlos Gonzalo Gallardo
+                <i className="bi bi-chat-heart-fill "></i> Carlos Gonzalo
+                Gallardo
               </h3>
               <p className="text-white">
                 Hola, mi nombre es Gonzalo tengo 28 años, soy profesor de
@@ -60,32 +61,44 @@ const Nosotros = () => {
               <img src={enzo} className="w-50 my-3" alt="avatar Enzo" />
             </div>
           </article>
-          <hr/>
+          <hr />
           <article className="row align-items-center mb-5">
-                <div className="col-12 col-md-6 col-lg-6">
-                  <img
-                    src={florencia}
-                    className="w-50"
-                    alt="avatar florencia"
-                  />
-                </div>
-                <div className="col-12 col-md-6 col-lg-6">
-                  <h3>
-                    <i className="bi bi-chat-heart-fill"></i> María Florencia Alonso
-                  </h3>
-                  <p>
-                  Soy Florencia, tengo 37 años, soy contadora y me dedico a la valuación de empresas para Estados Unidos. En mi carrera, me especialicé en impuestos y también realicé un MBA.  Elegí estudiar programación porque se trata de una disciplina apasionante y de una versatilidad sin igual. Mi objetivo es aplicar estos conocimientos a las Ciencias Económicas para poder progresar en el área de las finanzas corporativas.
-                  </p>
-                </div>
-              </article>
-              <hr />
-              <article className="row flex-column-reverse flex-lg-row flex-md-row align-items-center">
+            <div className="col-12 col-md-6 col-lg-6">
+              <img src={florencia} className="w-50" alt="avatar florencia" />
+            </div>
+            <div className="col-12 col-md-6 col-lg-6">
+              <h3>
+                <i className="bi bi-chat-heart-fill"></i> María Florencia Alonso
+              </h3>
+              <p>
+                Soy Florencia, tengo 37 años, soy contadora y me dedico a la
+                valuación de empresas para Estados Unidos. En mi carrera, me
+                especialicé en impuestos y también realicé un MBA. Elegí
+                estudiar programación porque se trata de una disciplina
+                apasionante y de una versatilidad sin igual. Mi objetivo es
+                aplicar estos conocimientos a las Ciencias Económicas para poder
+                progresar en el área de las finanzas corporativas.
+              </p>
+            </div>
+          </article>
+          <hr />
+          <article className="row flex-column-reverse flex-lg-row flex-md-row align-items-center">
             <div className="col-12 col-md-6">
               <h3>
                 <i className="bi bi-chat-heart-fill"></i> Mauricio Alonso
               </h3>
               <p>
-              ¡Hey hey! Me llamo Mauricio, tengo 41 años, soy contador, magister en administración y, si la situación lo amerita, puedo convertirme en guitarrista amateur. Trabajo para el Consejo Federal de Inversiones analizando proyectos de inversión. La informática siempre fue mi pasatiempo, hasta que decidí hacer de esta afición una actividad seria. Me motivó un artículo especializado donde se mencionaba que el contador del futuro debe tener conocimientos de Big Data, análisis de datos y manejo de código. Por ello decidí ingresar a RollingCode, para adquirir nuevas habilidades y, por qué no, probarme a mí mismo en un nuevo desafío.
+                ¡Hey hey! Me llamo Mauricio, tengo 41 años, soy contador,
+                magister en administración y, si la situación lo amerita, puedo
+                convertirme en guitarrista amateur. Trabajo para el Consejo
+                Federal de Inversiones analizando proyectos de inversión. La
+                informática siempre fue mi pasatiempo, hasta que decidí hacer de
+                esta afición una actividad seria. Me motivó un artículo
+                especializado donde se mencionaba que el contador del futuro
+                debe tener conocimientos de Big Data, análisis de datos y manejo
+                de código. Por ello decidí ingresar a RollingCode, para adquirir
+                nuevas habilidades y, por qué no, probarme a mí mismo en un
+                nuevo desafío.
               </p>
             </div>
             <div className="col-12 col-md-6 col-lg-6 justify-content-center">
@@ -94,22 +107,24 @@ const Nosotros = () => {
           </article>
           <hr />
           <article className="row align-items-center mb-5">
-                <div className="col-12 col-md-6 col-lg-6">
-                  <img
-                    src={florencia}
-                    className="w-50"
-                    alt="avatar florencia"
-                  />
-                </div>
-                <div className="col-12 col-md-6 col-lg-6">
-                  <h3>
-                    <i className="bi bi-chat-heart-fill"></i> María Florencia Alonso
-                  </h3>
-                  <p>
-                  Soy Florencia, tengo 37 años, soy contadora y me dedico a la valuación de empresas para Estados Unidos. En mi carrera, me especialicé en impuestos y también realicé un MBA.  Elegí estudiar programación porque se trata de una disciplina apasionante y de una versatilidad sin igual. Mi objetivo es aplicar estos conocimientos a las Ciencias Económicas para poder progresar en el área de las finanzas corporativas.
-                  </p>
-                </div>
-              </article>
+            <div className="col-12 col-md-6 col-lg-6">
+              <img src={florencia} className="w-50" alt="avatar florencia" />
+            </div>
+            <div className="col-12 col-md-6 col-lg-6">
+              <h3>
+                <i className="bi bi-chat-heart-fill"></i> María Florencia Alonso
+              </h3>
+              <p>
+                Soy Florencia, tengo 37 años, soy contadora y me dedico a la
+                valuación de empresas para Estados Unidos. En mi carrera, me
+                especialicé en impuestos y también realicé un MBA. Elegí
+                estudiar programación porque se trata de una disciplina
+                apasionante y de una versatilidad sin igual. Mi objetivo es
+                aplicar estos conocimientos a las Ciencias Económicas para poder
+                progresar en el área de las finanzas corporativas.
+              </p>
+            </div>
+          </article>
         </section>
       </Container>
     </section>
