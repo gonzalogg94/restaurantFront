@@ -32,7 +32,7 @@ const AdministradorPedidos = () => {
           <Table striped bordered hover variant="dark">
             <thead>
               <tr>
-                <th>Código</th>
+                {/* <th>Código</th> */}
                 <th> Detalle Pedido</th>
                 <th> Estado</th>
                 <th> Precio Total</th>
