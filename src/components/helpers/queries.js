@@ -1,3 +1,5 @@
+import bcrypt from "bcryptjs";
+
 const url ="http://localhost:4000/apirestaurante/pr/productos";
 
 
@@ -123,9 +125,11 @@ export const login = async (usuario) => {
       console.log("email encontrado");
       console.log(usuarioBuscado);
       //verificar el password
-      if (usuarioBuscado.contrasena === usuario.password) {
+      const passwordValido = bcrypt.compareSync(usuario.password, usuarioBuscado.contrasena)
+       if (passwordValido)  {
         return usuarioBuscado;
       }
+     
     } else {
       console.log("el mail no existe");
       return;
@@ -189,7 +193,8 @@ export const loginClientes = async (cliente) => {
       console.log("email encontrado");
       console.log(clienteBuscado);
       //verificar el password
-      if (clienteBuscado.contrasena === cliente.password) {
+      const passwordValido = bcrypt.compareSync(cliente.password, clienteBuscado.contrasena)
+       if (passwordValido)  {
         return clienteBuscado;
       }
     } else {
