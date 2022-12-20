@@ -27,7 +27,7 @@ const CrearProducto = () => {
   return (
     <section className="colorFondo fuente text-light">
       <Container>
-        <h2 className="display-3 text-center by-3">Agregar Producto Nuevo</h2>
+        <h2 className="display-3 text-center by-3 m-0">Agregar Producto Nuevo</h2>
         <hr />
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formNombreProdcuto">
