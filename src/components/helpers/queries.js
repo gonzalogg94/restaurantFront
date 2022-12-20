@@ -3,7 +3,6 @@ import bcrypt from "bcryptjs";
 const url ="http://localhost:4000/apirestaurante/pr/productos";
 
 
-
 export const consultarApi = async () => {
   try {
     const respuesta = await fetch(url);
@@ -70,12 +69,9 @@ export const editarProductoApi = async (id, datosActualizados) => {
     console.log(error);
   }
 };
-//Consultas a API de usuarios
 
 const URL ="http://localhost:4000/apirestaurante/us/usuarios";
-//const URL = "http://localhost:3004/usuarios";
 
-//muestra usuarios
 export const consultarUsersAPI = async () => {
   try {
     const respuesta = await fetch(URL);
@@ -114,17 +110,14 @@ export const borrarUserAPI = async (id) => {
 
 export const login = async (usuario) => {
   try {
-    //verificar si el usuario existe
     const respuesta = await fetch(URL);
     const listaUsuarios = await respuesta.json();
-    //buscar cual usuario tiene mi mail
     const usuarioBuscado = listaUsuarios.find(
       (itemUsuario) => itemUsuario.email === usuario.email
     );
     if (usuarioBuscado) {
       console.log("email encontrado");
       console.log(usuarioBuscado);
-      //verificar el password
       const passwordValido = bcrypt.compareSync(usuario.password, usuarioBuscado.contrasena)
        if (passwordValido)  {
         return usuarioBuscado;
@@ -143,7 +136,6 @@ export const login = async (usuario) => {
 
 const URLclientes = "http://localhost:4000/apirestaurante/cl/clientes";
 
-//muestra usuarios
 export const consultarClientesAPI = async () => {
   try {
     const respuesta = await fetch(URLclientes);
@@ -182,17 +174,14 @@ export const borrarClientesAPI = async (id) => {
 
 export const loginClientes = async (cliente) => {
   try {
-    //verificar si el cliente existe
     const respuesta = await fetch(URLclientes);
     const listaClientes = await respuesta.json();
-    //buscar cual usuario tiene mi mail
     const clienteBuscado = listaClientes.find(
       (itemCliente) => itemCliente.email === cliente.email
     );
     if (clienteBuscado) {
       console.log("email encontrado");
       console.log(clienteBuscado);
-      //verificar el password
       const passwordValido = bcrypt.compareSync(cliente.password, clienteBuscado.contrasena)
        if (passwordValido)  {
         return clienteBuscado;
@@ -207,9 +196,6 @@ export const loginClientes = async (cliente) => {
   }
 };
 
-
-
-//Peticiones  Api Productos
 const urlPedidos = "http://localhost:4000/apirestaurante/pe/pedidos";
 
 export const consultarPedidosApi = async()=>{  
@@ -266,23 +252,6 @@ export const crearPedidoApi = async (pedido) => {
   }
 };
 
-// export const crearPedidoApiCliente = async (pedido) => {
-//   try {
-//     const respuesta = await fetch(urlPedidos, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify(pedido),
-//     });
-
-//     return respuesta;
-//   } catch (error) {
-//     console.log(error);
-//   }
-  
-// };
-
 export const borrarPedidoApiCliente = async (id) => {
   try {
     const respuesta = await fetch(`${urlPedidos}/${id}`, {
@@ -294,8 +263,6 @@ export const borrarPedidoApiCliente = async (id) => {
   }
 };
 
-
-
 export const tomarPedidoCliente = async  (pedido) => {
   try {
      const respuesta = await fetch(urlPedidos, {
@@ -306,7 +273,6 @@ export const tomarPedidoCliente = async  (pedido) => {
       },
       body: JSON.stringify(pedido)
     });
-
     return respuesta;
   } catch (error) {
     console.log(error);

@@ -19,15 +19,12 @@ const LoginUsuario = ({setUsuarioLogueado, setSaludoNavbar}) => {
         login(data).then((respuesta) => {
           console.log(respuesta);
           if (respuesta) {
-            //almaceno el usuario en el state y localstorage
             localStorage.setItem("tokenUsuario", JSON.stringify(respuesta));
             setUsuarioLogueado(respuesta);
-
             localStorage.getItem("tokenUsuario", JSON.stringify(respuesta));
             const saludo = "Hola "+respuesta.apellido+", "+respuesta.nombreUsuario+"!!"
             localStorage.setItem("saludo", JSON.stringify(saludo))
             setSaludoNavbar(saludo)
-            // si el usuario es correcto entonces redirecciono al admin
             navigate("/administrador");
           } else {
             Swal.fire(

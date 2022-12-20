@@ -18,7 +18,6 @@ const Menu = ({
   const navegar = useNavigate();
 
   const logoutCliente = () => {
-    //borrar el localstorage
     navegar("/");
     localStorage.removeItem("tokenCliente");
     localStorage.removeItem("saludoCliente");
@@ -27,7 +26,6 @@ const Menu = ({
   };
 
   const logout = () => {
-    //borrar el localstorage
     navegar("/");
     localStorage.removeItem("tokenUsuario");
     localStorage.removeItem("saludo");

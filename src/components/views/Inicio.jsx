@@ -147,7 +147,6 @@ const Inicio = () => {
           </aside>
         </Link>
       </article>
-      {/* card */}
       <Container>
         <hr className="text-white" />
         <article className="text-white container py-4 text-center">

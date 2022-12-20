@@ -1,38 +1,33 @@
-/* fuente */
 .fuente {
   font-family: "Black Han Sans", sans-serif;
   font-family: "Orbitron", sans-serif;
   font-family: "Source Serif Pro", serif;
 }
 
-/* Color de fondo negro */
 .colorFondo {
   background-color:#2C503B;
   min-height: 100vh;
 }
 
-/* Botón Footer*/
+
 .botonFooter{
   background: none;
   border: none;
 }
 
-/* .alineamiento{
-  
-} */
 
-/*Iconos*/
+
 .iconos{
   flex-direction: row;
 }
 .botonFooter:hover{background-color: transparent !important;}
 
-/* clase para dar tamaño al banner principal de pa pagina */
+
 .bannerPagina {
   height: 500px;
   object-fit: cover;
 }
-/* card de inicio */
+
 .card--1 .card__img, .card--1 .card__img--hover {
     background-image: url('https://images.pexels.com/photos/718742/pexels-photo-718742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 }
@@ -152,9 +147,7 @@ border-bottom-right-radius: 12px;
 .card:hover .card__info-hover {
     opacity: 1;
 }
-/* card */
 
-/* menu barra lateral */
 .fondoLateral {
   background-color: #a1f1bf;
 }
@@ -259,20 +252,18 @@ li {
 .tamañoCard{
   height:300px;
 }
-/* menu barra lateral */
-/* carrito */
+
 .posicionBadge {
   z-index: 5;
 }
-/* carrito */
-/* Background Navbar Transparente*/
+
 .bgTransparente{
   background-color: #2C503B;
   padding: 0px;
   margin: 0px;
 }
 
-/*Footer*/
+
 .stylesFooter{
   background-color: #2C503B;
   min-height: 100uh;
@@ -283,7 +274,7 @@ li {
   flex-grow: 1;
 }
 
-/* media queries */
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
  
   .tamañoCard{

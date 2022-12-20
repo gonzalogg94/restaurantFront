@@ -1,10 +1,7 @@
 import { Container } from "react-bootstrap";
 
-
-
 const AdminClientes = () => {
     
-
     return (
         <section className="colorFondo fuente">
         <Container className="py-5">
