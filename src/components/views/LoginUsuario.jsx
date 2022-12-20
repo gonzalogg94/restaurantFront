@@ -14,9 +14,7 @@ const LoginUsuario = ({ setUsuarioLogueado, setSaludoNavbar }) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     login(data).then((respuesta) => {
-      console.log(respuesta);
       if (respuesta) {
         localStorage.setItem("tokenUsuario", JSON.stringify(respuesta));
         setUsuarioLogueado(respuesta);

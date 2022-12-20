@@ -7,13 +7,10 @@ import { consultarPedidosApi } from "../../helpers/queries";
 const AdministradorPedidos = () => {
   const titularCarro = JSON.parse(localStorage.getItem("tokenCliente"));
   const clienteCarro = titularCarro.nombreCliente + " " + titularCarro.apellido;
-  console.log(clienteCarro);
-
   const [pedidos, setPedidos] = useState([]);
 
   useEffect(() => {
     consultarPedidosApi().then((respuesta) => {
-      console.log(respuesta);
       setPedidos(
         respuesta.filter(
           (pedido) => pedido.nombreClientePedido === clienteCarro

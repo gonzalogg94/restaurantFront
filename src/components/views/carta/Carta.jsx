@@ -39,7 +39,6 @@ function Carta() {
   const [entrada, setEntrada] = useState([]);
   useEffect(() => {
     consultarApi().then((respuesta) => {
-      console.log(respuesta);
       setEntrada(
         respuesta.filter(
           (producto) =>
@@ -52,7 +51,6 @@ function Carta() {
   const [platoPrincipal, setPlatoPrincipal] = useState([]);
   useEffect(() => {
     consultarApi().then((respuesta) => {
-      console.log(respuesta);
       setPlatoPrincipal(
         respuesta.filter(
           (producto) =>
@@ -66,7 +64,6 @@ function Carta() {
   const [postre, setPostre] = useState([]);
   useEffect(() => {
     consultarApi().then((respuesta) => {
-      console.log(respuesta);
       setPostre(
         respuesta.filter(
           (producto) =>
@@ -79,7 +76,6 @@ function Carta() {
   const [bebida, setBebida] = useState([]);
   useEffect(() => {
     consultarApi().then((respuesta) => {
-      console.log(respuesta);
       setBebida(
         respuesta.filter(
           (producto) =>
@@ -92,7 +88,6 @@ function Carta() {
   const [aperitivo, setAperitivo] = useState([]);
   useEffect(() => {
     consultarApi().then((respuesta) => {
-      console.log(respuesta);
       setAperitivo(
         respuesta.filter(
           (producto) =>

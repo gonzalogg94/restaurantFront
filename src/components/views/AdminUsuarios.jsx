@@ -10,7 +10,6 @@ const AdminUsuarios = () => {
 
   useEffect(() => {
     consultarUsersAPI().then((respuesta) => {
-      console.log(respuesta);
       setUsuarios(respuesta);
     });
   }, []);

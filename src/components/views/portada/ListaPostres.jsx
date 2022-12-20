@@ -10,7 +10,6 @@ const ListaPostres = () => {
 
   useEffect(() => {
     consultarApi().then((respuesta) => {
-      console.log(respuesta);
       setProductos(
         respuesta.filter(
           (producto) =>

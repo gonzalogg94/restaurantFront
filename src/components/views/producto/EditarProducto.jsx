@@ -17,8 +17,6 @@ const EditarProducto = () => {
     setValue,
   } = useForm();
 
-  console.log(id);
-
   const navegar = useNavigate();
   useEffect(() => {
     obtenerProductoApi(id).then((respuesta) => {
@@ -29,7 +27,6 @@ const EditarProducto = () => {
         setValue("detalle", respuesta.dato.detalle);
         setValue("categoria", respuesta.dato.categoria);
         setValue("imagen", respuesta.dato.imagen);
-        console.log(respuesta);
       } else {
         Swal.fire(
           "Ocurrio un error",
@@ -49,7 +46,6 @@ const EditarProducto = () => {
         Swal.fire("Error inesperado", "Intente Nuevamente", "error");
       }
     });
-    console.log(producto);
   };
 
   return (

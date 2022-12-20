@@ -15,8 +15,6 @@ const AgregarPedido = () => {
   } = useForm();
 
   const onSubmit = (datos) => {
-    console.log(datos);
-    console.log("desde el evento onsubmit");
     crearPedidoApi(datos).then((respuesta) => {
       if (respuesta.status === 201) {
         Swal.fire("Pedido Creado", "Creado Con Exito", "success");

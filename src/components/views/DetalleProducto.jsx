@@ -10,7 +10,6 @@ const DetalleProducto = () => {
   const [producto, setProducto] = useState({});
   useEffect(() => {
     obtenerProductoApi(id).then((respuesta) => {
-      console.log(respuesta);
       if (respuesta.status === 200) {
         setProducto(respuesta.dato);
       } else {

@@ -24,14 +24,12 @@ const EditarPedido = () => {
         setValue("estado", respuesta.dato.estado);
         setValue("detallePedido", respuesta.dato.detallePedido);
         setValue("costoTotal", respuesta.dato.costoTotal);
-        console.log(respuesta);
       }
     });
   }, []);
   const navegacion = useNavigate();
 
   const onSubmit = (pedido) => {
-    console.log(pedido);
     editarPedidoApi(id, pedido).then((respuesta) => {
       if (respuesta.status === 200) {
         Swal.fire("Producto Actualizado", "Actualizacion Correcta", "success");

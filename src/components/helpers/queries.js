@@ -7,9 +7,7 @@ export const consultarApi = async () => {
     const respuesta = await fetch(url);
     const listaProductos = await respuesta.json();
     return listaProductos;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const crearProductoApi = async (producto) => {
@@ -23,9 +21,7 @@ export const crearProductoApi = async (producto) => {
     });
 
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const borrarProductoApi = async (id) => {
@@ -35,9 +31,7 @@ export const borrarProductoApi = async (id) => {
     });
 
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const obtenerProductoApi = async (id) => {
@@ -48,9 +42,7 @@ export const obtenerProductoApi = async (id) => {
       status: respuesta.status,
     };
     return productoBuscado;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const editarProductoApi = async (id, datosActualizados) => {
@@ -64,9 +56,7 @@ export const editarProductoApi = async (id, datosActualizados) => {
     });
 
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 const URL = "http://localhost:4000/apirestaurante/us/usuarios";
@@ -76,9 +66,7 @@ export const consultarUsersAPI = async () => {
     const respuesta = await fetch(URL);
     const listaUsers = await respuesta.json();
     return listaUsers;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const crearUserAPI = async (usuario) => {
@@ -91,9 +79,7 @@ export const crearUserAPI = async (usuario) => {
       body: JSON.stringify(usuario),
     });
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const borrarUserAPI = async (id) => {
@@ -102,9 +88,7 @@ export const borrarUserAPI = async (id) => {
       method: "DELETE",
     });
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const login = async (usuario) => {
@@ -115,8 +99,6 @@ export const login = async (usuario) => {
       (itemUsuario) => itemUsuario.email === usuario.email
     );
     if (usuarioBuscado) {
-      console.log("email encontrado");
-      console.log(usuarioBuscado);
       const passwordValido = bcrypt.compareSync(
         usuario.password,
         usuarioBuscado.contrasena
@@ -125,11 +107,9 @@ export const login = async (usuario) => {
         return usuarioBuscado;
       }
     } else {
-      console.log("el mail no existe");
       return;
     }
   } catch (error) {
-    console.log("errores en el login");
     return;
   }
 };
@@ -141,9 +121,7 @@ export const consultarClientesAPI = async () => {
     const respuesta = await fetch(URLclientes);
     const listaClientes = await respuesta.json();
     return listaClientes;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const crearClientesAPI = async (cliente) => {
@@ -156,9 +134,7 @@ export const crearClientesAPI = async (cliente) => {
       body: JSON.stringify(cliente),
     });
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const borrarClientesAPI = async (id) => {
@@ -167,9 +143,7 @@ export const borrarClientesAPI = async (id) => {
       method: "DELETE",
     });
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const loginClientes = async (cliente) => {
@@ -180,8 +154,6 @@ export const loginClientes = async (cliente) => {
       (itemCliente) => itemCliente.email === cliente.email
     );
     if (clienteBuscado) {
-      console.log("email encontrado");
-      console.log(clienteBuscado);
       const passwordValido = bcrypt.compareSync(
         cliente.password,
         clienteBuscado.contrasena
@@ -190,11 +162,9 @@ export const loginClientes = async (cliente) => {
         return clienteBuscado;
       }
     } else {
-      console.log("el mail no existe");
       return;
     }
   } catch (error) {
-    console.log("errores en el login");
     return;
   }
 };
@@ -206,9 +176,7 @@ export const consultarPedidosApi = async () => {
     const respuesta = await fetch(urlPedidos);
     const listaPedidos = await respuesta.json();
     return listaPedidos;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const obtenerPedidoApi = async (_id) => {
@@ -219,9 +187,7 @@ export const obtenerPedidoApi = async (_id) => {
       status: respuesta.status,
     };
     return pedidoBuscado;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const editarPedidoApi = async (_id, datosActualizados) => {
@@ -235,9 +201,7 @@ export const editarPedidoApi = async (_id, datosActualizados) => {
     });
 
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const crearPedidoApi = async (pedido) => {
@@ -251,9 +215,7 @@ export const crearPedidoApi = async (pedido) => {
     });
 
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const borrarPedidoApiCliente = async (id) => {
@@ -262,9 +224,7 @@ export const borrarPedidoApiCliente = async (id) => {
       method: "DELETE",
     });
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const tomarPedidoCliente = async (pedido) => {
@@ -278,7 +238,5 @@ export const tomarPedidoCliente = async (pedido) => {
       body: JSON.stringify(pedido),
     });
     return respuesta;
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };

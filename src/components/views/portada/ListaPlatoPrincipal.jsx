@@ -9,7 +9,6 @@ const ListaPlatoPrincipal = () => {
   const [mostrarSpinner, setMostrarSpinner] = useState(true);
   useEffect(() => {
     consultarApi().then((respuesta) => {
-      console.log(respuesta);
       setProductos(
         respuesta.filter(
           (producto) =>

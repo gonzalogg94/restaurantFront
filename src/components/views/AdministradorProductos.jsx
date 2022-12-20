@@ -10,8 +10,7 @@ const AdministradorProductos = () => {
 
   useEffect(() => {
     consultarApi().then((respuesta) => {
-      console.log(respuesta);
-      setProductos(respuesta);
+       setProductos(respuesta);
     });
   }, []);
 

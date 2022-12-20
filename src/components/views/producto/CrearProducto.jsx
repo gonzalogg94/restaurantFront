@@ -13,8 +13,6 @@ const CrearProducto = () => {
   } = useForm();
 
   const onSubmit = (datos) => {
-    console.log(datos);
-    console.log("desde el evento onsubmit");
     crearProductoApi(datos).then((respuesta) => {
       if (respuesta.status === 201) {
         Swal.fire("Producto Creado", "Creado Con Exito", "success");

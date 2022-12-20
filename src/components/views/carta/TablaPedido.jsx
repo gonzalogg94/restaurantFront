@@ -8,7 +8,6 @@ import {
 const TablaPedido = (props) => {
   const titularCarro = JSON.parse(localStorage.getItem("tokenCliente"));
   const clienteCarro = titularCarro.nombreCliente + " " + titularCarro.apellido;
-  console.log(clienteCarro);
 
   const borrarPedido = () => {
     Swal.fire({

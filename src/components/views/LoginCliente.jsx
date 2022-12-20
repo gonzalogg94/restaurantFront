@@ -14,9 +14,7 @@ const LoginCliente = ({ setClienteLogueado, setSaludoNavbarCliente }) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     loginClientes(data).then((respuesta) => {
-      console.log(respuesta);
       if (respuesta) {
         //almaceno el usuario en el state y localstorage
         localStorage.setItem("tokenCliente", JSON.stringify(respuesta));

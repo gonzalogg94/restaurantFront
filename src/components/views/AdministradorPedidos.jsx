@@ -10,23 +10,19 @@ const AdministradorPedidos = () => {
   useEffect(() => {
     consultarPedidosApi().then((respuesta) => {
       setPedidos(respuesta);
-      console.log(respuesta);
     });
   }, []);
   const onClickPendiente = () => {
-    console.log("desde la funcion pendiente");
     consultarPedidosApi().then((respuesta) => {
       setPedidos(respuesta.filter((pedido) => pedido.estado === "Pendiente"));
     });
   };
   const onClickEntregado = () => {
-    console.log("desde la funcion pendiente");
     consultarPedidosApi().then((respuesta) => {
       setPedidos(respuesta.filter((pedido) => pedido.estado === "Entregado"));
     });
   };
   const onClickCancelado = () => {
-    console.log("desde la funcion pendiente");
     consultarPedidosApi().then((respuesta) => {
       setPedidos(respuesta.filter((pedido) => pedido.estado === "Cancelado"));
     });
