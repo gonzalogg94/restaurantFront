@@ -67,6 +67,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #806723;
+
+}
+
 button.add {
   background-color: #40c0f0;
   width: 1.5rem;

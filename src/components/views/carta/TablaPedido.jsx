@@ -38,7 +38,6 @@ const TablaPedido = (props) => {
   };
   return (
     <tr>
-      {/* <td>{props.pedido._id}</td> */}
       <td>{props.pedido.detallePedido}</td>
       <td>{props.pedido.estado}</td>
       <td>{props.pedido.costoTotal}</td>
