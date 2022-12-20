@@ -180,7 +180,7 @@ li {
   width: 90%;
   padding: 4px;
 }
-.sidebar li a {
+.sidebar li p {
   display: block;
   width: 100%;
   padding: 10px;
@@ -195,23 +195,23 @@ li {
   -webkit-box-sizing: border-box;
   border-radius: 10px;
 }
-.sidebar li a:hover {
+.sidebar li p:hover {
   border-bottom: 0px;
   color: rgb (15, 24, 26);
 }
-.sidebar li:first-child a {
+.sidebar li:first-child p {
   border-left: 10px solid #51ba49;
 }
-.sidebar li:nth-child(2) a {
+.sidebar li:nth-child(2) p {
   border-left: 10px solid #51ba49;
 }
-.sidebar li:nth-child(3) a {
+.sidebar li:nth-child(3) p {
   border-left: 10px solid #51ba49;
 }
-.sidebar li:last-child a {
+.sidebar li:last-child p {
   border-left: 10px solid #51ba49;
 }
-.sidebar li a:after {
+.sidebar li p:after {
   content: "";
   height: 100%;
   left: 0;
@@ -222,21 +222,21 @@ li {
   -webkit-transition: all 0.2s ease 0s;
   z-index: -1;
 }
-.sidebar li a:hover:after {
+.sidebar li p:hover:after {
   width: 100%;
   border-end-end-radius: 15px;
   border-top-right-radius: 15px;
 }
-.sidebar li:first-child a:after {
+.sidebar li:first-child p:after {
   background: #51ba49;
 }
-.sidebar li:nth-child(2) a:after {
+.sidebar li:nth-child(2) p:after {
   background: #51ba49;
 }
-.sidebar li:nth-child(3) a:after {
+.sidebar li:nth-child(3) p:after {
   background: #51ba49;
 }
-.sidebar li:last-child a:after {
+.sidebar li:last-child p:after {
   background: #51ba49;
 }
 .botonSmall {

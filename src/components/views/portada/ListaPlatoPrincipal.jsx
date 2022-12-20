@@ -33,35 +33,35 @@ const ListaPlatoPrincipal = () => {
     <section className="fuente colorFondo container-fluid">
       <div className="posicionBadge position-fixed"></div>
       <article className="row">
-        <aside class="col-lg-2 col-md-2 fondoLateral esconder container-fluid">
-          <div class="sidebar d-none d-md-grid col-md-2 col-lg-2 text-light">
-            <ul class="list-group mt-5">
+        <aside className="col-lg-2 col-md-2 fondoLateral esconder container-fluid">
+          <div className="sidebar d-none d-md-grid col-md-2 col-lg-2 text-light">
+            <ul className="list-group mt-5">
               <Link className="text-decoration-none" to={"/entradas"}>
-                <li class="list-group-item listSidebar">
-                  <a href="#Entradas">Entradas</a>
+                <li className="list-group-item listSidebar">
+                  <p>Entradas</p>
                 </li>
               </Link>
               <Link
                 className="text-decoration-none d-none"
                 to={"/platos-principales"}
               >
-                <li class="list-group-item listSidebar">
-                  <a href="#PlatoPrincipal">Platos Principales</a>
+                <li className="list-group-item listSidebar">
+                  <p>Platos Principales</p>
                 </li>
               </Link>
               <Link className="text-decoration-none" to={"/postres"}>
-                <li class="list-group-item listSidebar">
-                  <a href="#Postres">Postres</a>
+                <li className="list-group-item listSidebar">
+                  <p>Postres</p>
                 </li>
               </Link>
               <Link className="text-decoration-none" to={"/bebidas"}>
-                <li class="list-group-item listSidebar">
-                  <a href="#postres">Bebidas</a>
+                <li className="list-group-item listSidebar">
+                  <p>Bebidas</p>
                 </li>
               </Link>
               <Link className="text-decoration-none" to={"/aperitivos"}>
-                <li class="list-group-item listSidebar">
-                  <a href="#postres">Aperitivos</a>
+                <li className="list-group-item listSidebar">
+                  <p>Aperitivos</p>
                 </li>
               </Link>
             </ul>
