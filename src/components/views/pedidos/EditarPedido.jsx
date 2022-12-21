@@ -83,7 +83,6 @@ const EditarPedido = () => {
               {errors.estado?.message}
             </Form.Text>
           </Form.Group>
-
           <Button variant="success"
           type="submit"
           className="my-3 fw-bold fs-3 fuente "
