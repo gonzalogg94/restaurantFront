@@ -4,16 +4,9 @@ import Nosotros from "./components/views/Nosotros";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/style.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import AdministradorProductos from "./components/views/AdministradorProductos";
-import CrearProducto from "./components/views/producto/CrearProducto";
-import EditarProducto from "./components/views/producto/EditarProducto";
 import Footer from "./components/common/Footer";
 import Menu from "./components/common/Menu";
 import DetalleProducto from "./components/views/DetalleProducto";
-import Registro from "./components/views/Registro";
-import RegistroAdministrador from "./components/views/RegistroAdministrador";
-import AdminClientes from "./components/views/AdminClientes";
-import AdminUsuarios from "./components/views/AdminUsuarios";
 import LoginCliente from "./components/views/LoginCliente";
 import LoginUsuario from "./components/views/LoginUsuario";
 import { useState } from "react";
@@ -26,11 +19,10 @@ import Basket from "./components/views/carta/Basket";
 import Main from "./components/views/carta/Main";
 import Carta from "./components/views/carta/Carta";
 import Product from "./components/views/carta/Product";
-import PedidoCliente from "./components/views/carta/PedidoCliente";
-import AdministradorPedidos from "./components/views/AdministradorPedidos";
-import EditarPedido from "./components/views/pedidos/EditarPedido";
 import Error404 from "./components/views/Error404";
-import AgregarPedido from "./components/views/pedidos/AgregarPedido";
+import RutasProtegidas from "./components/Routes/RutasProtegidas";
+import RutasAdministrador from "./components/Routes/RutasAdministrador";
+import Registro from "./components/views/Registro";
 
 function App() {
   const cliente = JSON.parse(localStorage.getItem("tokenCliente")) || [];
@@ -60,13 +52,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route exact path="/nosotros" element={<Nosotros></Nosotros>} />
-        <Route exact path="/error" element={<Error404></Error404>} />
         <Route exact path="/Carta" element={<Carta></Carta>} />
-        <Route
-          exact
-          path="/PedidoCliente"
-          element={<PedidoCliente></PedidoCliente>}
-        />
         <Route exact path="/Basket" element={<Basket></Basket>} />
         <Route exact path="/Main" element={<Main></Main>} />
         <Route exact path="/Product" element={<Product></Product>} />
@@ -89,37 +75,9 @@ function App() {
         />
         <Route
           exact
-          path="/administrador"
-          element={<AdministradorProductos />}
-        />
-        <Route
-          exact
-          path="/administrador/crearProd"
-          element={<CrearProducto />}
-        />
-        <Route
-          exact
-          path="/administrador/editarProd/:id"
-          element={<EditarProducto />}
-        />
-        <Route
-          exact
           path="/detalles/producto/:id"
           element={<DetalleProducto></DetalleProducto>}
         />
-        <Route
-          exact
-          path="/administrador/editarProd"
-          element={<EditarProducto />}
-        />
-        <Route exact path="/registro" element={<Registro />} />
-        <Route
-          exact
-          path="/registroAdministrador"
-          element={<RegistroAdministrador />}
-        />
-        <Route exact path="/adminClientes" element={<AdminClientes />} />
-        <Route exact path="/adminUsuarios" element={<AdminUsuarios />} />
         <Route
           exact
           path="/loginCliente"
@@ -140,21 +98,13 @@ function App() {
             />
           }
         />
-        <Route
-          exact
-          path="/administrador/pedidosAdmin"
-          element={<AdministradorPedidos />}
-        />
-        <Route
-          exact
-          path="/administrador/pedidosAdmin/editarPedido/:id"
-          element={<EditarPedido />}
-        />
-        <Route
-          exact
-          path="/administrador/pedidosAdmin/creadPed"
-          element={<AgregarPedido />}
-        />
+        <Route exact path="/registro" element={<Registro />} />
+        <Route path="/administrador/*" element={
+          <RutasProtegidas>
+            <RutasAdministrador></RutasAdministrador>
+          </RutasProtegidas>
+        }></Route>
+        <Route exact path="*" element={<Error404></Error404>} />
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
