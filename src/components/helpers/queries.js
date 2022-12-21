@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
 
-const url = "http://localhost:4000/apirestaurante/pr/productos";
+const url = process.env.REACT_APP_API_ONLINE_PRODUCTOS
+
 
 export const consultarApi = async () => {
   try {
@@ -59,7 +60,8 @@ export const editarProductoApi = async (id, datosActualizados) => {
   } catch (error) {}
 };
 
-const URL = "http://localhost:4000/apirestaurante/us/usuarios";
+const URL = process.env.REACT_APP_API_ONLINE_USUARIOS;
+
 
 export const consultarUsersAPI = async () => {
   try {
@@ -114,7 +116,8 @@ export const login = async (usuario) => {
   }
 };
 
-const URLclientes = "http://localhost:4000/apirestaurante/cl/clientes";
+const URLclientes = process.env.REACT_APP_API_ONLINE_CLIENTES;
+
 
 export const consultarClientesAPI = async () => {
   try {
@@ -169,7 +172,8 @@ export const loginClientes = async (cliente) => {
   }
 };
 
-const urlPedidos = "http://localhost:4000/apirestaurante/pe/pedidos";
+const urlPedidos = process.env.REACT_APP_API_ONLINE_PEDIDOS;
+
 
 export const consultarPedidosApi = async () => {
   try {

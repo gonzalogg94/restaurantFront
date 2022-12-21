@@ -84,8 +84,8 @@ const EditarPedido = () => {
             </Form.Text>
           </Form.Group>
 
-          <Button variant="primary" type="submit">
-            Submit
+          <Button variant="success" type="submit">
+            Enviar
           </Button>
         </Form>
       </Container>
