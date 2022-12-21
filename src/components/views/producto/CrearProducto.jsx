@@ -25,13 +25,13 @@ const CrearProducto = () => {
   const navegacion = useNavigate();
 
   return (
-    <section className="colorFondo fuente text-light">
+    <section className="colorFondo text-light">
       <Container>
-        <h2 className="display-3 text-center by-3">Agregar Producto Nuevo</h2>
+        <h2 className="display-3 text-center by-3 m-0 fuente">Agregar Producto Nuevo</h2>
         <hr />
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formNombreProdcuto">
-            <Form.Label>Nombre producto</Form.Label>
+            <Form.Label className="fuente fs-4">Nombre producto</Form.Label>
             <Form.Control
               minLength={2}
               maxLength={50}
@@ -54,7 +54,7 @@ const CrearProducto = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formEstado">
-            <Form.Label>Estado</Form.Label>
+            <Form.Label className="fuente fs-4">Estado</Form.Label>
             <Form.Select
               {...register("estado", {
                 required: "Debe seleccionar un estado",
@@ -69,7 +69,7 @@ const CrearProducto = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPrecio">
-            <Form.Label>Precio</Form.Label>
+            <Form.Label className="fuente fs-4">Precio</Form.Label>
             <Form.Control
               min={1}
               max={20000}
@@ -92,7 +92,7 @@ const CrearProducto = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formDetalle">
-            <Form.Label>Detalle</Form.Label>
+            <Form.Label className="fuente fs-4">Detalle</Form.Label>
             <Form.Control
               minLength={2}
               maxLength={1000}
@@ -115,7 +115,7 @@ const CrearProducto = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formCategoria">
-            <Form.Label>Categoria</Form.Label>
+            <Form.Label className="fuente fs-4">Categoria</Form.Label>
             <Form.Select
               {...register("categoria", {
                 required: "Debe seleccionar una categoria",
@@ -133,7 +133,7 @@ const CrearProducto = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formImagen">
-            <Form.Label>Imagen</Form.Label>
+            <Form.Label className="fuente fs-4">Imagen</Form.Label>
             <Form.Control
               minLength={2}
               maxLength={500}
@@ -153,10 +153,10 @@ const CrearProducto = () => {
           </Form.Group>
 
           <Button
-            variant="outline-info"
-            type="submit"
-            className="my-3 "
-            size="lg"
+              variant="success"
+              type="submit"
+              className="my-3 fw-bold fs-3 fuente "
+              size="lg"
           >
             Guardar
           </Button>

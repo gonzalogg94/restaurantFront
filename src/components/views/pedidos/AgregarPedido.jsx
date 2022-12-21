@@ -30,7 +30,7 @@ const AgregarPedido = () => {
       <Container className="text-white">
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formNombreCliente">
-            <Form.Label>Nombre Cliente</Form.Label>
+            <Form.Label className="fuente fs-4">Nombre Cliente</Form.Label>
             <Form.Control
               type="text"
               placeholder="Nombre"
@@ -52,7 +52,7 @@ const AgregarPedido = () => {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formNombreProdcuto">
-            <Form.Label>detalle Pedido</Form.Label>
+            <Form.Label className="fuente fs-4">Detalle Pedido</Form.Label>
             <Form.Control
               minLength={2}
               maxLength={50}
@@ -75,7 +75,7 @@ const AgregarPedido = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formCategoria">
-            <Form.Label>Estado</Form.Label>
+            <Form.Label className="fuente fs-4">Estado</Form.Label>
             <Form.Select
               {...register("estado", {
                 required: "Debe seleccionar una Estado",
@@ -91,7 +91,7 @@ const AgregarPedido = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPrecio">
-            <Form.Label>Costo Total</Form.Label>
+            <Form.Label className="fuente fs-4">Costo Total</Form.Label>
             <Form.Control
               min={1}
               max={20000}
@@ -115,10 +115,10 @@ const AgregarPedido = () => {
           </Form.Group>
 
           <Button
-            variant="outline-info"
-            type="submit"
-            className="my-3 "
-            size="lg"
+           variant="success"
+           type="submit"
+           className="my-3 fw-bold fs-3 fuente"
+           size="lg"
           >
             Guardar
           </Button>

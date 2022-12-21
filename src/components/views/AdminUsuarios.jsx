@@ -29,7 +29,7 @@ const AdminUsuarios = () => {
             <Link
               className="btn btn-success fs-5"
               variant="outline-info"
-              to="/registroAdministrador"
+              to="/administrador/registroAdministrador"
             >
               Agregar
             </Link>
