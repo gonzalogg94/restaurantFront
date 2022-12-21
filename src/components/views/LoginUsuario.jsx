@@ -21,7 +21,7 @@ const LoginUsuario = ({ setUsuarioLogueado, setSaludoNavbar }) => {
         setUsuarioLogueado(respuesta);
         localStorage.getItem("tokenUsuario", JSON.stringify(respuesta));
         const saludo =
-          "Hola " + respuesta.apellido + ", " + respuesta.nombreUsuario + "!!";
+          "¡Hola " + respuesta.nombreUsuario + " " + respuesta.apellido + "!";
         localStorage.setItem("saludo", JSON.stringify(saludo));
         setSaludoNavbar(saludo);
         navigate("/administrador");
@@ -38,7 +38,7 @@ const LoginUsuario = ({ setUsuarioLogueado, setSaludoNavbar }) => {
         <Card.Body>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Correo Electronico</Form.Label>
+              <Form.Label>Correo Electrónico</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Ingrese un email"

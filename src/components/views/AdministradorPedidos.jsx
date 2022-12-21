@@ -33,10 +33,10 @@ const AdministradorPedidos = () => {
         <h2 className="text-white text-center py-3 m-0 display-3">
           Lista de Pedidos de Productos
         </h2>
-        <div className="d-flex justify-content-around">
+        <div className="d-md-flex justify-content-center">
           <Button
             onClick={onClickPendiente}
-            className="btn btn-success fs-5 m-5"
+            className="btn btn-success fs-5 m-lg-3 my-1"
             size="sm"
             type="button"
           >
@@ -44,7 +44,7 @@ const AdministradorPedidos = () => {
           </Button>
           <Button
             onClick={onClickEntregado}
-            className="btn btn-success fs-5 m-5"
+            className="btn btn-success fs-5 m-lg-3 my-1"
             size="sm"
             type="button"
           >
@@ -52,19 +52,21 @@ const AdministradorPedidos = () => {
           </Button>
           <Button
             onClick={onClickCancelado}
-            className="btn btn-success fs-5 m-5"
+            className="btn btn-success fs-5 m-lg-3 my-1 "
             size="sm"
             type="button"
           >
             Cancelados
           </Button>
         </div>
-        <Link
-          className="btn btn-success fs-5"
-          to="/administrador/pedidosAdmin/creadPed"
-        >
-          Tomar Pedido
-        </Link>
+        <div className="text-center">
+          <Link
+            className="btn btn-success fs-5 m-lg-5 my-1"
+            to="/administrador/pedidosAdmin/creadPed"
+          >
+            Tomar Pedido
+          </Link>
+        </div>
         <div className="row justify-content-center">
           {pedidos.map((pedidos) => (
             <CardPedido key={pedidos._id} pedidos={pedidos} />

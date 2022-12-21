@@ -42,7 +42,7 @@ const Menu = ({
             </Navbar.Brand>
           </Col>
 
-          <Col lg={5} className="alineamiento">
+          <Col lg={6} className="alineamiento">
             <Navbar.Toggle aria-controls="basic-navbar-nav" className="mb-2" />
             <Navbar.Collapse>
               <Nav className="me-auto text-center">
@@ -64,12 +64,12 @@ const Menu = ({
                     </NavLink>
                     <Button
                       variant="danger"
-                      className="fuente fs-5 mb-3"
+                      className="fuente fs-4 mx-2 mb-3"
                       onClick={logoutCliente}
                     >
-                      Logout
+                      Salir
                     </Button>
-                    <div className="text-light text-center pb-2 pt-1 mx-4 fuente fs-6 fw-bold">
+                    <div className="text-light fw-bold">
                       {saludoNavbarCliente}
                     </div>
                   </>
@@ -101,11 +101,9 @@ const Menu = ({
                       className="fuente fs-4 mx-2 mb-3"
                       onClick={logout}
                     >
-                      Logout
+                      Salir
                     </Button>
-                    <div className="text-light px-3 pb-2 fw-bold my-3">
-                      {saludoNavbar}
-                    </div>
+                    <div className="text-light fw-bold">{saludoNavbar}</div>
                   </>
                 ) : (
                   <>

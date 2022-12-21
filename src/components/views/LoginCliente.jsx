@@ -22,7 +22,7 @@ const LoginCliente = ({ setClienteLogueado, setSaludoNavbarCliente }) => {
         setClienteLogueado(respuesta);
         localStorage.getItem("tokenCliente", JSON.stringify(respuesta));
         const saludoCliente =
-          "Hola " + respuesta.apellido + ", " + respuesta.nombreCliente + "!!";
+           "¡Hola " + respuesta.nombreCliente +" " + respuesta.apellido + "!";
         localStorage.setItem("saludoCliente", JSON.stringify(saludoCliente));
         setSaludoNavbarCliente(saludoCliente);
         // si el usuario es correcto entonces redirecciono al admin
@@ -40,7 +40,7 @@ const LoginCliente = ({ setClienteLogueado, setSaludoNavbarCliente }) => {
         <Card.Body>
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Correo Electronico</Form.Label>
+              <Form.Label>Correo Electrónico</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Ingrese un email"

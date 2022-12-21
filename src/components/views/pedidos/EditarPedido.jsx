@@ -40,14 +40,14 @@ const EditarPedido = () => {
     });
   };
   return (
-    <section className="colorFondo">
-      <Container>
-        <h2 className="display-3 text-center text-white">
-          Modificacion de Pedidos
+    <section className="colorFondo text-light">
+      <Container className="py-5">
+        <h2 className="display-3 text-center by-3 fuente">
+          Modificación de Pedidos
         </h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formNombreCliente">
-            <Form.Label>Nombre Cliente</Form.Label>
+            <Form.Label className="fuente fs-4">Nombre Cliente</Form.Label>
             <Form.Control
               type="text"
               placeholder="Nombre"
@@ -68,7 +68,7 @@ const EditarPedido = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formCategoria">
-            <Form.Label>Estado</Form.Label>
+            <Form.Label className="fuente fs-4">Estado</Form.Label>
             <Form.Select
               {...register("estado", {
                 required: "Debe seleccionar una Estado",
