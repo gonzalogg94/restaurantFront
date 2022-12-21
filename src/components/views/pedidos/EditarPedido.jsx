@@ -42,12 +42,12 @@ const EditarPedido = () => {
   return (
     <section className="colorFondo">
       <Container>
-        <h2 className="display-3 text-center text-white">
+        <h2 className="display-3 text-center text-white m-0 py-3 fuente">
           Modificacion de Pedidos
         </h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formNombreCliente">
-            <Form.Label>Nombre Cliente</Form.Label>
+            <Form.Label className="text-white fuente fs-4">Nombre Cliente</Form.Label>
             <Form.Control
               type="text"
               placeholder="Nombre"
@@ -68,7 +68,7 @@ const EditarPedido = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formCategoria">
-            <Form.Label>Estado</Form.Label>
+            <Form.Label className="fuente text-white fs-4">Estado</Form.Label>
             <Form.Select
               {...register("estado", {
                 required: "Debe seleccionar una Estado",
@@ -84,8 +84,11 @@ const EditarPedido = () => {
             </Form.Text>
           </Form.Group>
 
-          <Button variant="primary" type="submit">
-            Submit
+          <Button variant="success"
+            type="submit"
+            className="my-3 fw-bold fs-3 fuente "
+            size="lg">
+            Terminar
           </Button>
         </Form>
       </Container>

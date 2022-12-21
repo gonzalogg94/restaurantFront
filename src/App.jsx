@@ -22,6 +22,7 @@ import Product from "./components/views/carta/Product";
 import Error404 from "./components/views/Error404";
 import RutasProtegidas from "./components/helpers/Routes/RutasProtegidas";
 import RutasAdministrador from "./components/helpers/Routes/RutasAdministrador";
+import Registro from "./components/views/Registro";
 
 function App() {
   const cliente = JSON.parse(localStorage.getItem("tokenCliente")) || [];
@@ -97,6 +98,7 @@ function App() {
             />
           }
         />
+        <Route exact path="/registro" element={<Registro />} />
         <Route path="/administrador/*" element={
           <RutasProtegidas>
             <RutasAdministrador></RutasAdministrador>

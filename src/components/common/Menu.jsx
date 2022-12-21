@@ -58,7 +58,7 @@ const Menu = ({
                     <NavLink
                       end
                       className="nav-item nav-link"
-                      to="/PedidoCliente"
+                      to="/administrador/PedidoCliente"
                     >
                       Tu pedido
                     </NavLink>
@@ -85,7 +85,7 @@ const Menu = ({
                     <NavLink
                       end
                       className="nav-item nav-link"
-                      to="/adminUsuarios"
+                      to="/administrador/adminUsuarios"
                     >
                       Usuarios
                     </NavLink>

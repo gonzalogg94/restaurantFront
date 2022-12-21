@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import AdministradorProductos from "../../views/AdministradorProductos";
 import CrearProducto from "../../views/producto/CrearProducto";
 import EditarProducto from "../../views/producto/EditarProducto";
-import Registro from "../../views/Registro";
 import RegistroAdministrador from "../../views/RegistroAdministrador";
 import AdminClientes from "../../views/AdminClientes";
 import AdminUsuarios from "../../views/AdminUsuarios";
@@ -40,7 +39,7 @@ const RutasAdministrador = () => {
           path="/editarProd"
           element={<EditarProducto />}
         />
-        <Route exact path="/registro" element={<Registro />} />
+        
         <Route
           exact
           path="/registroAdministrador"
@@ -63,6 +62,7 @@ const RutasAdministrador = () => {
           path="/pedidosAdmin/creadPed"
           element={<AgregarPedido />}
         />
+        
       </Routes>
     </>
   );

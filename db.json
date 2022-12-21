@@ -68,55 +68,9 @@
     {
       "nombreUsuario": "Leandro",
       "apellido": "Gonzalez",
-      "email": "leandrito@gmail.com",
-      "contrasena": "Leandrio1234",
+      "email": "leandro@gmail.com",
+      "contrasena": "Leandro123*",
       "id": 10
-    },
-    {
-      "nombreUsuario": "Kike",
-      "apellido": "Heredia",
-      "email": "kiketuch@gmail.com",
-      "contrasena": "1234Aidjfk",
-      "id": 11
-    },
-    {
-      "nombreUsuario": "Enzo Alejandro",
-      "apellido": "Heredia",
-      "email": "eaheredia292@gmail.com",
-      "contrasena": "Enzo1234",
-      "id": 12
-    },
-    {
-      "nombreUsuario": "Romina",
-      "apellido": "Heredia",
-      "email": "Rheredia@gmail.com",
-      "contrasena": "1234Romi",
-      "id": 16
-    },
-    {
-      "nombreUsuario": "florencia",
-      "apellido": "alonso",
-      "email": "floralonso@gmail.com",
-      "contrasena": "Contador1$",
-      "id": 17
-    },
-    {
-      "nombreUsuario": "Alejandro",
-      "apellido": "Heredia",
-      "email": "ale@gmail.com",
-      "contrasena": "Enzo1234*",
-      "estado": "Activo",
-      "perfil": "Administrador",
-      "id": 18
-    },
-    {
-      "nombreCliente": "Enzo",
-      "apellido": "Heredia",
-      "email": "enzo@gmail.com",
-      "contrasena": "Ale1234*",
-      "estado": "Familiar",
-      "perfil": "Celíaco, vegano, etc",
-      "id": 19
     }
   ]
 }

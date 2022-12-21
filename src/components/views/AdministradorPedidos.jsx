@@ -29,11 +29,11 @@ const AdministradorPedidos = () => {
   };
   return (
     <section className="colorFondo fuente">
-      <Container>
+      <Container className="text-center">
         <h2 className="text-white text-center py-3 m-0 display-3">
           Lista de Pedidos de Productos
         </h2>
-        <div className="d-flex justify-content-around">
+        <div className="d-flex justify-content-between">
           <Button
             onClick={onClickPendiente}
             className="btn btn-success fs-5 m-5"
@@ -60,7 +60,7 @@ const AdministradorPedidos = () => {
           </Button>
         </div>
         <Link
-          className="btn btn-success fs-5"
+          className="btn btn-success fs-5 mb-3"
           to="/administrador/pedidosAdmin/creadPed"
         >
           Tomar Pedido
