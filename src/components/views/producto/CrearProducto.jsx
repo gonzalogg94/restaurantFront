@@ -115,7 +115,7 @@ const CrearProducto = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formCategoria">
-            <Form.Label className="fuente fs-4">Categoria</Form.Label>
+            <Form.Label className="fuente fs-4">Categoría</Form.Label>
             <Form.Select
               {...register("categoria", {
                 required: "Debe seleccionar una categoria",
