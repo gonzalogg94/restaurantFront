@@ -43,7 +43,7 @@ const EditarPedido = () => {
     <section className="colorFondo">
       <Container>
         <h2 className="display-3 text-center text-white m-0 py-3 fuente">
-          Modificacion de Pedidos
+          Modificación de Pedidos
         </h2>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formNombreCliente">
