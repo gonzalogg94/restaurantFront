@@ -20,7 +20,7 @@ const LoginUsuario = ({ setUsuarioLogueado, setSaludoNavbar }) => {
         setUsuarioLogueado(respuesta);
         localStorage.getItem("tokenUsuario", JSON.stringify(respuesta));
         const saludo =
-          "Hola " + respuesta.apellido + ", " + respuesta.nombreUsuario + "!!";
+          "¡Hola " + respuesta.nombreUsuario + " " + respuesta.apellido + "!";
         localStorage.setItem("saludo", JSON.stringify(saludo));
         setSaludoNavbar(saludo);
         navigate("/administrador");

@@ -19,7 +19,8 @@ const Menu = ({
   const logoutCliente = () => {
     navegar("/");
     localStorage.removeItem("tokenCliente");
-    localStorage.removeItem("saludoCliente");
+    localStorage.removeItem("cartItems");
+    localStorage.removeItem("cartPrice");
     setClienteLogueado({});
     setSaludoNavbarCliente("");
   };
@@ -64,10 +65,10 @@ const Menu = ({
                     </NavLink>
                     <Button
                       variant="danger"
-                      className="fuente fs-5 mb-3"
+                      className="fuente fs-4 mx-2 mb-3"
                       onClick={logoutCliente}
                     >
-                      Logout
+                      Salir
                     </Button>
                     <div className="text-light text-center pb-2 pt-1 mx-4 fuente fs-6 fw-bold">
                       {saludoNavbarCliente}
@@ -101,9 +102,9 @@ const Menu = ({
                       className="fuente fs-4 mx-2 mb-3"
                       onClick={logout}
                     >
-                      Logout
+                      Salir
                     </Button>
-                    <div className="text-light px-3 pb-2 fw-bold my-3">
+                    <div className="text-light text-center pb-2 pt-1 mx-4 fuente fs-6 fw-bold">
                       {saludoNavbar}
                     </div>
                   </>
@@ -126,7 +127,9 @@ const Menu = ({
                     >
                       Administrador
                     </NavLink>
-                    <NavLink end className="nav-item nav-link" to="/nosotros">Nosotros</NavLink>
+                    <NavLink end className="nav-item nav-link" to="/nosotros">
+                      Nosotros
+                    </NavLink>
                   </>
                 )}
               </Nav>

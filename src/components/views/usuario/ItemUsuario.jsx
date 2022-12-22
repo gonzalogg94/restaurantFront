@@ -6,8 +6,7 @@ import { consultarUsersAPI } from "../../helpers/queries";
 const ItemUsuario = ({ usuario, setUsuarios }) => {
 
 const titularUsuario = JSON.parse(localStorage.getItem("tokenUsuario"))
-console.log(titularUsuario._id)
-
+  
   const borrarUsuario = () => {
     Swal.fire({
       title: "¿Está seguro?",

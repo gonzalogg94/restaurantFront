@@ -1,12 +1,12 @@
 .sk-cube-grid {
-  width: 40px;
+  width: 50px;
   height: 40px;
   margin: 100px auto;
 }
 
 .sk-cube-grid .sk-cube {
   width: 33%;
-  height: 33%;
+  height: 66%;
   background: rgb(49, 149, 15);
   background: linear-gradient(
     243deg,

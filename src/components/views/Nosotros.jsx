@@ -3,6 +3,8 @@ import { Container } from "react-bootstrap";
 import gonzalo from "../img/Avatar-Gonzalo.png";
 import enzo from "../img/Enzo.png";
 import florencia from "../img/avatarFlor.png";
+import mauricio from "../img/Avatar-Mauricio.png";
+import jose from "../img/Avatar-Jose.png";
 
 const Nosotros = () => {
   return (
@@ -85,7 +87,7 @@ const Nosotros = () => {
           <article className="row flex-column-reverse flex-lg-row flex-md-row align-items-center">
             <div className="col-12 col-md-6">
               <h3>
-                <i className="bi bi-chat-heart-fill"></i> Mauricio Alonso
+                <i className="bi bi-chat-heart-fill"></i> Mauricio Javier Alonso
               </h3>
               <p>
                 ¡Hey hey! Me llamo Mauricio, tengo 41 años, soy contador,
@@ -102,26 +104,24 @@ const Nosotros = () => {
               </p>
             </div>
             <div className="col-12 col-md-6 col-lg-6 justify-content-center">
-              <img src={enzo} className="w-50 my-3" alt="avatar Enzo" />
+              <img src={mauricio} className="w-50 my-3" alt="avatar Enzo" />
             </div>
           </article>
           <hr />
           <article className="row align-items-center mb-5">
             <div className="col-12 col-md-6 col-lg-6">
-              <img src={florencia} className="w-50" alt="avatar florencia" />
+              <img src={jose} className="w-50" alt="avatar jose" />
             </div>
             <div className="col-12 col-md-6 col-lg-6">
               <h3>
-                <i className="bi bi-chat-heart-fill"></i> María Florencia Alonso
+                <i className="bi bi-chat-heart-fill"></i> Jose Luis Pereyra
               </h3>
               <p>
-                Soy Florencia, tengo 37 años, soy contadora y me dedico a la
-                valuación de empresas para Estados Unidos. En mi carrera, me
-                especialicé en impuestos y también realicé un MBA. Elegí
-                estudiar programación porque se trata de una disciplina
-                apasionante y de una versatilidad sin igual. Mi objetivo es
-                aplicar estos conocimientos a las Ciencias Económicas para poder
-                progresar en el área de las finanzas corporativas.
+                "Buenas... Mi nombre es Jose luis, tengo 32 años, soy
+                profesional en la higiene y seguridad laboral, soy un apasionado
+                por la tecnología y aprender cosas nuevas, un amigo me pregunto
+                si queria sumarme a aprender programacion a finales del año
+                pasado, dije que si y bueno paso un año y aqui estamos!!!!....."
               </p>
             </div>
           </article>

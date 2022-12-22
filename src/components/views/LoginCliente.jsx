@@ -21,7 +21,7 @@ const LoginCliente = ({ setClienteLogueado, setSaludoNavbarCliente }) => {
         setClienteLogueado(respuesta);
         localStorage.getItem("tokenCliente", JSON.stringify(respuesta));
         const saludoCliente =
-          "Hola " + respuesta.apellido + ", " + respuesta.nombreCliente + "!!";
+          "¡Hola " + respuesta.nombreCliente + " " + respuesta.apellido + "!";
         localStorage.setItem("saludoCliente", JSON.stringify(saludoCliente));
         setSaludoNavbarCliente(saludoCliente);
         // si el usuario es correcto entonces redirecciono al admin
