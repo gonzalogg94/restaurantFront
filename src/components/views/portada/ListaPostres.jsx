@@ -36,7 +36,7 @@ const ListaPostres = () => {
         <aside className="col-lg-2 col-md-2 fondoLateral esconder container-fluid">
           <div className="sidebar d-none d-md-grid col-md-2 col-lg-2 text-light">
             <ul className="list-group mt-5">
-              <Link className="text-decoration-none">
+              <Link className="text-decoration-none" to={"/entradas"}>
                 <li className="list-group-item listSidebar">
                   <p>Entradas</p>
                 </li>
